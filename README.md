@@ -1,9 +1,9 @@
 Lasercuter Einweisung
 =====================
 
- Einweisung des [FAU FabLab](https://fablab.fau.de) für den Lasercuter [Cameo Zing 6030](https://fablab.fau.de/tool/lasercutter).
+Einweisung des [FAU FabLab](https://fablab.fau.de) für den Lasercuter [Cameo Zing 6030](https://fablab.fau.de/tool/lasercutter).
 
-Die neueste Version des Einweisung aus [github](https://github.com/fau-fablab/lasercutter-einweisung) ist als PDF unter https://user.fablab.fau.de/~buildserver/lasercutter-einweisung/Einweisung_Lasercutter.pdf abrufbar.
+Die neueste Version der Einweisung aus [github](https://github.com/fau-fablab/lasercutter-einweisung) ist als PDF unter https://user.fablab.fau.de/~buildserver/lasercutter-einweisung/Einweisung_Lasercutter.pdf abrufbar.
 
 auschecken
 ----------
