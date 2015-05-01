@@ -1,0 +1,2 @@
+TARGET=Einweisung_Lasercutter
+include fablab-document/Makefile.include
