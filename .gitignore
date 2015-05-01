@@ -1,5 +1,6 @@
 # ignore PDFs in the main directory - please put pdf images into a subdir.
 /*.pdf
+output/
 revision.tex
 *~
 
