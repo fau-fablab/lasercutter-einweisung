@@ -1,0 +1,70 @@
+\newcommand{\basedir}{./fablab-document/}
+\documentclass{\basedir/fablab-document}
+
+\usepackage{tabularx} % Tabellen mit bestimmtem Breitenverhältnis der Spalten
+
+\newcommand{\thickhline}{\noalign{\hrule height 2pt}}
+\usepackage{eurosym}
+\renewcommand{\texteuro}{\euro}
+
+\title{Wartung Laser}
+\author{Patrick Kanzler}
+
+\fancyfoot[L]{Wartungsliste Laser}
+\fancyfoot[C]{}
+%\fancyfoot[R]{Liste Nr. \underline{~~~~~~~~}}
+
+\begin{document}
+%optional: dicke Überschrift auf der ersten Seite
+\vspace{-3em}
+\maketitle
+\vspace{-.5em}
+Bitte hier sämtliche Wartungsvorgänge am Lasercuttersystem vermerken!
+Bei Fragen oder Problemen und zur Einweisung in die Wartung bei Patrick (patrick.kanzler@fablab.fau.de) melden.
+\vspace{-1.5em}
+\subsection*{Laser}
+\vspace{-1em}
+Zu tun: Linse putzen und Spiegel festschrauben (etwa alle 2 Wochen), Z-Achse reinigen und schmieren (etwa alle 3 Wochen), Y-Achse reinigen (etwa alle 2 Wochen), Riemenspannung überprüfen (etwa alle 4 Wochen)
+nice to have: Gitter putzen, Innenraum wischen
+
+
+\newcommand{\bsp}[1]{\textcolor{gray}{\it #1}}
+\newcommand{\beispielzeile}[5]{\bsp{#2} & \bsp{#3} & \bsp{#4} \\ \hline}
+\newcommand{\leerzeile}{\vbox{\vspace{2.4em}} & & \\ \hline}
+\vspace{-.4em}
+\begin{tabularx}{\textwidth}{|c|X|c|} \hline
+\bf Datum      &  \bf Tätigkeit  & \bf \bf Name, Unterschrift \\\thickhline
+\beispielzeile{BSP}{12.5.2014}{ Linse geputzt }{Name, Unterschrift}
+% \beispielzeile{BSP}{1.1.12}{Kleinteile und Schrauben}{12,34€}{B. Beispiel ~ $\mathfrak{Beispiel}$}
+% \leerzeile
+\leerzeile
+\leerzeile
+\leerzeile
+\leerzeile
+\leerzeile
+\leerzeile
+\leerzeile
+\leerzeile
+\leerzeile
+\end{tabularx}
+
+\subsection*{Filter}
+\vspace{-1em}
+Zu tun: Filter wechseln (dann wenn nötig), Motor ausblasen (halbjährlich)
+
+\vspace{-.4em}
+\begin{tabularx}{\textwidth}{|c|X|c|} \hline
+\bf Datum      &  \bf Tätigkeit  & \bf \bf Name, Unterschrift \\\thickhline
+\beispielzeile{BSP}{12.5.2014}{ Filter gewechselt }{Name, Unterschrift}
+% \beispielzeile{BSP}{1.1.12}{Kleinteile und Schrauben}{12,34€}{B. Beispiel ~ $\mathfrak{Beispiel}$}
+% \leerzeile
+\leerzeile
+\leerzeile
+\leerzeile
+\leerzeile
+\leerzeile
+\end{tabularx}
+Wenn der vorletzte Filter eingesetzt wurde, bitte Mail an Patrick (patrick.kanzler@fablab.fau.de) schreiben.
+
+
+\end{document}
