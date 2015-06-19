@@ -99,7 +99,7 @@
 Den Inhalt dieser zwei Abschnitte solltest du wissen, alles andere kannst du bei Bedarf nachlesen.
 \subsection{Regeln und Hinweise}
 \begin{itemize}
- \item nur zweifelsfrei geeignete Materialien verwenden: keine unbekannten Materialien, kein PVC, Teflon, PFA und sonstige chlor-, brom- oder fluorhaltige Kunststoffe!
+ \item nur zweifelsfrei geeignete Materialien verwenden (siehe Liste weiter unten). Keine unbekannten Materialien, kein PVC, Teflon, etc.
  \item Ebenfalls nicht erlaubt sind leichtentzündliche oder ähnlich gefährliche Dinge, wie z.B. gefüllte Feuer\-zeuge. Wenn das Gehäuse nicht aus Metall ist, muss bei Handys vorher der Akku herausgenommen werden.
  \item Lasercutter nur unter ständiger Beobachtung betreiben! Solange der Laser aktiv ist, muss immer eine Person \emph{direkt} beim Lasercutter sein. Für vollständig unbrennbare Materialien (Glas, nicht lackierte Metallteile) gibt es eine Ausnahme, wenn vorher alle brennbaren Reste aus dem Schneidetisch entleert wurden.
  \item Alle Arbeiten sind auf eigenes Risiko, auch wenn dein schickes Handy beim Gravieren kaputtgeht.
@@ -128,6 +128,28 @@ Wenn am Laserpunkt eine \emph{größere} Flamme entsteht, die bis zum schwarzen 
  \item Bei weiterer Eskalation die Feuerwehr rufen, anwesende Personen warnen und den Raum verlassen (Erstickungsgefahr)
 \end{itemize}
 
+\section{Materialien}
+Wenn ein Material nicht zweifelsfrei erlaubt ist, frage unbedingt nach! Viele Kunststoffe sehen gleich aus, und Baumärkte haben schon oft falsche Sorten verkauft, weshalb Kunststoff ohne Beschriftung im Zweifelsfall nicht gelasert werden darf.
+
+\subsection{Erlaubt}
+\newcommand{\itemCheck}{\item[\checkmark]}
+\begin{itemize}
+\itemCheck unbrennbares zum Gravieren: Metall, Glas, Keramik, Stein
+\itemCheck erlaubte Kunststoffe: Acrylglas (PMMA), Overheadfolie (PET), Moosgummi (EVA-Schaum)
+\itemCheck Holz, Pappe, Papier und Ähnliches (HDF, Butterkeks ohne Schokolade, ...)
+\itemCheck schlecht laserbar aber trotzdem erlaubt: PE Polyethylen, PS Polystyrol
+\itemCheck Polycarbonat (z.B. Bayer Vivak) bis 1mm Dicke
+\end{itemize}
+
+\subsection{Verboten}
+\newcommand{\itemCross}{\item[$\times$]}
+\begin{itemize}
+\itemCross im Zweifelsfall: alles was nicht erlaubt ist 
+\itemCross nicht eindeutig identifizierbare Kunststoffe (\enquote{irgendwas durchsichtiges})
+\itemCross spritzendes oder stark wässriges Material (Schokolade, ...)
+\itemCross PC Polycarbonat dicker als 1\,mm, weil es beim Lasern spritzt
+\itemCross halogenhaltige Kunststoffe: PVC = Vinyl = Neopren, PTFE = Teflon (z.B. als \enquote{glitschige} Beschichtung von Taschenmessern), PFA, ...
+\end{itemize}
 
 \section{Grundlagen}
 Der Lasercutter hat zwei Laser: Einen roten Laserpointer, der weitestgehend harmlos ist. Dieser ist wie ein Laserpointer ungefährlich, solange man man den direkten Strahl (z.B. mit einem Spiegel) höchstens für sehr kurze Zeit betrachtet. Das Betrachten des roten Punkts auf einem Objekt ist harmlos.
@@ -142,15 +164,28 @@ Mit einem Vektorzeichenprogramm (Inkscape, Corel Draw, Adobe Illustrator) die Da
 %TODO TilmanAushang behauptet: Eigene Dokumente (in A4 o.Ä.) landen irgendwo in der Mitte des Tisches. -> Ausprobieren, wo die landen
 % das kommt davon, dass ICH (Phi) das gesagt habe. Das hab ich so ausprobiert, beim corel ist das so, wenn man die Geräteresetfunktion verwendet und NICHT einen eigenen Nullpunkt festlegt. Dieser wird trotz verstellter ``Papiergröße`` richtig verwendet.
 % ??? (Max) verstehe ich nicht. Werde ich ausprobieren.
+\subsection{Inkscape + VisiCut}
+Wenn du Inkscape verwendest, wähle möglichst folgende Aufteilung, damit du es direkt in VisiCut weiterverarbeiten kannst.
 
+\textbf{Schneiden}: Pfade mit Linienfarbe rot, Liniendicke ist egal, keine Füllung.
+
+\textbf{Gravur}: Schwarz, Graustufen, oder beliebige Pixelgrafiken (Fotos).
+
+\textbf{Linie markieren}: Linienfarbe grün, keine Füllung.
+
+\textbf{Kommentare}: Linienfarbe oder Füllung blau. So kannst du z.B. Erklärungstexte mit in deine Datei einbauen, die nicht gelasert werden sollen.
+
+Bringe die Datei als SVG mit. Wenn du Schriftarten verwendest, die wir im FabLab nicht installiert haben, wandle den Text in Pfade um.
+
+%Du kannst VisiCut auch auf deinem eigenen Rechner installieren.
+
+
+\subsection{Andere Programme}
 \textbf{Vektor (Schneiden)}: Zu schneidende Linien auf eine Linienbreite von höchstens 0,001 inch stellen (Inkscape: 0,1 px, Corel Draw: Haarline, Adobe Illustrator: 0,1 px, Vectorworks: 0,03 mm). Bei fertigen Zeichnungen aus dem Internet ist Vorsicht geboten, manchmal sind hinter gefüllten Flächen solche dünnen Linien versteckt, die dann durchgeschnitten werden. 
 
 \textbf{Raster (Gravur)}: Alles, das keine dünne Vektorlinie ist (sicher ab 0,25mm / 0,008 inch), wird graviert, sowohl dicke Linien und Flächen als auch Pixelgrafiken (Fotos). Die Gravur erfolgt im Graustufenmodus, sodass hellere Flächen nur leicht graviert werden, schwarze Flächen jedoch vollständig. 
 
 Dokument als PDF (oder Corel CDR) auf Windows-Freigabe \texttt{\textbackslash\textbackslash ws01\textbackslash freigabe\textbackslash deinName} (von Linux aus: \texttt{smb://ws01/freigabe/deinName}) ablegen. Beim Speichern einen aussagekräftigen Namen wählen, da dieser später auf dem Display erscheint. 
-
-Soll die unter \ref{VisiCut} beschriebene Software VisiCut zum Senden das Jobs verwendet werden, kann die Datei freier erstellt werden.
-VisiCut kann nicht nur zwischen Haarlinie und anderen Linien unterscheiden, sondern unterscheidet zwischen beliebig einstellbaren Eigenschaften. Zum Beispiel können verschiedene Farben für Gravieren, Schneiden, Markieren gewählt werden.
 
 \section{Job senden}
 \subsection{Epilog Druckertreiber}
