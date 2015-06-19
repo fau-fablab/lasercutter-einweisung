@@ -135,10 +135,13 @@ Wenn ein Material nicht zweifelsfrei erlaubt ist, frage unbedingt nach! Viele Ku
 \newcommand{\itemCheck}{\item[\checkmark]}
 \begin{itemize}
 \itemCheck unbrennbares zum Gravieren: Metall, Glas, Keramik, Stein
-\itemCheck erlaubte Kunststoffe: Acrylglas (PMMA), Overheadfolie (PET), Moosgummi (EVA-Schaum)
+% TODO: \itemCheck dünne Lackschichten auf Metall
+\itemCheck erlaubte Kunststoffe: Acrylglas (PMMA), PET (Overheadfolie, Bayer Vivak), Moosgummi (EVA-Schaum)
 \itemCheck Holz, Pappe, Papier und Ähnliches (HDF, Butterkeks ohne Schokolade, ...)
-\itemCheck schlecht laserbar aber trotzdem erlaubt: PE Polyethylen, PS Polystyrol
-\itemCheck Polycarbonat (z.B. Bayer Vivak) bis 1mm Dicke
+\itemCheck schlecht laserbar aber trotzdem erlaubt: PE Polyethylen
+\itemCheck PS Polystyrol bis 1mm Dicke % TODO
+\itemCheck PC Polycarbonat bis 1mm Dicke % TODO
+\itemCheck spezieller laserbarer Stempelgummi
 \end{itemize}
 
 \subsection{Verboten}
@@ -147,7 +150,8 @@ Wenn ein Material nicht zweifelsfrei erlaubt ist, frage unbedingt nach! Viele Ku
 \itemCross im Zweifelsfall: alles was nicht erlaubt ist 
 \itemCross nicht eindeutig identifizierbare Kunststoffe (\enquote{irgendwas durchsichtiges})
 \itemCross spritzendes oder stark wässriges Material (Schokolade, ...)
-\itemCross PC Polycarbonat dicker als 1\,mm, weil es beim Lasern spritzt
+\itemCross ABS, Epoxidharz (GFK, CFK, Platinen), weil es übelst stinkt
+\itemCross PS Polystyrol / PC Polycarbonat dicker als 1\,mm, weil es beim Lasern spritzt
 \itemCross halogenhaltige Kunststoffe: PVC = Vinyl = Neopren, PTFE = Teflon (z.B. als \enquote{glitschige} Beschichtung von Taschenmessern), PFA, ...
 \end{itemize}
 
@@ -157,13 +161,10 @@ Der Lasercutter hat zwei Laser: Einen roten Laserpointer, der weitestgehend harm
 Der eigentliche Laser (45W Infrarot) wird sofort abgeschaltet, wenn Schutzscheibe oder Frontklappe geöffnet sind. Von ihm geht keine Gefahr aus, solange die Schutzschalter nicht manipuliert werden. Daher: keine Magneten an der Vorder- und Oberseite des Lasercutters anbringen.
 
 \section{Datei erstellen}
-Mit einem Vektorzeichenprogramm (Inkscape, Corel Draw, Adobe Illustrator) die Datei anlegen. Als Seitengröße sollten die Maße des Schneidtisches gewählt werden (609\,$\times$\,304~mm), da sonst Probleme auftreten können.
+Lege mit einem Vektorzeichenprogramm (Inkscape, Corel Draw, Adobe Illustrator) die Datei an. Je nach Programm unterscheidet sich das Vorgehen etwas:
 
-% TODO verifizieren, ob bei Seitengröße != Treibereinstellung, oder Treibereinstellung=Seitengröße!=609x304 Probleme.
+% TODO VisiCut + Illustrator/Corel beschreiben?
 
-%TODO TilmanAushang behauptet: Eigene Dokumente (in A4 o.Ä.) landen irgendwo in der Mitte des Tisches. -> Ausprobieren, wo die landen
-% das kommt davon, dass ICH (Phi) das gesagt habe. Das hab ich so ausprobiert, beim corel ist das so, wenn man die Geräteresetfunktion verwendet und NICHT einen eigenen Nullpunkt festlegt. Dieser wird trotz verstellter ``Papiergröße`` richtig verwendet.
-% ??? (Max) verstehe ich nicht. Werde ich ausprobieren.
 \subsection{Inkscape + VisiCut}
 Wenn du Inkscape verwendest, wähle möglichst folgende Aufteilung, damit du es direkt in VisiCut weiterverarbeiten kannst.
 
@@ -180,7 +181,9 @@ Bringe die Datei als SVG mit. Wenn du Schriftarten verwendest, die wir im FabLab
 %Du kannst VisiCut auch auf deinem eigenen Rechner installieren.
 
 
-\subsection{Andere Programme}
+\subsection{Corel Draw, Adobe Illustrator, sonstiges + Epilog Druckertreiber}
+Als Seitengröße sollten die Maße des Schneidtisches gewählt werden (609\,$\times$\,304~mm), da sonst Probleme auftreten können.
+
 \textbf{Vektor (Schneiden)}: Zu schneidende Linien auf eine Linienbreite von höchstens 0,001 inch stellen (Inkscape: 0,1 px, Corel Draw: Haarline, Adobe Illustrator: 0,1 px, Vectorworks: 0,03 mm). Bei fertigen Zeichnungen aus dem Internet ist Vorsicht geboten, manchmal sind hinter gefüllten Flächen solche dünnen Linien versteckt, die dann durchgeschnitten werden. 
 
 \textbf{Raster (Gravur)}: Alles, das keine dünne Vektorlinie ist (sicher ab 0,25mm / 0,008 inch), wird graviert, sowohl dicke Linien und Flächen als auch Pixelgrafiken (Fotos). Die Gravur erfolgt im Graustufenmodus, sodass hellere Flächen nur leicht graviert werden, schwarze Flächen jedoch vollständig. 
@@ -308,11 +311,12 @@ Material gibt es im Lagerregal und in den Schubladen nebenan. Spezielle Verarbei
 
 \subsection{Bezahlung}
 \label{sec:bezahlung}
-\begin{wrapfigure}{r}{8cm}
-  \vspace{-20pt} %WORKAROUND: Nicht so viel leerer weißer Platz
-  \includegraphics{./img/bezahlung-flaeche.pdf} 
-  \vspace{-20pt} %WORKAROUND: Nicht so viel leerer weißer Platz
-\end{wrapfigure}
+% Bild ist obsolet:
+% \begin{wrapfigure}{r}{8cm}
+%   \vspace{-20pt} %WORKAROUND: Nicht so viel leerer weißer Platz
+%   \includegraphics{./img/bezahlung-flaeche.pdf} 
+%   \vspace{-20pt} %WORKAROUND: Nicht so viel leerer weißer Platz
+% \end{wrapfigure}
 Das Material wird nach ganzen, halben (längs/quer) und viertel Platten abgerechnet. Angefangene, bereits bezahlte Platten kosten nichts. Zusätzlich kostet die Maschinen\-zeit noch, um die Wartung der Laser\-röhre (ca. 3000\,€ alle 5 Jahre!), den Austausch des Absaugungsfilters sowie sonstige Reparaturen und die Abschreibung zu finan\-zieren.
 Die Preise sind im Kassenterminal oder auch online (\url{https://user.fablab.fau.de/~buildserver/pricelist/output/price_list-Laser.html}) verfügbar.
 
@@ -405,6 +409,7 @@ In Härtefällen, z.B. wenn ein kompletter Auftrag fehlgeschlagen ist, können v
 %TODO  fertig machen
 Der Schneidtisch läuft auf 4 Gewindestangen. Diese müssen von Zeit zu Zeit gereinigt werden. Dazu saugt man den Innenraum und die Stangen ab und wischt mit einem alten Lappen nach. Wichtig ist, dass an den Lagern sich keine Staubklumpen sammeln. Auf die staubfreien Stangen gibt man wenige Tropfen Öl.
 \subsection{Absaugungsfilter wechseln}
+\todo{Beschreibung ist veraltet}
 Die Absauganlage besteht aus einer Holzkiste mit einer Filtermatte und einem Blechwagen mit zwei Filtereinheiten. Für den Normalbetrieb wird der Filter im Holzkasten verwendet und deswegen kein Filter in den Blechwagen eingesetzt. Auf Messen wird die Holzeinheit entfernt und eine Filtertasche und ein Feinfilterkasten in den Blechwagen eingesetzt. Das Innere des Blechwagens erreicht man durch kräftiges Ziehen an der Tür. Wichtig ist, dass die Anlage aus ist, da man nicht gegen Sog ankommt.
 %TODO Skizze der Filteranlage
 \subsubsection{Filtermatte wechseln}
@@ -465,8 +470,7 @@ Zur ausführlichen Wartung gehören die folgenden Punkte:
 \subsection{Lasermatch einstellen}
 Der Lasercutter graviert die Zeilen immer abwechseld von links nach rechts und umgekehrt. Dabei kann ein leichter Versatz zwischen links- und rechtsherum gravierten Zeilen auftreten, der vertikale Gravurkanten kammförmig erscheinen lässt. Zum Testen lasert man mit 1000dpi eine feine vertikale Linke oder feine Schrift (ein kleines i in 9pt Times). Dies wiederholt man mit verschiedenen Lasermatch-Einstellungen und wählt die, bei der die Kante optimal aussieht.
 
-%TODO
-\todo{aus Aufzeichnungen übertragen}
+Details dazu stehen im Handbuch.
 
 \section{Troubleshooting}
 In diesem Abschnitt geht es um die Beseitigung häufiger Fehler. Wenn das Werkstück fehlgeschlagen ist, werden die Laserzeitkosten des Fehlschlags in der Regel erlassen. Material muss weiterhin bezahlt werden.
