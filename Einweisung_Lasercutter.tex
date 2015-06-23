@@ -43,13 +43,13 @@
 % Knöpfe für Laser und Fernbedienung
 \newcommand{\knopf}[2]{
     \begin{tikzpicture}[baseline={(box.base)}]
-    \node [#1] (box) { 
+    \node [#1] (box) {
         \fontsize{9pt}{9pt}\selectfont \textbf{#2}\strut
     };
     \end{tikzpicture}
 }
-  
-  
+
+
 \renewcommand{\todo}[1]{\textbf{\color{red}{TODO: #1}}}
 
 
@@ -94,7 +94,7 @@
 % \@title
 % \makeatother
 
-%TODO: Schutzschalter, 
+%TODO: Schutzschalter,
 \section{Was du dir merken musst}
 Den Inhalt dieser zwei Abschnitte solltest du wissen, alles andere kannst du bei Bedarf nachlesen.
 \subsection{Regeln und Hinweise}
@@ -147,7 +147,7 @@ Wenn ein Material nicht zweifelsfrei erlaubt ist, frage unbedingt nach! Viele Ku
 \subsection{Verboten}
 \newcommand{\itemCross}{\item[$\times$]}
 \begin{itemize}
-\itemCross im Zweifelsfall: alles was nicht erlaubt ist 
+\itemCross im Zweifelsfall: alles was nicht erlaubt ist
 \itemCross nicht eindeutig identifizierbare Kunststoffe (\enquote{irgendwas durchsichtiges})
 \itemCross spritzendes oder stark wässriges Material (Schokolade, ...)
 \itemCross ABS, Epoxidharz (GFK, CFK, Platinen), weil es übelst stinkt
@@ -184,19 +184,19 @@ Bringe die Datei als SVG mit. Wenn du Schriftarten verwendest, die wir im FabLab
 \subsection{Corel Draw, Adobe Illustrator, sonstiges + Epilog Druckertreiber}
 Als Seitengröße sollten die Maße des Schneidtisches gewählt werden (609\,$\times$\,304~mm), da sonst Probleme auftreten können.
 
-\textbf{Vektor (Schneiden)}: Zu schneidende Linien auf eine Linienbreite von höchstens 0,001 inch stellen (Inkscape: 0,1 px, Corel Draw: Haarline, Adobe Illustrator: 0,1 px, Vectorworks: 0,03 mm). Bei fertigen Zeichnungen aus dem Internet ist Vorsicht geboten, manchmal sind hinter gefüllten Flächen solche dünnen Linien versteckt, die dann durchgeschnitten werden. 
+\textbf{Vektor (Schneiden)}: Zu schneidende Linien auf eine Linienbreite von höchstens 0,001 inch stellen (Inkscape: 0,1 px, Corel Draw: Haarline, Adobe Illustrator: 0,1 px, Vectorworks: 0,03 mm). Bei fertigen Zeichnungen aus dem Internet ist Vorsicht geboten, manchmal sind hinter gefüllten Flächen solche dünnen Linien versteckt, die dann durchgeschnitten werden.
 
-\textbf{Raster (Gravur)}: Alles, das keine dünne Vektorlinie ist (sicher ab 0,25mm / 0,008 inch), wird graviert, sowohl dicke Linien und Flächen als auch Pixelgrafiken (Fotos). Die Gravur erfolgt im Graustufenmodus, sodass hellere Flächen nur leicht graviert werden, schwarze Flächen jedoch vollständig. 
+\textbf{Raster (Gravur)}: Alles, das keine dünne Vektorlinie ist (sicher ab 0,25mm / 0,008 inch), wird graviert, sowohl dicke Linien und Flächen als auch Pixelgrafiken (Fotos). Die Gravur erfolgt im Graustufenmodus, sodass hellere Flächen nur leicht graviert werden, schwarze Flächen jedoch vollständig.
 
-Dokument als PDF (oder Corel CDR) auf Windows-Freigabe \texttt{\textbackslash\textbackslash ws01\textbackslash freigabe\textbackslash deinName} (von Linux aus: \texttt{smb://ws01/freigabe/deinName}) ablegen. Beim Speichern einen aussagekräftigen Namen wählen, da dieser später auf dem Display erscheint. 
+Dokument als PDF (oder Corel CDR) auf Windows-Freigabe \texttt{\textbackslash\textbackslash ws01\textbackslash freigabe\textbackslash deinName} (von Linux aus: \texttt{smb://ws01/freigabe/deinName}) ablegen. Beim Speichern einen aussagekräftigen Namen wählen, da dieser später auf dem Display erscheint.
 
 \section{Job senden}
 \subsection{Epilog Druckertreiber}
 
 Der Lasercutter wird über einen Windows-Druckertreiber (Epilog Engraver Win32 Zing) angesprochen. Wenn es nicht bereits läuft, beim Steuerrechner auf dem Desktop \enquote{Wolfgang} %TODO wie heißt die Verknüpfung atm?
- öffnen und etwas Geduld haben. 
+ öffnen und etwas Geduld haben.
 
-Drucken kann man nur aus aus Adobe Reader 9 (Datei vorher nach PDF exportieren, geht gut für Inkscape) und Corel Draw (Import anderer Formate funktioniert nicht gescheit).  Das direkte Drucken aus anderen Programmen heraus, z.B. Inkscape, ist nicht möglich! 
+Drucken kann man nur aus aus Adobe Reader 9 (Datei vorher nach PDF exportieren, geht gut für Inkscape) und Corel Draw (Import anderer Formate funktioniert nicht gescheit).  Das direkte Drucken aus anderen Programmen heraus, z.B. Inkscape, ist nicht möglich!
 
 Die Datei mit Adobe Reader bzw.\  Corel Draw öffnen, die Freigabe ist unter Computer$\rightarrow$Z:\textbackslash \ zu finden. Bei Datei$\rightarrow$Drucken \textit{Epilog Engraver} auswählen und in den Druckereinstellungen alles auf das aktuelle Material einstellen:
 
@@ -216,7 +216,7 @@ Die Datei mit Adobe Reader bzw.\  Corel Draw öffnen, die Freigabe ist unter Com
  \item \textbf{Optimal} schneidet zeitoptimiert von links oben nach rechts unten.
  \item \textbf{Aus}: Ohne "Vektoren sortieren" wird in der Reihenfolge geschnitten, in der das Grafikprogramm die Polygone liefert, was meistens nicht optimal ist.
 \end{itemize}
- 
+
 
 Wenn \textbf{Mittelpunkt-Definition} ausgeschaltet ist, entspricht die linke obere Ecke der Seite genau dem Nullpunkt im Lasercutter, der dann ebenfalls links oben gewählt wird. Somit kann man einfach abmessen, wo auf dem Material der gewünschte Platz ist, und in der Zeichnung die Objekte entsprechend positionieren.
 
@@ -297,7 +297,7 @@ Problem		 										& mögliche Ursache															& mögliche Lösung \\ \hl
 \multirow{3}{0.333\textwidth}{Das Bild wird nicht aktualisiert}	& Es wurden trotz mehrmaligen Versuchens nicht alle Passermarken erkannt	& Vergewissere dich, dass keine Marke überdeckt ist, sondern alle von der Kammera gut erkannt werden können \\ \cline{2-3}
   													& Die Lichtverhältnisse sind zu schlecht, als dass der Kontrast zw. den weißen und schwarzen Stellen groß genug für die Mustererkennung wäre	& Schalte die LEDs des Lasers aus (kleiner Schlater rechts  unter dem Lasercutter oder schalte andere Lichter an oder aus\\ \cline{2-3}
   													& VisiCam läuft nicht														& Frage einen Betreuer, dass er den Dienst auf der ws01 startet \\ \hline
-\multirow{2}{0.333\textwidth}{Der Laser schneidet nicht da, wo er sollte}	& War der Laser in seinem Nullpunkt und nicht links oben auf der Arbeitsfläche?	& drücke am Laser \laserXyAus und \laserReset \\ \cline{2-3}
+\multirow{2}{0.333\textwidth}{Der Laser schneidet nicht da, \\ wo er sollte}	& War der Laser in seinem Nullpunkt und nicht links oben auf der Arbeitsfläche?	& drücke am Laser \laserXyAus und \laserReset \\ \cline{2-3}
 													& VisiCam ist verkalibriert &	Frage einen Betreuer, oder führe das Kalibrierungsprogramm in VisiCut durch \\ \hline
 
 \end{tabularx}
@@ -314,7 +314,7 @@ Material gibt es im Lagerregal und in den Schubladen nebenan. Spezielle Verarbei
 % Bild ist obsolet:
 % \begin{wrapfigure}{r}{8cm}
 %   \vspace{-20pt} %WORKAROUND: Nicht so viel leerer weißer Platz
-%   \includegraphics{./img/bezahlung-flaeche.pdf} 
+%   \includegraphics{./img/bezahlung-flaeche.pdf}
 %   \vspace{-20pt} %WORKAROUND: Nicht so viel leerer weißer Platz
 % \end{wrapfigure}
 Das Material wird nach ganzen, halben (längs/quer) und viertel Platten abgerechnet. Angefangene, bereits bezahlte Platten kosten nichts. Zusätzlich kostet die Maschinen\-zeit noch, um die Wartung der Laser\-röhre (ca. 3000\,€ alle 5 Jahre!), den Austausch des Absaugungsfilters sowie sonstige Reparaturen und die Abschreibung zu finan\-zieren.
@@ -504,7 +504,7 @@ Bitte führe Wartungen an der Mechanik nur dann durch, wenn du weißt, was du tu
   \includegraphics[width=2cm]{./img/fehler-umlenkspiegel.png}
   \vspace{-20pt} %WORKAROUND: Nicht so viel leerer weißer Platz
 \end{wrapfigure}
- Wenn es so aussieht wie auf dem Bild: Umlenkspiegel und Linse festschrauben. 
+ Wenn es so aussieht wie auf dem Bild: Umlenkspiegel und Linse festschrauben.
 
 \subsubsection{Fokusprobleme}
 Ein falscher Fokus äußert sich dadurch, dass das Schneiden schlecht und die Gravur nur schwach und verrauscht funktioniert. Prüfe zuerst mit dem Fokuspendel, ob der Fokus richtig eingestellt ist.
@@ -575,7 +575,7 @@ Dieses Diagramm fasst den Arbeitsablauf am Laser zusammen. Wer Probleme mit dem 
 	\path [line] (drucker) -- (uebertragen);
 	%uebertragen
 	\path [line] (uebertragen) -- (fokus);
-	
+
 \end{tikzpicture}
 
 %alte Version, gefällt mir grad nicht mehr
