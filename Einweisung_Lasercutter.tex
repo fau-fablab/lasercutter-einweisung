@@ -99,7 +99,7 @@
 Den Inhalt dieser zwei Abschnitte solltest du wissen, alles andere kannst du bei Bedarf nachlesen.
 \subsection{Regeln und Hinweise}
 \begin{itemize}
- \item nur zweifelsfrei geeignete Materialien verwenden (siehe Liste weiter unten). Keine unbekannten Materialien, kein PVC, Teflon, etc.
+ \item Nur zweifelsfrei geeignete Materialien verwenden, die in der Liste (weiter unten) stehen. Keine unbekannten Materialien, kein PVC, Teflon, etc.
  \item Ebenfalls nicht erlaubt sind leichtentzündliche oder ähnlich gefährliche Dinge, wie z.B. gefüllte Feuer\-zeuge. Wenn das Gehäuse nicht aus Metall ist, muss bei Handys vorher der Akku herausgenommen werden.
  \item Lasercutter nur unter ständiger Beobachtung betreiben! Solange der Laser aktiv ist, muss immer eine Person \emph{direkt} beim Lasercutter sein. Für vollständig unbrennbare Materialien (Glas, nicht lackierte Metallteile) gibt es eine Ausnahme, wenn vorher alle brennbaren Reste aus dem Schneidetisch entleert wurden.
  \item Alle Arbeiten erfolgen auf eigenes Risiko, auch wenn dein schickes Handy beim Gravieren kaputtgeht.
@@ -142,6 +142,7 @@ Wenn ein Material nicht zweifelsfrei erlaubt ist, frage unbedingt nach! Viele Ku
 \itemCheck PS Polystyrol bis 1mm Dicke
 \itemCheck PC Polycarbonat bis 1mm Dicke
 \itemCheck spezieller laserbarer Stempelgummi aus dem FabLab
+\itemCheck Heißlaminierfolie \emph{nur} wenn sie laut Datenblatt des Herstellers aus PET+EVA besteht\\(keine Kaltlaminierfolie, diese enthält oft PVC!) 
 \end{itemize}
 
 \subsection{Verboten}
@@ -281,10 +282,12 @@ Es ist verfügbar unter \url{https://hci.rwth-aachen.de/visicut}. Die aktuell ve
 
 
 
-\subsubsection{VisiCam}
+\subsubsection{Kamera}
 %TODO verbessern, ...
 
-VisiCam ist ein in VisiCut eingebettetes Programm, welches es ermöglicht, seine Vektorzeichnung auf einem Bild des eingelegten Materials zu platzieren. Dazu wird von einer Kammera, die an der Klappe des Lasercutters angebracht ist, ein Bild geschossen, das anhand der 4 Passermarken an den 4 Ecken der Arbeitsfläche des Lasers ausgerichtet und beschnitten wird. Das Bild kann durch Klicken des Buttons \button{Capture Photo} aktualisiert werden. Nun können die Teile, die gelasert werden sollen, je nach Kalibrierung bis auf etwa 2mm genau am Bild ausgerichtet werden, was vor Allem bei Reststücken nützlich ist. Vor dem Lasern ist noch zu beachten, dass der Laserkopf in den Nullpunkt des Lasercutters zurückgefahren ist. Dazu drückt man am Laser die Taste \laserXyAus und danach \laserReset
+Mit VisiCut kann man seine Vektorzeichnung auf einem Bild des eingelegten Materials platzieren. Dazu wird von einer Kammera, die an der Klappe des Lasercutters angebracht ist, ein Bild geschossen, das anhand der 4 Passermarken an den 4 Ecken der Arbeitsfläche des Lasers ausgerichtet und beschnitten wird. So können die Teile, die gelasert werden sollen, je nach Kalibrierung bis auf etwa 2mm genau am Bild ausgerichtet werden, was vor Allem bei Reststücken nützlich ist. Das Bild wird automatisch aktualisiert, es funktioniert nur wenn der Laserdeckel aufgeklappt ist.
+
+Vor dem Lasern ist noch zu beachten, dass der Laserkopf in den Nullpunkt des Lasercutters zurückgefahren ist. Dazu drückt man am Laser die Taste \laserXyAus und danach \laserReset
 
 \subsubsection{Troubleshooting}
 Sollte dies nicht funktionieren, könnten folgende Punkte hilfreich sein:
@@ -295,7 +298,7 @@ Sollte dies nicht funktionieren, könnten folgende Punkte hilfreich sein:
 \hline
 Problem		 										& mögliche Ursache															& mögliche Lösung \\ \hline \hline
 \multirow{3}{0.333\textwidth}{Das Bild wird nicht aktualisiert}	& Es wurden trotz mehrmaligen Versuchens nicht alle Passermarken erkannt	& Vergewissere dich, dass keine Marke überdeckt ist, sondern alle von der Kammera gut erkannt werden können \\ \cline{2-3}
-  													& Die Lichtverhältnisse sind zu schlecht, als dass der Kontrast zw. den weißen und schwarzen Stellen groß genug für die Mustererkennung wäre	& Schalte die LEDs des Lasers aus (kleiner Schlater rechts  unter dem Lasercutter oder schalte andere Lichter an oder aus\\ \cline{2-3}
+  													& Die Lichtverhältnisse sind zu schlecht, als dass der Kontrast zw. den weißen und schwarzen Stellen groß genug für die Mustererkennung wäre	& Schalte die Deckenbeleuchtung an oder aus\\ \cline{2-3}
   													& VisiCam läuft nicht														& Frage einen Betreuer, dass er den Dienst auf der ws01 startet \\ \hline
 \multirow{2}{0.333\textwidth}{Der Laser schneidet nicht da, \\ wo er sollte}	& War der Laser in seinem Nullpunkt und nicht links oben auf der Arbeitsfläche?	& drücke am Laser \laserXyAus und \laserReset \\ \cline{2-3}
 													& VisiCam ist verkalibriert &	Frage einen Betreuer, oder führe das Kalibrierungsprogramm in VisiCut durch \\ \hline
