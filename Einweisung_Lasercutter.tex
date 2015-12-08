@@ -90,17 +90,13 @@
 
 \begin{document}
 \maketitle
-% \makeatletter
-% \@title
-% \makeatother
 
-%TODO: Schutzschalter,
 \section{Was du dir merken musst}
-Den Inhalt dieser zwei Abschnitte solltest du wissen, alles andere kannst du bei Bedarf nachlesen.
+Den Inhalt dieser drei Abschnitte musst du wissen, alles andere kannst du bei Bedarf nachlesen.
 \subsection{Regeln und Hinweise}
 \begin{itemize}
- \item Nur zweifelsfrei geeignete Materialien verwenden, die in der Liste (weiter unten) stehen. Keine unbekannten Materialien, kein PVC, Teflon, etc.
- \item Ebenfalls nicht erlaubt sind leichtentzündliche oder ähnlich gefährliche Dinge, wie z.B. gefüllte Feuer\-zeuge. Wenn das Gehäuse nicht aus Metall ist, muss bei Handys vorher der Akku herausgenommen werden.
+ \item Nur zweifelsfrei geeignete Materialien verwenden, die in der Liste (auf den nächsten Seiten) stehen. Keine unbekannten Materialien, kein PVC, Teflon, etc.
+ \item Ebenfalls nicht erlaubt sind leichtentzündliche oder gefährliche Dinge, wie z.B. gefüllte Feuer\-zeuge. Wenn das Gehäuse nicht aus Metall ist, muss bei Handys der Akku herausgenommen werden.
  \item Lasercutter nur unter ständiger Beobachtung betreiben! Solange der Laser aktiv ist, muss immer eine Person \emph{direkt} beim Lasercutter sein. Für vollständig unbrennbare Materialien (Glas, nicht lackierte Metallteile) gibt es eine Ausnahme, wenn vorher alle brennbaren Reste aus dem Schneidetisch entleert wurden.
  \item Alle Arbeiten erfolgen auf eigenes Risiko, auch wenn dein schickes Handy beim Gravieren kaputtgeht.
  \item Die grün markierten Rändelschrauben am Schneidetisch dürfen von Hand gedreht werden, ansonsten nichts verstellen. % Betätigen der grünen Schrauben ist nötig, um den Schneidetisch zu reinigen! Deshalb kann man es nicht ganz verbieten.
@@ -110,23 +106,30 @@ Den Inhalt dieser zwei Abschnitte solltest du wissen, alles andere kannst du bei
 
 % Messing ist nicht verboten, auch wenn es nicht geht, denn dieser Laser hat einen Schutz gegen Reflektionen (Aussage des Technikers, auf explizite Frage, was passiert, wenn ich den Strahl 100% spiegle und in den Laser zurückwerfe)
 \pagebreak % lieber hier ein Seitenumbruch, anstatt den nächsten Punkt zu zerreißen
-\subsection{Wenns brennt (im wörtlichen Sinn)}
-Wenn eine \emph{kleinere} Flamme an dem Punkt, an dem gerade der Laser ist, entsteht:
+\subsection{Bei kleineren Flammen}
+Eine \emph{kleinere} Flamme am Laserpunkt und leichter Geruch kann manchmal auftreten:
 \begin{itemize}
- \item Sicherstellen, dass Air Assist (Schalter unter dem Gehäuse rechts, bei Messebetrieb: \enquote{Schaltmodul}) an ist und die Absaugung (und Deckenabsaugung) auf 100 Prozent läuft.
+ \item Zum Pausieren \laserStop drücken: Druckauftrag wird \emph{nach} dem Ende der aktuellen Linie pausiert. Bis zum Anhalten kann es unter Umständen lange dauern!
+ \item Sicherstellen, dass die Absaugung (auch die Decken-Absaugung) angeschaltet ist und Air Assist (Schalter unter dem Gehäuse rechts) an ist.
  \item Bei manchem Material lässt es sich nicht vermeiden und dann ist es auch nicht weiter schlimm.
 \end{itemize}
 
-Wenn am Laserpunkt eine \emph{größere} Flamme entsteht, die bis zum schwarzen Arm reicht, oder das Material anderswo anfängt zu brennen: Keine Panik! Die folgenden Punkte abarbeiten und nebenbei noch einen Betreuer rufen.
+\subsection{Im Ernstfall}
+Bei \emph{größeren} Flammen oder starker Rauchentwicklung muss das Lasern \emph{sofort} unterbrochen werden, da sonst die Linse beschädigt wird:
 \begin{itemize}
- \item \laserStop  drücken: Druckauftrag wird nach dem Ende der aktuellen Linie pausiert. Bis zum Anhalten kann es unter Umständen zu lange dauern.
- \item Deckel leicht öffnen (Laser wird ausgeschaltet, der Antrieb fährt jedoch weiter).
- \item Falls möglich einen (weiteren) Betreuer hinzu ziehen.
-%  \item Absaugung ausschalten, wenn sie das Feuer weiter anfacht.
-% \item Wenn es immer noch brennt: Soweit möglich, Material über Vorderklappe entnehmen (oben ist der Arm, an dem die Linse fährt, im Weg).
- \item Letzer Ausweg ist das Löschen mit dem CO\subscript{2}-Löscher in kurzen Sprühstößen.
+ \item \textbf{Deckel leicht öffnen} (Laser wird ausgeschaltet, der Antrieb fährt jedoch weiter).
+ \item \textbf{Betreuer rufen}
+ \item Letzer Ausweg ist das Löschen mit dem CO\subscript{2}-Löscher in kurzen Sprühstößen. Ein Feuerlöscher befindet sich direkt beim Lasercutter, sowie am Durchgang zur Elektrowerkstatt.
  \item Bei weiterer Eskalation die Feuerwehr rufen, anwesende Personen warnen und den Raum verlassen (Erstickungsgefahr)
 \end{itemize}
+
+\vspace{5em}
+\hrule
+
+Alles bis hier musst du auswendig wissen. Den Rest kannst du bei Bedarf nachschauen.
+\vspace{0.2em}
+\hrule
+\vspace{3em}
 
 \section{Materialien}
 Wenn ein Material nicht zweifelsfrei erlaubt ist, frage unbedingt nach! Viele Kunststoffe sehen gleich aus, und Baumärkte haben schon oft falsche Sorten verkauft, weshalb Kunststoff ohne Beschriftung im Zweifelsfall nicht gelasert werden darf.
@@ -289,7 +292,7 @@ Mit VisiCut kann man seine Vektorzeichnung auf einem Bild des eingelegten Materi
 
 Vor dem Lasern ist noch zu beachten, dass der Laserkopf in den Nullpunkt des Lasercutters zurückgefahren ist. Dazu drückt man am Laser die Taste \laserXyAus und danach \laserReset
 
-\subsubsection{Troubleshooting}
+\subsubsection{Fehlerbehebung}
 Sollte dies nicht funktionieren, könnten folgende Punkte hilfreich sein:
 
 %TODO Tabelle schön machen
@@ -475,7 +478,7 @@ Der Lasercutter graviert die Zeilen immer abwechseld von links nach rechts und u
 
 Details dazu stehen im Handbuch.
 
-\section{Troubleshooting}
+\section{Fehlerbehebung}
 In diesem Abschnitt geht es um die Beseitigung häufiger Fehler. Wenn das Werkstück fehlgeschlagen ist, werden die Laserzeitkosten des Fehlschlags in der Regel erlassen. Material muss weiterhin bezahlt werden.
 
 \subsection{Software}
