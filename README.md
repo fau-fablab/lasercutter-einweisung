@@ -4,8 +4,8 @@ Lasercuter Einweisung
 Einweisung des [FAU FabLab](https://fablab.fau.de) für den Lasercuter [Cameo Zing 6030](https://fablab.fau.de/tool/lasercutter).
 
 Die neueste Version gibt es hier zum Download als PDF:
-* [Einweisung](https://user.fablab.fau.de/~buildserver/lasercutter-einweisung/Einweisung_Lasercutter.pdf)
-* [Einweisungsliste](https://user.fablab.fau.de/~buildserver/lasercutter-einweisung/Einweisungsliste_Lasercutter.pdf)
+* [Einweisung](https://brain.fablab.fau.de/build/lasercutter-einweisung/Einweisung_Lasercutter.pdf)
+* [Einweisungsliste](https://brain.fablab.fau.de/build/lasercutter-einweisung/Einweisungsliste_Lasercutter.pdf)
 
 auschecken
 ----------
@@ -16,8 +16,8 @@ git clone --recursive git@github.com:fau-fablab/lasercutter-einweisung.git
 
 Technische Details zum Buildserver siehe auf macgyver `/home/buildserver/README`
 
-[![Build Status](https://user.fablab.fau.de/~buildserver/lasercutter-einweisung/status.svg)](https://user.fablab.fau.de/~buildserver/lasercutter-einweisung/)
-[![TODOs](https://user.fablab.fau.de/~buildserver/lasercutter-einweisung/status-todos.svg)](https://user.fablab.fau.de/~buildserver/lasercutter-einweisung/)
+[![Build Status](https://brain.fablab.fau.de/build/lasercutter-einweisung/status.svg)](https://brain.fablab.fau.de/build/lasercutter-einweisung/)
+[![TODOs](https://brain.fablab.fau.de/build/lasercutter-einweisung/status-todos.svg)](https://brain.fablab.fau.de/build/lasercutter-einweisung/)
 
 Lizenz
 ------
