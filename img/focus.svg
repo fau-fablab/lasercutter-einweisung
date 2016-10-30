@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 140.85157 163.20516"
+   height="616.83838"
+   width="532.35242">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient4537">
+      <stop
+         id="stop4533"
+         offset="0"
+         style="stop-color:#ff9600;stop-opacity:1" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1"
+         offset="0.4996621"
+         id="stop4541" />
+      <stop
+         id="stop4535"
+         offset="1"
+         style="stop-color:#ff9600;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="214.56511"
+       x2="64.909531"
+       y1="82.434898"
+       x1="64.909531"
+       id="linearGradient4539"
+       xlink:href="#linearGradient4537" />
+    <linearGradient
+       gradientTransform="translate(80.180803,-5.9425679)"
+       y2="214.56511"
+       x2="64.909531"
+       y1="82.434898"
+       x1="64.909531"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4545"
+       xlink:href="#linearGradient4537" />
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-35.379077,-73.846496)"
+     id="layer1">
+    <rect
+       y="142.55743"
+       x="39.526176"
+       height="11.885143"
+       width="130.94765"
+       id="rect4473"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#0000fa;fill-opacity:0.14227642;fill-rule:nonzero;stroke:#000065;stroke-width:1.3440237;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <circle
+       r="6.6145835"
+       cy="142.55771"
+       cx="145.09033"
+       id="circle4547"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.93888855;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.93888855;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="circle4479"
+       cx="64.909576"
+       cy="148.5"
+       r="6.6145835" />
+    <path
+       id="path4468"
+       d="m 58.387039,82.434897 3.261293,33.032403 3.261195,33.03298 3.261293,-33.03298 3.261293,-33.032403 h -6.522586 z m 6.522488,66.065383 -3.261195,33.03242 -3.261293,33.03241 h 6.522488 6.522586 L 68.17082,181.5327 Z"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4539);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.161449;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.14900004;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       id="text4491"
+       y="152.4455"
+       x="104.97416"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332px"
+         y="152.4455"
+         x="104.97416"
+         id="tspan4489">Material</tspan></text>
+    <text
+       id="text4495"
+       y="97.239578"
+       x="104.97416"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332px"
+         y="97.239578"
+         x="104.97416"
+         id="tspan4493">Laserstrahl</tspan></text>
+    <path
+       id="path4497"
+       d="m 69.168128,105.36592 6.329794,-8.126342"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 141.37852,104.95982 -6.3298,-8.126351"
+       id="path4499" />
+    <text
+       id="text4503"
+       y="227.64137"
+       x="65.015511"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332px"
+         y="227.64137"
+         x="65.015511"
+         id="tspan4501">Schneiden</tspan></text>
+    <text
+       id="text4507"
+       y="221.02679"
+       x="145.07494"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332px"
+         y="221.02679"
+         x="145.07494"
+         id="tspan4505">Oberfläche</tspan><tspan
+         id="tspan4509"
+         style="stroke-width:0.26458332px"
+         y="227.64137"
+         x="145.07494"></tspan><tspan
+         id="tspan4511"
+         style="stroke-width:0.26458332px"
+         y="234.25597"
+         x="145.07494">Gravieren</tspan></text>
+    <path
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4545);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.161449;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.14900004;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 138.56784,76.492329 3.26129,33.032401 3.2612,33.03298 3.26129,-33.03298 3.26129,-33.032401 h -6.52258 z m 6.52249,66.065381 -3.2612,33.03242 -3.26129,33.03241 h 6.52249 6.52258 l -3.26129,-33.03241 z"
+       id="path4543" />
+  </g>
+</svg>

@@ -61,6 +61,7 @@
 \newcommand{\laserStop}{\laserKnopf{Stop}}
 \newcommand{\laserReset}{\laserKnopf{Reset}}
 \newcommand{\laserJob}{\laserKnopf{Job}}
+\newcommand{\laserFocus}{\laserKnopf{Focus}}
 \newcommand{\laserPfeilRauf}{\laserKnopf{$\blacktriangle$}}
 \newcommand{\laserPfeilRunter}{\laserKnopf{$\blacktriangledown$}}
 
@@ -285,12 +286,12 @@ Es ist verfügbar unter \url{https://hci.rwth-aachen.de/visicut}. Die aktuell ve
 
 
 
-\subsubsection{Kamera}
+\subsubsection{Kamera} \label{kamera}
 %TODO verbessern, ...
 
 Mit VisiCut kann man seine Vektorzeichnung auf einem Bild des eingelegten Materials platzieren. Dazu wird von einer Kammera, die an der Klappe des Lasercutters angebracht ist, ein Bild geschossen, das anhand der 4 Passermarken an den 4 Ecken der Arbeitsfläche des Lasers ausgerichtet und beschnitten wird. So können die Teile, die gelasert werden sollen, je nach Kalibrierung bis auf etwa 2mm genau am Bild ausgerichtet werden, was vor Allem bei Reststücken nützlich ist. Das Bild wird automatisch aktualisiert, es funktioniert nur wenn der Laserdeckel aufgeklappt ist.
 
-Vor dem Lasern ist noch zu beachten, dass der Laserkopf in den Nullpunkt des Lasercutters zurückgefahren ist. Dazu drückt man am Laser die Taste \laserXyAus und danach \laserReset
+Vor dem Lasern ist noch zu beachten, dass der Laserkopf in den Nullpunkt des Lasercutters (links oben) zurückgefahren ist. Dazu drückt man am Laser die Taste \laserXyAus und danach \laserReset. Nach dem Start ist der Laserkopf automatisch im Maschinennullpunkt.
 
 \subsubsection{Fehlerbehebung}
 Sollte dies nicht funktionieren, könnten folgende Punkte hilfreich sein:
@@ -326,15 +327,24 @@ Material gibt es im Lagerregal und in den Schubladen nebenan. Spezielle Verarbei
 Das Material wird nach ganzen, halben (längs/quer) und viertel Platten abgerechnet. Angefangene, bereits bezahlte Platten kosten nichts. Zusätzlich kostet die Maschinen\-zeit noch, um die Wartung der Laser\-röhre (ca. \EUR{3000} alle 5 Jahre!), den Austausch des Absaugungsfilters sowie sonstige Reparaturen und die Abschreibung zu finan\-zieren.
 Die Preise sind im Kassenterminal oder auch online (\url{https://brain.fablab.fau.de/build/pricelist/price_list-Laser.html}) verfügbar.
 
-\subsection{Fokus}
+\subsection{Fokus} \label{fokus}
 
-Mit \laserXyAus  die Schrittmotoren ausschalten, sodass Arm und Linsenschlitten frei bewegt werden können. Die Pendelfeder am Arm nach unten klappen und den Abstand zwischen Objekt und Linse mit \laserPfeilRauf/\laserPfeilRunter  so einstellen, dass die Feder die Oberfläche des Objekts berührt und gerade nicht mehr frei schwingen kann.
+Der Laserstrahl wird durch die Linse im Schlitten auf einen bestimmen Punkt fokusiert. Am Linsenschlitten ist deshalb eine Pendelfeder angebracht, mit der der Abstand zur Brennebene eingestellt werden kann. Dort wo das Pendel im herunter geklappten Zustand endet, ist der Laserstrahl fokusiert.
 
-Die Brennebene der Linse ist jetzt genau auf der Oberfläche (ideal für Gravieren). Ungefähr 2mm unter und über dieser Ebene ist die Leistungsdichte so hoch, dass das Material graviert oder geschnitten werden kann.
+Dazu muss man \laserFocus drücken, das Pendel herunter klappen und dann die gewünschte Höhe mit \laserPfeilRauf/\laserPfeilRunter einstellen. Wenn man den Fokus an einem speziellen Punkt setzen möchte, kann man auch \laserXyAus wählen und dann den Kopf an diese Stelle schieben. Abschließen kann man den Vorgang mit \laserReset.
 
-Für dickeres Material (ab ca. 3\ mm) verringert man den Abstand zwischen Linse und Objekt noch etwas weiter, sodass die Brennebene in der Mitte des Objekts liegt. Beim Gravieren gewölbter Oberflächen (z.B. Kugelschreiber) verringert man den Abstand ebenfalls, um die Rundung auszugleichen.
+\begin{wrapfigure}{r}{4cm}
+	%\vspace{-50pt} %WORKAROUND: Nicht so viel leerer weißer Platz
+	\includegraphics[width=4cm]{./img/focus.pdf}
+	%\vspace{-20pt} %WORKAROUND: Nicht so viel leerer weißer Platz
+\end{wrapfigure}
 
-%TODO optional: Bild mit Kegel, 2mm in beide Richtungen
+Es gibt 3 übliche Einstellungen:
+\begin{itemize}
+	\item Wenn man VisiCut verwendet, kann man den Fokus auf die Grundplatte einstellen. Das ist besonders hilfreich, wenn man nacheinander verschieden dicke Materialien bearbeiten möchte, da man dann nur beim ersten mal den Fokus einstellen muss. Alles Andere übernimmt das Programm. Dazu den Haken ``Fokus ist anfangs auf der Grundplatte statt auf dem Material'' in VisiCut nicht vergessen.
+	\item Wenn man nur schneiden möchte, empfiehlt es sich, den Fokus auf etwa die Hälfte der Materialhöhe einzustellen.
+	\item Beim Gravieren dagegen ist es sinnvoll, den Fokus auf die Materialoberfläche zu setzen.
+\end{itemize}
 
 \subsection{Absaugung}
 \label{sec:absaugung}
@@ -348,8 +358,6 @@ Dann wird die Lasercutter-Absaugung mit dem Drehschalter vorne am Lasercutter ak
 
 %Mit der Fernbedienung kann man die Absaugung schalten (\lueftungOn/\lueftungOff) und die Geschwindigkeit festlegen (Prozentwert eingeben und \lueftungEnter  drücken bzw. \lueftungPlus/\lueftungMinus  verwenden). Für stark rauchende Materialien wie Sperrholz sollten höhere Geschwindigkeiten verwendet werden. Um die Absaugung zu verbessern, empfiehlt es sich, größere freie Flächen des Schneidetischs abzudecken.
 
-\pagebreak
-
 \subsection{Air Assist}
 \label{sec:air-assist}
 Da besonders bei Acryl auch mit Absaugung öfters Flammen entstehen, sind im Arm Ausströmer für Druckluft verbaut, die entstehende brennbare Dämpfe wegpusten, bevor sich eine Flamme bildet. Der Air Assist wird normalerweise automatisch mit dem Lasercutter mit angeschaltet. Er kann über einen Schalter deaktiviert werden, dann geht als Warnung automatisch auch das Licht im Lasercutter mit aus.
@@ -358,16 +366,15 @@ Da besonders bei Acryl auch mit Absaugung öfters Flammen entstehen, sind im Arm
 
 Optimale Einstellung für den Druckminderer sind etwas unter 2\,bar. Dies ist normalerweise bereits korrekt eingestellt und darf nicht durch den Nutzer verändert werden.
 
-\subsection{Nullpunkt}
-Bei der Nullpunktfestlegung ist besondere Vorsicht erforderlich! Wird der Nullpunkt falsch festgelegt, kann es vorkommen, dass der Lasercutter beim Ausführen des Jobs dann gegen die Begrenzung fährt und beschädigt wird. Entsprechend der Einstellung bei der Mittelpunkt-Definition muss hier der Startpunkt auf dem Material festgelegt werden. Wenn er nicht bereits angeschaltet ist, den roten Laserpunkt mit \laserRoterLaser  anschalten.
+\subsection{Nullpunkt} \label{nullpunkt}
+Bei der Nullpunktfestlegung ist besondere Vorsicht erforderlich! Wird der Nullpunkt falsch festgelegt, kann es vorkommen, dass der Lasercutter beim Ausführen des Jobs dann gegen die Begrenzung fährt und beschädigt wird. Das passiert, wenn der Nullpunkt außerhalb (besonders links) der Arbeitsfläche gesetzt ist. Entsprechend der Einstellung bei der Mittelpunkt-Definition muss hier der Startpunkt auf dem Material festgelegt werden. Wenn er nicht bereits angeschaltet ist, den roten Laserpunkt mit \laserRoterLaser  anschalten.
 
 Mit \laserXyAus deaktiviert man den Antrieb, sodass man nun von Hand den Arm (y-Richtung) und den darin befindlichen Linsenschlitten (x-Richtung) bewegen kann. Um die unten am Schlitten befestigte Linse nicht zu berühren, den Schlitten nur mit dem Zahnriemen bewegen, der oben durch den Arm läuft.
 
 Die Position des Nullpunkts überprüfen und mit \laserStart  bestätigen. Das Display zeigt \laserDisplay{Set Home/Center} (Nullpunkt gesetzt).
 
-Anstatt den Nullpunkt selber zu wählen, kann man auch den Maschinennullpunkt (linke obere Ecke des Tisches) verwenden. Dazu drückt man \laserReset anstatt Start, der Lasercutter sucht dann den Nullpunkt und fährt anschließend den Arm aus dem Weg.
+Anstatt den Nullpunkt selber zu wählen, kann man auch den Maschinennullpunkt (linke obere Ecke des Tisches) verwenden. Dazu drückt man \laserReset anstatt Start, der Lasercutter sucht dann den Nullpunkt und fährt anschließend den Arm aus dem Weg. Für VisiCam ist das das präferierte Vorgehen (siehe Kapitel \ref{kamera})
 
-%TODO Nullpkt darf keinesfalls links vom Maschinennullpunkt liegen! Gravieren rummst an die Wand!
 %TODO Aufschreiben: zu Maschinennullpunkt Ausmessen, in der Datei genau so hinschieben,... etc
 
 \subsection{Job laden}
