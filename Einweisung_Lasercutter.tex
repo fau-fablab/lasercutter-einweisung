@@ -613,6 +613,25 @@ Dieser lässt sich mit dem Laser tief gravieren und ausschneiden.
 
 Eine genaue Anleitung dazu gibt es unter \url{https://fablab.fau.de/project/stempel}.
 
+\section{Lessons Learned}
+
+\subsection{Boxen automatisch generieren lassen}
+
+Die Vektordaten für eine praktische Box muss man nicht selbst erzeugen. Am einfachsten geht es, wenn man einen web-basierten Gerneratoren verwendet. \\
+
+Bisher wurden gute Erfahrungen mit folgenden Seiten gemacht:
+\begin{itemize}
+	\item \url{http://www.makercase.com/} \\
+		Wird als Vektorgrafik ausgegeben. Pfade sind so angeordnet, dass der Laser nahe beieinanderliegende Pfade nacheinander bearbeitet (gut, da ansonsten viel Zeit durch das Verfahren des Lasers verbraucht wird) \\
+		\textbf{Achtung!} Dimensionen werden immer als outside-Dimensionsn berechnet. Auswahl ´innerside´ wird nicht berücksichtigt.
+	\item \url{http://boxdesigner.connectionlab.org/} \\
+		Wird als PDF ausgegeben. Allerdings ist die Abfolge der Pfade eher zufällig. Somit entstehen zusätzliche Zeiten durch das Verfahren des Lasers. \\
+%		Siehe Kapitel \ref{}, umUm diese Unannehmlichkeit zu verwenden
+%
+\end{itemize}
+
+%\subsection{Vermeidung unnötiger Laserzeit durch }
+
 % schoenere Darstellung
 \newpage
 \ccLicense{lasercutter-einweisung}{Einweisung Lasercutter}
