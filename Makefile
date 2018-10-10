@@ -1,2 +1,2 @@
-TARGET=Einweisung_Lasercutter Bearbeitung_Acryl Wartungsliste_Lasercutter Einweisungsliste_Lasercutter
+TARGET=Einweisung_Lasercutter Wartungsliste_Lasercutter Einweisungsliste_Lasercutter
 include fablab-document/Makefile.include
