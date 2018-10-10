@@ -14,7 +14,7 @@ auschecken
 git clone --recursive git@github.com:fau-fablab/lasercutter-einweisung.git
 ```
 
-Technische Details zum Buildserver siehe auf brain `/home/buildserver/README`
+Technische Details zum Buildserver siehe in dessen Repository [buildserver](https://github.com/fau-fablab/buildserver)
 
 [![Build Status](https://brain.fablab.fau.de/build/lasercutter-einweisung/status.svg)](https://brain.fablab.fau.de/build/lasercutter-einweisung/)
 [![TODOs](https://brain.fablab.fau.de/build/lasercutter-einweisung/status-todos.svg)](https://brain.fablab.fau.de/build/lasercutter-einweisung/)
