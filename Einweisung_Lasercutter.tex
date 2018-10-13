@@ -101,23 +101,26 @@ minimum height=2em]
 	\subsection{Regeln und Hinweise}
 	\begin{itemize}
 		\item Nur zweifelsfrei geeignete Materialien verwenden, die in der Liste (auf den nächsten Seiten) stehen. Keine unbekannten Materialien. Besonders keine Materialien die gifitge Gase entwickeln können, wie zum Beispiel PVC, Teflon, etc.
-		\item Ebenfalls nicht erlaubt sind leichtentzündliche oder gefährliche Dinge, wie z.B. gefüllte oder leere Feuer\-zeuge (Behältnisse von brennbaren Stoffen). Wenn das Gehäuse nicht aus Metall ist, muss bei Handys der Akku herausgenommen werden.
+		\item Ebenfalls nicht erlaubt sind leichtentzündliche oder gefährliche Dinge, wie z.B. Feuer\-zeuge (außer diese wurden noch nie befüllt). Wenn das Gehäuse nicht aus Metall ist, muss bei Handys der Akku herausgenommen werden.
 		\item Lasercutter nur unter ständiger Beobachtung betreiben! Solange der Laser aktiv ist, muss immer eine Person \emph{direkt} beim Lasercutter sein und in den Bauraum sehen. Für vollständig unbrennbare Materialien (Glas, nicht lackierte Metallteile) gibt es eine Ausnahme, wenn vorher alle brennbaren Reste aus dem Schneidetisch entleert wurden.
-		\item Alle Arbeiten erfolgen auf Eigenverantwortung und eigenes Risiko. Das FabLab haftet nicht für deine Beschädigungen, auch nicht wenn dein schickes Handy beim Gravieren kaputt geht.
-		\item Die Schrauben zur Befestigung des Schneidetischs (Wabengitter) dürfen im Notfall gedreht werden, ansonsten nichts schrauben oder verstellen. \todo{Diese durch Rändelschrauben ersetzen, um Verwechslungen zu vermeiden, und grün markieren (z.B. Plotterfolie um die Soll-Position) damit wir den gleichen Text wie beim Zing verwenden können}
-		\item \nurZing Die zwei grün markierten Rändelschrauben am Schneidetisch dürfen nach entnahme aus dem Gerät von Hand gedreht werden, ansonsten nichts verstellen. % Betätigen der grünen Schrauben ist nötig, um den Schneidetisch zu reinigen! Deshalb kann man es nicht ganz verbieten.
-		\item Im Brandfall nur mit CO\subscript{2}-Löscher, niemals mit Pulver-, Schaum- oder Wasserlöscher löschen (Verschmutzung, Stromschlaggefahr)! Der Feuerlöscher steht direkt neben dem Lasercutter.
-		\item Magnete sind im Bauraum und im Zweifel auch in der nähe des Lasers nicht gestattet. 
-		\item \nurLTT \todo{...}
-		\item \nurLTT Sofortiges Abschalten des Lasercutters geht nur mit dem Not-Aus-Schalter. \laserLTTPause fährt die nächsten Linien noch zu Ende. Dies braucht aber seine Zeit (Siehe 1.2 "TODO:")
+		\item Alle Arbeiten erfolgen eigenverantwortlich und auf eigenes Risiko. Das FabLab haftet nicht für Beschädigungen, auch nicht wenn dein schickes Handy beim Gravieren kaputt geht.
+		\item Die Schrauben zur Befestigung des Schneidetischs (Wabengitter) dürfen gedreht werden, ansonsten nichts schrauben oder verstellen. \todo{Diese durch Rändelschrauben ersetzen, um Verwechslungen zu vermeiden, und grün markieren (z.B. Plotterfolie um die Soll-Position) damit wir den gleichen Text wie beim Zing verwenden können}
+		\item \nurZing Die zwei grün markierten Rändelschrauben am Schneidetisch dürfen von Hand gedreht werden, ansonsten nichts verstellen. % Betätigen der grünen Schrauben ist nötig, um den Schneidetisch zu reinigen! Deshalb kann man es nicht ganz verbieten.
+		\item Im Brandfall nur mit CO\subscript{2}-Löscher, niemals mit Pulver-, Schaum- oder Wasserlöscher löschen (Verschmutzung, Stromschlaggefahr)! Der Feuerlöscher steht gegenüber vom Lasercutter beim Kassenterminal.
+		\item Keine Magnete in den Bauraum oder in die Nähe des Lasercutters bringen. (\nurLTT Einzige erlaubte Ausnahme ist die in der Gravureinheit enthaltene Magnethalterung. Mit dieser ist besondere Vorsicht erforderlich, damit nicht die magnetischen Positionsgeber an den Achsen beschädigt werden.)
+		\item \nurLTT \todo{weitere LTT-spezifische Hinweise aus dem Word-Dokument auf der Freigabe...}
+		\item \nurLTT Sofortiges Abschalten des Lasercutters geht nur mit dem Not-Aus-Schalter. \laserLTTPause fährt die nächsten Linien noch zu Ende. Dies braucht aber seine Zeit und funktioniert manchmal nicht.
 		\item \nurZing Es gibt hier keinen Not-Aus-Schalter! \laserZingStop  fährt die aktuelle Linie noch zu Ende. Sofortiges Abschalten des Lasercutters geht nur über den Kippschalter rechts unten am Gerät.
+		\item Sicherstellen, dass der Laserkopf sich in seiner Ebene komplett frei bewegen kann, ohne gegen Hindernisse (z.\,B. gegen das Material) zu stoßen.
+		\item Wenn der Laserkopf gegen etwas stößt, sofort Not-Aus betätigen und Betreuer informieren. Das Gerät muss außer Betrieb genommen werden (Netzstecker ziehen, Hinweiszettel anbringen) bis alle Achsen überprüft wurden ($\rightarrow$ S. \pageref{sec:wartung-ltt}). \emph{Auf keinen Fall vorher zum Test wieder einschalten}, weil dadurch noch viel mehr kaputtgeht.
+		\item \nurLTT Beim Autofokus immer auf den höchsten Punkt des Werkstücks fokussieren. (Es gibt nur etwa 4mm Sicherheitsabstand, bei größerem Fehler kommt es zu einer Kollision.)
 	\end{itemize}
 	
 	% Messing ist nicht verboten, auch wenn es nicht geht, denn dieser Laser hat einen Schutz gegen Reflektionen (Aussage des Zing-Technikers, auf explizite Frage, was passiert, wenn ich den Strahl 100% spiegle und in den Laser zurückwerfe, ähnliche-Aussage des LTT-Vertrieblers)
 	\subsection{Bei kleineren Flammen}
 	Eine \emph{kleinere} Flamme am Laserpunkt und leichter Geruch kann manchmal auftreten:
 	\begin{itemize}
-		\item Zum Pausieren \laserLTTPause (\nurZing \laserZingStop) drücken: Druckauftrag wird \emph{nach} dem Ende der aktuellen Linie pausiert. Bis zum Anhalten kann es unter Umständen lange dauern!
+		\item Zum Pausieren \laserLTTPause (\nurZing \laserZingStop) drücken. Bis zum Anhalten kann es unter Umständen lange dauern, da der Lasercutter erst noch die nächsten Linien zu Ende fährt!
 		\todo{\nurLTT manchmal reagiert der Laser auch bei Visicut nicht auf Pause, als hätte er den Tastendruck nicht mitbekommen, auch wenn es später die Möglichkeit zur Pause gäbe. Unklar, wann und wieso.}
 		\item Sicherstellen, dass die Absaugung angeschaltet ist und Air Assist (Druckluft bei der Linse) an ist.
 		\item Bei manchem Material lässt es sich nicht vermeiden und dann ist es auch nicht weiter schlimm.
@@ -130,7 +133,7 @@ minimum height=2em]
 		\nurLTT Oder auch den Not-Aus betätigen.
 		\item \textbf{Betreuer rufen}
 		\item Letzer Ausweg ist das Löschen mit dem CO\subscript{2}-Löscher in kurzen Sprühstößen. Ein Feuerlöscher befindet sich beim Kassenterminal gleich gegenüber vom Lasercutter, sowie am Durchgang zur Elektrowerkstatt.
-		\item Bei weiterer Eskalation die Feuerwehr rufen, anwesende Personen warnen und mit allen den Raum verlassen (Erstickungsgefahr durch CO\subscript{2} und durch Rauch) Gegebenfalls anweisungen der Feuerwehr beachten.
+		\item Bei weiterer Eskalation die Feuerwehr rufen, anwesende Personen warnen und mit allen den Raum verlassen --- Erstickungsgefahr durch CO\subscript{2} und durch Rauch!
 	\end{itemize}
 	
 	
@@ -140,12 +143,6 @@ minimum height=2em]
 	
 	Bild: Ein ausgebrannter Lasercutter des FabLab Leuven. Der Benutzer meinte, weil die Datei dreimal funktioniert hat, müsse man beim vierten mal nicht mehr dabeibleiben.
 	
-	\subsection{\nurLTT Eigenheiten und Marotten} %Vielleicht möchte man das für beide Laser formulieren?
-	Unser neuer Laser hat einige Rotienen, die bei Unwissenheit darüber zur Zerstörung des Gerätes führen können. Deshalb hier eine kleine Auflistung der zu beachtenen Punkte:
-	\begin{itemize}
-		\item Bevor das Geräte eingeschalten wird und während des Benutzens, muss sichergestellt sein, dass sich der Laserkopf in seiner Ebene komplett frei bewegen kann, ohne auf Hindernisse (zum Beispiel eingelegtes Lasermaterial) zu stoßen!
-		\item Bei der automatischen Fokuseinstellung ist darauf zu achten den höchsten Punkt der zu lasernen Fläche für den Fokus zu nutzen. Im Zeifelsfall jedoch die höchste Stelle des kompletten Werkstücks. (Der Laser erlaubt nur einen Fehler unter 4mm)
-	\end{itemize}
 	
 	
 	\vspace{5em}
@@ -167,8 +164,9 @@ minimum height=2em]
 		\itemCheck unbrennbares zum Gravieren: Metall, Glas, Keramik, Stein
 		\itemCheck dünne Lackschichten auf Metall (außer Teflonbeschichtung)
 		\itemCheck erlaubte Kunststoffe: Acrylglas (PMMA), PET (Overheadfolie, Bayer Vivak), Moosgummi (EVA-Schaum)
-		\itemCheck Holz, Pappe, Papier und ähnliche auf Holz basierende Werstoffe ohne giftige Zusätze (HDF, Hartholz, Sperrholz...)
-		\itemCheck "trockene" Nahrungsmittel, soweit bekannt wie zum Beispiel Äpfel (nur gravieren), Butterkeks ohne Schokolade, Brezen...
+		\itemCheck Papier, Pappe, Holz (auch Sperrholz, MDF, HDF und ähnliche Werkstoffe nur aus Holz und Leim)
+		\itemCheck Baumwolle, Leinen
+		\itemCheck \enquote{trockene} Nahrungsmittel, soweit bekannt, wie zum Beispiel Äpfel (nur gravieren), Butterkeks ohne Schokolade, Brezen, ...
 		\itemCheck PE Polyethylen: Schaumstoffe gehen gut, Platten schlecht laserbar aber trotzdem erlaubt
 		\itemCheck PS Polystyrol bis 1mm Dicke
 		\itemCheck PC Polycarbonat bis 1mm Dicke
@@ -364,7 +362,7 @@ minimum height=2em]
 	\section{Job ausführen}
 	
 	\subsection{Material}
-	Material gibt es im Lagerregal und in den Schubladen nebenan in der Elektrowerkstatt. Spezielle Verarbeitungshinweise finden sich im Wiki. Platten kann man einfach auf den Schneidetisch legen, entstehender Rauch wird dann nach unten und hinten abgesaugt. \nurLTT Nach dem Job einige Minuten warten, da unsere momentane Absauglösung nicht schnell genug ist um Abgse zuverlässig abzusaugen. An den Stellen, an denen der Laser auf das Gitter trifft, gibt es beim Schneiden Reflexionen, die z.B. bei durchsichtigem Acryl störende kleine Macken an Schnittkanten erzeugen können. Um dies zu umgehen, gibt es allerlei Tricks mit Abstandshaltern, die im Wiki dokumentiert sind.
+	Material gibt es im Lagerregal und in den Schubladen nebenan in der Elektrowerkstatt. Platten kann man einfach auf den Schneidetisch legen, entstehender Rauch wird dann nach unten und hinten abgesaugt. Nach dem Job kurz warten, damit verbleibende Dämpfe abgesaugt werden. An den Stellen, an denen der Laser auf das Gitter trifft, gibt es beim Schneiden Reflexionen, die z.B. bei durchsichtigem Acryl störende kleine Macken an Schnittkanten erzeugen können. Um dies zu umgehen, gibt es allerlei Tricks mit Abstandshaltern, die im Wiki dokumentiert sind.
 	
 	%TODO Schneidetisch, Befestigung bauen
 	
@@ -476,9 +474,14 @@ minimum height=2em]
 	
 	\subsection{Aufräumen}
 	\begin{itemize}
-		\item \textbf{nach jedem Job:} Werkstück und Reste aus dem Bauraum entfernen. Werkzeuge, Messmittel und Hilfsmittel wieder an ihren zugedachten Platz bringen.\\
-		\nurZing Wenn mehr als eine Handvoll Reste im Schneidetisch liegen, diesen ausleeren: Schneidetisch einfach herausnehmen (dazu müssen keine Schrauben gelöst werden). Vorderklappe des Schneidetischs entfernen (grüne Rändelschrauben lösen) und den Schneidetisch entleeren. Dann den Schneidetisch wieder zusammenbauen und so in den Lasercutter einsetzen, dass er fest sitzt.
-		\item \textbf{letzter Job} Vor dem Ausschalten des Lasers sichergehen, das der Bauraum frei von Restmaterialien oder Abgasen ist. Gegebenfalls die Lüftung etwas nachlaufen lassen. Absaugung ausschalten (siehe \ref{sec:absaugung}).
+		\item Werkstück und Reste aus dem Bauraum entfernen.
+		\item Werkzeug und Materialreste aufräumen, nicht beim Laser herumliegen lassen.
+		\item Wenn mehr als eine Handvoll Reste im Schneidetisch liegen, diesen ausleeren: 
+		
+		\nurLTT Deckel und vordere Tür des Lasercutters öffnen. Schublade aus dem Schneidetisch herausziehen und entleeren. Schublade wieder einschieben.
+		
+		\nurZing Schneidetisch einfach herausnehmen (dazu müssen keine Schrauben gelöst werden). Vorderklappe des Schneidetischs entfernen (grüne Rändelschrauben lösen) und den Schneidetisch entleeren. Dann den Schneidetisch wieder zusammenbauen und so in den Lasercutter einsetzen, dass er fest sitzt.
+		\item Vor dem Ausschalten des Lasers gegebenfalls die Lüftung etwas nachlaufen lassen.
 	\end{itemize}
 	
 	\pagebreak
@@ -561,19 +564,22 @@ minimum height=2em]
 	Bisher wurden gute Erfahrungen mit folgenden Seiten gemacht:
 	\begin{itemize}
 		\item \url{http://www.makercase.com/} \\
-		Wird als Vektorgrafik ausgegeben. Pfade sind so angeordnet, dass der Laser nahe beieinanderliegende Pfade nacheinander bearbeitet (gut, da ansonsten viel Zeit durch das Verfahren des Lasers verbraucht wird) \\
-		\textbf{Achtung!} Dimensionen werden immer als outside-Dimensionen berechnet. Auswahl \enquote{innerside} wird nicht berücksichtigt.
+		Wird als Vektorgrafik ausgegeben. Pfade sind so angeordnet, dass der Laser nahe beieinanderliegende Pfade nacheinander bearbeitet (gut, da ansonsten viel Zeit durch das Verfahren des Lasers verbraucht wird)
 		\item \url{http://boxdesigner.connectionlab.org/} \\
 		Wird als PDF ausgegeben. Allerdings ist (wenn nicht Visicut verwendet wird) die Abfolge der Pfade eher zufällig. Somit entstehen zusätzliche Zeiten durch das Verfahren des Lasers.
 	\end{itemize}
 	
 	
 	\subsection{Schnittmuster platzsparend anordnen}
-	\url{https://svgnest.com/} (im Browser) oder \url{https://deepnest.io/} (zum Installieren).
+	Je nach Design kann Platz gespart werden, wenn auszuschneidende Objekte
+	\enquote{ineinander} geschoben werden.
+	Diese mühselige Aufgabe kann von Programmen übernommen werden.
+	Beispiele sind \url{https://svgnest.com/} (im Browser) oder \url{https://deepnest.io/} (zum Installieren).
 	
 	
 	\newpage
 	\section{Hinweise für Betreuer: Wartung - LTT iLaser}
+	\label{sec:wartung-ltt}
 	In Härtefällen, z.B. wenn ein kompletter Auftrag fehlgeschlagen ist, können von einem Betreuer die Kosten für die Laufzeit gemindert oder erlassen werden.
 	
 	\textbf{Achtung! Mache folgendes nur, wenn du wirklich Ahnung hast -- Fehler können teuer werden!}
@@ -673,6 +679,9 @@ minimum height=2em]
 	
 	\section{\nurLTT Fehlerbehebung}
 	In diesem Abschnitt geht es um die Beseitigung häufiger Fehler. Wenn das Werkstück fehlgeschlagen ist, werden die Laserzeitkosten des Fehlschlags in der Regel erlassen. Material muss weiterhin bezahlt werden.
+	
+	
+	Das Wartungshandbuch des Lasercutters findet sich auf der Dateifreigabe unter \verb|1_FabLab/1_Geräte/Laser/LTT|. Die Anweisungen bitte ausführlich lesen und im Zweifelsfall nachfragen bevor du irgendwas aus Versehen kaputt machst.
 	
 	\todo{...}
 	
