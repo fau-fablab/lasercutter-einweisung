@@ -56,7 +56,11 @@ minimum height=2em]
 \newcommand{\laserZingStop}{\laserKnopf{Stop}}
 \newcommand{\laserZingReset}{\laserKnopf{Reset}}
 \newcommand{\laserLTTPause}{\laserKnopf{$\blacktriangleright\,\parallel$}} % TODO: schöneres Pause-Symbol suchen
+\newcommand{\laserLTTNextJob}{\laserKnopf{$\blacktriangleright\blacktriangleright$}}
+\newcommand{\laserLTTPreviousJob}{\laserKnopf{$\blacktriangleleft\blacktriangleleft$}}
 \newcommand{\laserLTTStop}{\laserKnopf{$\square$}}
+\newcommand{\laserLTTExit}{\laserKnopf{$\curvearrowleft$}} % Pfeil linksrum
+\newcommand{\laserLTTOkay}{\laserKnopf{$\checkmark$}}
 \newcommand{\laserJob}{\laserKnopf{Job}}
 \newcommand{\laserFocus}{\laserKnopf{Focus}}
 \newcommand{\laserPfeilRauf}{\laserKnopf{$\blacktriangle$}}
@@ -378,13 +382,26 @@ minimum height=2em]
 	Die Preise sind im Kassenterminal oder auch online (\url{https://brain.fablab.fau.de/build/pricelist/price_list-Laser.html}) verfügbar.
 	
 	\subsection{Fokus} \label{fokus}
+	Der Laserstrahl wird durch die Linse im Schlitten auf einen bestimmen Punkt fokussiert. Damit das Material richtig geschnitten wird, muss der Tisch auf den richtigen Abstand zur Linse gebracht werden.
+	
+	Vergewissere Dich, dass der Laser bereits eingeschaltet und an die Nullposition (hinten rechts) gefahren ist.
+	Öffne den Glasdeckel des Lasers.
+	Lege Dein Material vorsichtig auf den Wabentisch und richte es aus. Der Wabentisch ist sehr empfindlich. Stütze Dich nicht darauf ab und lege keine schweren Materialien auf den Tisch.
+	
 	\subsubsection{\nurLTT}
-	\textbf{WICHTIG! Achte zu jeder Zeit darauf, dass sich der Laserkopf in seiner XY-Ebene frei bewegen kann, ohne dabei auf irgendwas zu stoßen! Bewege deshalb den Tisch vorher weit genug nach unten.} \\
-	Um den Fokus an diesem Gerät einzustellen, hat der Hersteller eine hilfreiche Funktion eingebaut. Um diese zu nutzen, muss der Laserkopf vorher manuell mittels den Pfeiltasten die um das Haussymbol angeordnet sind auf die höchste Stelle der zu bearbeitenen Fläche bewegen. Bei gekrümmten Flächen sollte sichergestellt sein, das der Fokusabtaststift der rechts von der Laserlinse verbaut ist, über dem höchsten Punkt steht. Beachte dabei, dass der Laser nach dem Fokusieren über diesen vermeindlich höchsten Punkt maximal 4mm Freiraum hat, bevor es zu einem Crash kommt. Steht der Fokusabtaststift über der gewünschten Stelle, kann der Prozess gestartet werden. Dafür wird der Knopf mit dem Lupensymbol zwischen den Tasten für die Tischverstellung betätigt. \textbf{Für den gesammten Verlauf des Prozesses muss eine Hand über dem Not-Aus Schater breit stehen um das Gerät vor einem Crash zu stoppen!}  Nach erfolgreicher Fokuseinstellung fährt der Lasertisch auf den richtigen Fokusabstand und bleibt danach in dieser Position. Da nach ist unbedingt zu Prüfen, ob der Laserkopf beim Verfahren mit dem Lasermaterial kollidieren kann. Gegebenenfalls das Fokusieren wiederholen. \\
-	\textbf{Sollte der Laser gestoppt werden, nachdem dieser in eine Position gefahren ist, bei der Laserkopf nicht in XY-Richtung bewegt werden kann, muss vor erneutem Einschalten der Tisch per Hand heruntergefahren werden. Auf keinen Fall den Laser vorher einschalten!}
+	\textbf{Achte zu jeder Zeit darauf, dass sich der Laserkopf in seiner Ebene frei bewegen kann, ohne dabei gegen irgendwas zu stoßen!} Fahre den Tisch mit der Taste \laserKnopf{Table $\downarrow$} weit genug herunter, sodass sich der Laserkopf frei bewegen kann und nicht seitlich gegen das Material stößt. Du kannst den Laserkopf jetzt mit den Richtungstasten bewegen (rund um die Haus-Taste). Um den Laserkopf sehr schnell zu bewegen, gibt es auch die Tasten P1 (Position hinten rechts) oder P2 (Position mitte Lasertisch).
+	
+	Bewege den Laserkopf so, dass der Fokusstift (rechts am Laserkopf) über der höchsten Stelle des Materials steht. \textbf{Vorsicht bei unebenem Material:} Wähle unbedingt die höchste Stelle -- wenn das Material woanders mehr als ca. 3mm höher ist, wird es später zu einer Kollision kommen, weil der Laserkopf am Material hängen bleibt!
+	
+	Drücke nun die Taste \laserKnopf{Fokus (Lupe)}. Der Laser fragt auf dem Display nun: \laserDisplay{Are you sure? Yes / No}. Bestätige mit
+	\laserLTTOkay. Der Laser beginnt nun mit dem Fokussierungsvorgang. Bleibe mit der Hand an der Notaustaste, damit du gleich anhalten kannst, wenn etwas nicht in Ordnung ist und der Laser in den Tisch rumpelt. Der Laser fährt nun mit dem Fokusstift bis zum Material und dann wieder hoch.
+	
+	Wenn alles richtig ist, steht der Fokusstift jetzt etwa 5 Millimeter über dem Material und kann sich in der Ebene frei bewegen, ohne gegen irgendwas zu stoßen.
+	
+	\textbf{Sollte der Laser ausgeschaltet werden (auch Not-Aus) und dann in einer Position stehen, bei der Laserkopf nicht in der (XY-)Ebene frei bewegt werden kann, wende dich an einen Betreuer, dass vor erneutem Einschalten der Tisch per Hand heruntergefahren wird. Auf keinen Fall den Laser vorher einschalten, denn er fährt dann automatisch in die Home-Position!}
 	
 	\subsubsection{\nurZing}
-	Der Laserstrahl wird durch die Linse im Schlitten auf einen bestimmen Punkt fokusiert. Am Linsenschlitten ist deshalb eine Pendelfeder angebracht, mit der der Abstand zur Brennebene eingestellt werden kann. Dort wo das Pendel im herunter geklappten Zustand endet, ist der Laserstrahl fokusiert.
+	Am Linsenschlitten ist eine Pendelfeder angebracht, mit der der richtige Abstand zur Brennebene gemessen werden kann. Dort wo das Pendel im herunter geklappten Zustand endet, ist der Laserstrahl fokusiert.
 	
 	Dazu muss man \laserFocus drücken, das Pendel herunter klappen und dann die gewünschte Höhe mit \laserPfeilRauf/\laserPfeilRunter einstellen. Wenn man den Fokus an einem speziellen Punkt setzen möchte, kann man auch \laserZingXyAus wählen und dann den Kopf an diese Stelle schieben. Abschließen kann man den Vorgang mit \laserZingReset.
 	
@@ -444,7 +461,9 @@ minimum height=2em]
 	
 	\subsection{Job laden}
 	\subsubsection{\nurLTT}
-	\todo{JOB MENU beschreiben}
+	Der Laser wechselt nicht automatisch auf den neuesten Auftrag, du musst diesen erst auswählen.
+	
+	Wähle dazu im Display \laserLTTExit~ \laserDisplay{$\textcolor{gray}{\blacksquare}$ 1. WORK DISPLAY} \laserLTTOkay. Sende deine Datei und wähle diese im Display mit den Tasten \laserLTTPreviousJob und \laserLTTNextJob aus. Die zuletzt gesendete Datei hat die höchste Nummer, bereits ausgeführte Aufträge sind mit \texttt{*} markiert.
 	
 	\subsubsection{\nurZing}
 	Mit \laserJob zeigt man Dateiname und laufende Nummer des aktuellen Druckauftrags an. Bei angeschalteter Mittelpunkt-Definiton wird zusätzlich \texttt{*} hinter dem Dateinamen angezeigt. Wenn der neue Auftrag nicht im Display steht, \laserZingReset drücken. Eventuell musst du auch erst etwas warten.
@@ -455,11 +474,16 @@ minimum height=2em]
 	Wenn du dir unsicher bist, den Deckel öffnen, um einen Testlauf ohne Laser durchzuführen. (Lasercutter fährt den Pfad ab, doch er lasert nicht) Man sollte sich dabei nicht davon verunsichern lassen, dass der Laser beim Gravieren bis zu 3,5cm (\nurZing: etwa 5\,cm)links und rechts über das Gebiet hinausfährt, um abzubremsen und wieder in die andere Richtung zu beschleunigen.
 	
 	\subsubsection{\nurLTT}
-	\todo{Start/Pause/Reset mit \laserLTTPause \laserLTTStop beschreiben}
+	Start des Auftrags mit der Grünen Taste {Bild Grüne Taste}.
 	
 	Wenn der Lasercutter Unfug macht, im Zweifelsfall den Not-Aus-Schalter betätigen.
 	
 	\textbf{\underline{Bei brennbaren Materialien immer beim Lasercutter bleiben!}} Wenn der Auftrag abgeschlossen ist, piept der Lasercutter und zeigt die Laufzeit an.
+	
+	Falls der Laser nicht mehr weiter lasern soll, öffne den Glasdeckel des Lasers etwas. Der Laser fährt dann weiter. Bei Gefahr drücke die Notaustaste und rufe einen Betreuer.
+	
+	Wenn keine Eile besteht, kannst du den Auftrag auch pausieren, das braucht aber etwas und funktioniert manchmal nicht: Drücke 1x fest auf die Taste \laserLTTPause und warte ab. Manchmal fährt der Laser wieder in die Homeposition. Manchmal auch nicht. Im zweiten Fall ist es besser, Du wartest weiter ab.
+	Ist der Laser an seine Homeposition gefahren, musst Du nun noch die Taste {Bild Stop} drücken, damit der augenblickliche Auftrag zurückgesetzt wird. Jetzt ist der Laserauftrag abgebrochen.	
 	
 	\subsubsection{\nurZing}
 	Zum Starten auf \laserZingStart drücken (Finger weg aus dem Verfahrbereich des Laserarms!).
