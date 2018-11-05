@@ -98,8 +98,6 @@ minimum height=2em]
 	
 	Diese Einweisung erklärt die Lasercutter LTT iLaser 4000 (seit Sept. 2018 im FAU FabLab) und Epilog Zing (kleiner, Vorgänger, aus Platzmangel normalerweise nicht im FabLab).
 	
-	\todo{Achtung, die Erklärungen sind oft nur für den Zing und noch nicht für den neuen LTT! Daher ist es noch nicht möglich, eine Einweisung in den LTT-Laser zu erhalten. Sobald alles passt, bitte diesen Hinweis entfernen.}
-	
 	\section{Was du dir merken musst}
 	Den Inhalt dieses Kapitels musst du wissen, alles andere kannst du bei Bedarf nachlesen.
 	\subsection{Regeln und Hinweise}
@@ -108,16 +106,17 @@ minimum height=2em]
 		\item Ebenfalls nicht erlaubt sind leichtentzündliche oder gefährliche Dinge, wie z.B. Feuer\-zeuge (außer diese wurden noch nie befüllt). Wenn das Gehäuse nicht aus Metall ist, muss bei Handys der Akku herausgenommen werden.
 		\item Solange der Laser arbeitet, muss immer eine Person \emph{direkt} beim Lasercutter sein und zusehen. \footnote{Bei vollständig unbrennbaren Materialien wie Stein, Metall oder Glas (keinesfalls bei Plexiglas!) dürfen Betreuer für besonders lange Aufträge eine Ausnahme erlauben, wenn vorher alle brennbaren Reste aus dem Schneidetisch entleert wurden.}
 		\item Alle Arbeiten erfolgen eigenverantwortlich und auf eigenes Risiko. Das FabLab haftet nicht für Beschädigungen, auch nicht wenn dein schickes Handy beim Gravieren kaputt geht.
-		\item Die Schrauben zur Befestigung des Schneidetischs (Wabengitter) dürfen gedreht werden, ansonsten nichts schrauben oder verstellen. Das Aufstützen auf das Wabengitter ist nicht gestattet - ebenfalls das Ablegen von schweren Gegenständen ist untersagt. Beschädigungsgefahr! \\ \todo{Diese durch Rändelschrauben ersetzen, um Verwechslungen zu vermeiden, und grün markieren (z.B. Plotterfolie um die Soll-Position) damit wir den gleichen Text wie beim Zing verwenden können}
+		\item Die Schrauben zur Befestigung des Schneidetischs (Wabengitter) dürfen gedreht werden, ansonsten nichts schrauben oder verstellen. \footnote{\todo{}Diese durch Rändelschrauben ersetzen, um Verwechslungen zu vermeiden, und grün markieren (z.B. Plotterfolie um die Soll-Position) damit wir den gleichen Text wie beim Zing verwenden und die Einweisung somit vereinfachen können}
 		\item \nurZing Die zwei grün markierten Rändelschrauben am Schneidetisch dürfen von Hand gedreht werden, ansonsten nichts verstellen. % Betätigen der grünen Schrauben ist nötig, um den Schneidetisch zu reinigen! Deshalb kann man es nicht ganz verbieten.
+		\item Das Wabengitter ist empfindlich, daher: Nicht darauf abstützen und nichts schweres darauf stellen!
 		\item Im Brandfall nur mit CO\subscript{2}-Löscher, niemals mit Pulver-, Schaum- oder Wasserlöscher löschen (Verschmutzung, Stromschlaggefahr)! Der Feuerlöscher steht gegenüber vom Lasercutter beim Kassenterminal.
 		\item Keine Magnete in den Bauraum oder in die Nähe des Lasercutters bringen. (\nurLTT Einzige erlaubte Ausnahme ist die in der Gravureinheit enthaltene Magnethalterung. Mit dieser ist besondere Vorsicht erforderlich, damit nicht die magnetischen Positionsgeber (Lineardecoder) an den Achsen beschädigt werden.)
-		\item \nurLTT \todo{weitere LTT-spezifische Hinweise aus dem Word-Dokument auf der Freigabe...}
 		\item \nurLTT Sofortiges Abschalten des Lasercutters geht nur mit dem Not-Aus-Schalter. \laserLTTPause fährt die nächsten Linien noch zu Ende. Dies braucht aber seine Zeit und funktioniert manchmal nicht.
 		\item \nurZing Es gibt hier keinen Not-Aus-Schalter! \laserZingStop  fährt die aktuelle Linie noch zu Ende. Sofortiges Abschalten des Lasercutters geht nur über den Kippschalter rechts unten am Gerät.
 		\item Sicherstellen, dass der Laserkopf sich in seiner Ebene komplett frei bewegen kann, ohne gegen Hindernisse (z.\,B. gegen das Material) zu stoßen.
 		\item Wenn der Laserkopf gegen etwas stößt, sofort Not-Aus betätigen und Betreuer informieren. Das Gerät muss außer Betrieb genommen werden (Netzstecker ziehen, Hinweiszettel anbringen) bis alle Achsen überprüft wurden ($\rightarrow$ S. \pageref{sec:wartung-ltt}). \emph{Auf keinen Fall vorher zum Test wieder einschalten}, weil dadurch noch viel mehr kaputtgeht.
 		\item \nurLTT Beim Autofokus immer auf den höchsten Punkt des Werkstücks fokussieren. (Es gibt nur etwa 4mm Sicherheitsabstand, bei größerem Fehler kommt es zu einer Kollision.)
+		\item \nurLTT Für den Windows-Treiber sind unbedingt die Hinweise in Abschnitt \ref{sec:ltt-windows} zu beachten.
 	\end{itemize}
 	
 	% Messing ist nicht verboten, auch wenn es nicht geht, denn dieser Laser hat einen Schutz gegen Reflektionen (Aussage des Zing-Technikers, auf explizite Frage, was passiert, wenn ich den Strahl 100% spiegle und in den Laser zurückwerfe, ähnliche-Aussage des LTT-Vertrieblers)
@@ -125,7 +124,7 @@ minimum height=2em]
 	Eine \emph{kleinere} Flamme am Laserpunkt und leichter Geruch kann manchmal auftreten:
 	\begin{itemize}
 		\item Zum Pausieren \laserLTTPause (\nurZing \laserZingStop) drücken. Bis zum Anhalten kann es unter Umständen lange dauern, da der Lasercutter erst noch die nächsten Linien zu Ende fährt!
-		\todo{\nurLTT manchmal reagiert der Laser auch bei Visicut nicht auf Pause, als hätte er den Tastendruck nicht mitbekommen, auch wenn es später die Möglichkeit zur Pause gäbe. Unklar, wann und wieso.}
+		\nurLTT Manchmal reagiert der Laser auch garnicht nicht auf Pause, als hätte er den Tastendruck nicht mitbekommen, auch wenn es später die Möglichkeit zur Pause gäbe. \todo{Unklar, wann und wieso.}
 		\item Sicherstellen, dass die Absaugung angeschaltet ist und Air Assist (Druckluft bei der Linse) an ist.
 		\item Bei manchem Material lässt es sich nicht vermeiden und dann ist es auch nicht weiter schlimm.
 	\end{itemize}
@@ -302,10 +301,12 @@ minimum height=2em]
 	
 	
 	\subsection{Windows-Druckertreiber}
-	 \todo {} Nur von ws11 mit fufablab08 Nutzer!
 	
-	\subsubsection{LTT iLaser}
+	\subsubsection{LTT iLaser}\label{sec:ltt-windows}
 	Neben Visicut gibt es auch die kompliziertere Möglichkeit, den Lasercutter über einen Windows-Druckertreiber anzusprechen.
+	
+	
+	Achtung: Der Treiber darf nur von Rechner ws11 und nur mit fufablab08 Nutzer verwendet werden!
 	
 	\todo{LTT: Einschränkungen des Treibers - nur mit fufablab08 Nutzer verwenden!} 
 	\\(Nie zwei Leute/Fenster gleichzeitig bearbeiten, da sonst die Einstellungen überschrieben werden!) \\
