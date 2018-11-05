@@ -108,10 +108,10 @@ minimum height=2em]
 		\item Ebenfalls nicht erlaubt sind leichtentzündliche oder gefährliche Dinge, wie z.B. Feuer\-zeuge (außer diese wurden noch nie befüllt). Wenn das Gehäuse nicht aus Metall ist, muss bei Handys der Akku herausgenommen werden.
 		\item Solange der Laser arbeitet, muss immer eine Person \emph{direkt} beim Lasercutter sein und zusehen. \footnote{Bei vollständig unbrennbaren Materialien wie Stein, Metall oder Glas (keinesfalls bei Plexiglas!) dürfen Betreuer für besonders lange Aufträge eine Ausnahme erlauben, wenn vorher alle brennbaren Reste aus dem Schneidetisch entleert wurden.}
 		\item Alle Arbeiten erfolgen eigenverantwortlich und auf eigenes Risiko. Das FabLab haftet nicht für Beschädigungen, auch nicht wenn dein schickes Handy beim Gravieren kaputt geht.
-		\item Die Schrauben zur Befestigung des Schneidetischs (Wabengitter) dürfen gedreht werden, ansonsten nichts schrauben oder verstellen. \todo{Diese durch Rändelschrauben ersetzen, um Verwechslungen zu vermeiden, und grün markieren (z.B. Plotterfolie um die Soll-Position) damit wir den gleichen Text wie beim Zing verwenden können}
+		\item Die Schrauben zur Befestigung des Schneidetischs (Wabengitter) dürfen gedreht werden, ansonsten nichts schrauben oder verstellen. Das Aufstützen auf das Wabengitter ist nicht gestattet - ebenfalls das Ablegen von schweren Gegenständen ist untersagt. Beschädigungsgefahr! \\ \todo{Diese durch Rändelschrauben ersetzen, um Verwechslungen zu vermeiden, und grün markieren (z.B. Plotterfolie um die Soll-Position) damit wir den gleichen Text wie beim Zing verwenden können}
 		\item \nurZing Die zwei grün markierten Rändelschrauben am Schneidetisch dürfen von Hand gedreht werden, ansonsten nichts verstellen. % Betätigen der grünen Schrauben ist nötig, um den Schneidetisch zu reinigen! Deshalb kann man es nicht ganz verbieten.
 		\item Im Brandfall nur mit CO\subscript{2}-Löscher, niemals mit Pulver-, Schaum- oder Wasserlöscher löschen (Verschmutzung, Stromschlaggefahr)! Der Feuerlöscher steht gegenüber vom Lasercutter beim Kassenterminal.
-		\item Keine Magnete in den Bauraum oder in die Nähe des Lasercutters bringen. (\nurLTT Einzige erlaubte Ausnahme ist die in der Gravureinheit enthaltene Magnethalterung. Mit dieser ist besondere Vorsicht erforderlich, damit nicht die magnetischen Positionsgeber an den Achsen beschädigt werden.)
+		\item Keine Magnete in den Bauraum oder in die Nähe des Lasercutters bringen. (\nurLTT Einzige erlaubte Ausnahme ist die in der Gravureinheit enthaltene Magnethalterung. Mit dieser ist besondere Vorsicht erforderlich, damit nicht die magnetischen Positionsgeber (Lineardecoder) an den Achsen beschädigt werden.)
 		\item \nurLTT \todo{weitere LTT-spezifische Hinweise aus dem Word-Dokument auf der Freigabe...}
 		\item \nurLTT Sofortiges Abschalten des Lasercutters geht nur mit dem Not-Aus-Schalter. \laserLTTPause fährt die nächsten Linien noch zu Ende. Dies braucht aber seine Zeit und funktioniert manchmal nicht.
 		\item \nurZing Es gibt hier keinen Not-Aus-Schalter! \laserZingStop  fährt die aktuelle Linie noch zu Ende. Sofortiges Abschalten des Lasercutters geht nur über den Kippschalter rechts unten am Gerät.
@@ -277,9 +277,12 @@ minimum height=2em]
 	
 	\todo{Die Details sind noch für den Zing. Funktioniert aber genauso für den iLaser}
 	
-	Mit VisiCut kann man seine Vektorzeichnung auf einem Bild des eingelegten Materials platzieren. Dazu wird von einer Kammera, die an der Klappe des Lasercutters angebracht ist, ein Bild geschossen, das anhand der 4 Passermarken an den 4 Ecken der Arbeitsfläche des Lasers ausgerichtet und beschnitten wird. So können die Teile, die gelasert werden sollen, je nach Kalibrierung bis auf etwa 2mm genau am Bild ausgerichtet werden, was vor Allem bei Reststücken nützlich ist. Das Bild wird automatisch aktualisiert, es funktioniert nur wenn der Laserdeckel aufgeklappt ist.
+	Mit VisiCut kann man seine Vektorzeichnung auf einem Bild des eingelegten Materials platzieren. Dazu wird von einer Kamera, die an der Klappe des Lasercutters angebracht ist, ein Bild geschossen, das anhand der 4 Passermarken an den 4 Ecken der Arbeitsfläche des Lasers ausgerichtet und beschnitten wird. So können die Teile, die gelasert werden sollen, je nach Kalibrierung bis auf etwa 2mm genau am Bild ausgerichtet werden, was vor Allem bei Reststücken nützlich ist. Das Bild wird automatisch aktualisiert, es funktioniert nur wenn der Laserdeckel aufgeklappt ist.
+	
+	\nurLTT Es ist zu beachten, dass die Kamera noch ziemlich ungenau ist. Diese beziehen sich zur Zeit noch auf einige Millimeter Unsicherheit! Bitte richte dich am Besten an den Linealen am Rand des Wabengitters und z.B. VisiCut.
 	
 	\nurZing Vor dem Lasern ist noch zu beachten, dass der Laserkopf in den Nullpunkt des Lasercutters (links oben) zurückgefahren ist. Dazu drückt man am Laser die Taste \laserZingXyAus und danach \laserZingReset. Nach dem Start ist der Laserkopf automatisch im Maschinennullpunkt.
+	
 	
 	\subsubsection{Fehlerbehebung}
 	Sollte dies nicht funktionieren, könnten folgende Punkte hilfreich sein:
@@ -299,11 +302,15 @@ minimum height=2em]
 	
 	
 	\subsection{Windows-Druckertreiber}
+	 \todo {} Nur von ws11 mit fufablab08 Nutzer!
 	
 	\subsubsection{LTT iLaser}
 	Neben Visicut gibt es auch die kompliziertere Möglichkeit, den Lasercutter über einen Windows-Druckertreiber anzusprechen.
 	
-	\todo{LTT: Einschränkungen des Treibers - nur mit fufablab08 Nutzer verwenden!}
+	\todo{LTT: Einschränkungen des Treibers - nur mit fufablab08 Nutzer verwenden!} 
+	\\(Nie zwei Leute/Fenster gleichzeitig bearbeiten, da sonst die Einstellungen überschrieben werden!) \\
+	Geladene Einstellungen überprüfen - bitte bedenke, dass der manuelle Fokus auch Ärger bereiten kann. \\
+	Scheiden = 0,03 mm rot (RGB) (0,1 funktioniert nur manchmal!)
 	
 	\todo{...}
 	
@@ -312,9 +319,9 @@ minimum height=2em]
 	Neben Visicut gibt es auch die Möglichkeit, den Lasercutter über einen Windows-Druckertreiber (Epilog Engraver Win32 Zing) anzusprechen. Wenn es nicht bereits läuft, beim Steuerrechner auf dem Desktop \enquote{Wolfgang} %TODO wie heißt die Verknüpfung atm?
 	öffnen und etwas Geduld haben.
 	
-	Drucken kann man nur aus aus Adobe Reader 9 (Datei vorher nach PDF exportieren, geht gut für Inkscape) und Corel Draw (Import anderer Formate funktioniert nicht gescheit).  Das direkte Drucken aus anderen Programmen heraus, z.B. Inkscape, ist nicht möglich!
+	Drucken kann man nur aus Adobe Reader 9 (Datei vorher nach PDF exportieren, geht gut für Inkscape) und Corel Draw (Import anderer Formate funktioniert nicht gescheit).  Das direkte Drucken aus anderen Programmen heraus, z.B. Inkscape, ist nicht möglich!
 	
-	Die Datei mit Adobe Reader bzw.\  Corel Draw öffnen, die Freigabe ist unter Computer$\rightarrow$Z:\textbackslash \ zu finden. Bei Datei$\rightarrow$Drucken \textit{Epilog Engraver} auswählen und in den Druckereinstellungen alles auf das aktuelle Material einstellen:
+	Die Datei mit Adobe Reader bzw.\  Corel Draw öffnen, die Freigabe ist unter Computer$\rightarrow$Z:\textbackslash \ zu finden. Bei Datei$\rightarrow$Drucken \textit{Epilog Engraver} auswählen und in den Druckereinstellungen alles auf das aktuelle Material einstellen - wenn die Materialeinstellung bei Power auf 0 steht, frage einfach einen Betreuer:
 	
 	\textbf{Erprobte Einstellungen} können unter Erweitert geladen werden. Gute Startwerte findest du auch im Wiki (\url{http://fablab.fau.de/wiki/technik/lasercutter}). Bitte schreibe bei neuen Materialien auf, was du gewählt hast (auch die dpi-Einstellung), und ob die Werte gut funktioniert haben. Gut funktionierende Werte bitte unter aussagekräftigem Namen abspeichern, nicht funktionierende Voreinstellungen notieren und evtl.\  löschen.
 	
@@ -386,7 +393,7 @@ minimum height=2em]
 	
 	Vergewissere Dich, dass der Laser bereits eingeschaltet und an die Nullposition (hinten rechts) gefahren ist.
 	Öffne den Glasdeckel des Lasers.
-	Lege Dein Material vorsichtig auf den Wabentisch und richte es aus. Der Wabentisch ist sehr empfindlich. Stütze Dich nicht darauf ab und lege keine schweren Materialien auf den Tisch.
+	Lege Dein Material vorsichtig auf den Wabentisch und richte es aus. Der Wabentisch ist sehr empfindlich. Stütze Dich nicht darauf ab und lege keine schweren Materialien auf den Tisch. Achte immer darauf den Autofokus zu nutzen.
 	
 	\subsubsection{\nurLTT}
 	\textbf{Achte zu jeder Zeit darauf, dass sich der Laserkopf in seiner Ebene frei bewegen kann, ohne dabei gegen irgendwas zu stoßen!} Fahre den Tisch mit der Taste \laserKnopf{Table $\downarrow$} weit genug herunter, sodass sich der Laserkopf frei bewegen kann und nicht seitlich gegen das Material stößt. Du kannst den Laserkopf jetzt mit den Richtungstasten bewegen (rund um die Haus-Taste). Um den Laserkopf sehr schnell zu bewegen, gibt es auch die Tasten P1 (Position hinten rechts) oder P2 (Position mitte Lasertisch).
@@ -708,7 +715,10 @@ minimum height=2em]
 	Das Wartungshandbuch des Lasercutters findet sich auf der Dateifreigabe unter \verb|1_FabLab/1_Geräte/Laser/LTT|. Die Anweisungen bitte ausführlich lesen und im Zweifelsfall nachfragen bevor du irgendwas aus Versehen kaputt machst.
 	
 	\todo{...}
-	
+	\section{\nurLTT Experimentell}
+	In diesem Abschnitt geht es um die Rotationseinheit. Diese darf nur bei ausgeschaltenem Gerät eingebaut werden. Die Verwendung der Rotationseinheit ist nur mit Betreuer zulässig und derzeit funktioniert die Einheit nur mit CoralDraw.
+	Weitere Sonderfunktionen wie Stempel und Fokus verstellen, frage bitte einen Betreuer. Diese Punkte befinden sich zur Zeit noch in der Entwicklung. 
+	\\todo
 	
 	\section{\nurZing Fehlerbehebung}
 	In diesem Abschnitt geht es um die Beseitigung häufiger Fehler. Wenn das Werkstück fehlgeschlagen ist, werden die Laserzeitkosten des Fehlschlags in der Regel erlassen. Material muss weiterhin bezahlt werden.
@@ -719,8 +729,9 @@ minimum height=2em]
 		\item Liniendicke 0.1 \textbf{Pixel} bzw. Haarlinie (Corel)
 		\item Inkscape: Deckkraft 100\% (Objekt $\rightarrow$ Füllung und Kontur $\rightarrow$ Schieberegler ganz unten: Deckkraft)
 		\item Keine Transparenz (Alphakanal, Deckkraft) verwenden! Auch nicht in Farbverläufen.
-		\item Illustrator: Gruppen mit Zuschneidepfad machen oft Probleme; diese auflösen.
+		\item Illustrator: Gruppen mit Zuschneidepfad machen oft Probleme; diese auflösen. Achte auf deinen Farbmodus! Farbmodus auf Datei $\rightarrow$ Farbmodus $\rightarrow$ RGB
 		\item Richtiges Programm verwendet? Siehe Abschnitt \ref{ArbeitsablaufFlowchart} Arbeitsablauf
+		\item Corel: Fufablab08 Nutzer hat auf ws11 passende Standartwerte konfiguriert. \\Defaultwerte: Lineal y-Richtung: 600mm, RGB, Dokumentengröße: 1000mm x 600mm
 		\item PDFs werden beim Exportieren manchmal gerastert bzw. kaputtgemacht. Keinen PDF-Export aus Corel verwenden!
 	\end{itemize}
 	
