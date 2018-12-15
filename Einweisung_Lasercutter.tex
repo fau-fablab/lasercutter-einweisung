@@ -610,17 +610,6 @@ minimum height=2em]
 	
 	
 	\newpage
-	\section{Hinweise für Betreuer: Wartung - LTT iLaser}
-	\label{sec:wartung-ltt}
-	In Härtefällen, z.B. wenn ein kompletter Auftrag fehlgeschlagen ist, können von einem Betreuer die Kosten für die Laufzeit gemindert oder erlassen werden.
-	
-	\textbf{Achtung! Mache folgendes nur, wenn du wirklich Ahnung hast -- Fehler können teuer werden!}
-	
-	Normale Reinigung der Optik und Mechanik siehe Benutzerhandbuch des Herstellers. Problembehandlung siehe Wartungshandbuch des Herstellers. Beides liegt auf der Dateifreigabe unter Fablab / Geräte / Laser.
-	
-	\todo{...}
-	
-	\newpage
 	\section{Hinweise für Betreuer: Wartung - Epilog Zing}
 	
 	\textbf{Achtung! Mache folgendes nur, wenn du wirklich Ahnung hast -- Fehler können teuer werden!}
@@ -709,13 +698,66 @@ minimum height=2em]
 	
 	
 	
-	\section{\nurLTT Fehlerbehebung}
+	\section{\nurLTT Fehlerbehebung - nur für Betreuer}
 	In diesem Abschnitt geht es um die Beseitigung häufiger Fehler. Wenn das Werkstück fehlgeschlagen ist, werden die Laserzeitkosten des Fehlschlags in der Regel erlassen. Material muss weiterhin bezahlt werden.
 	
+	Informationen zur Wartung und ernsthaften Problemen siehe Abschnitt \ref{sec:wartung-ltt}.
 	
-	Das Wartungshandbuch des Lasercutters findet sich auf der Dateifreigabe unter \verb|1_FabLab/1_Geräte/Laser/LTT|. Die Anweisungen bitte ausführlich lesen und im Zweifelsfall nachfragen bevor du irgendwas aus Versehen kaputt machst.
 	
 	\todo{...}
+	
+	
+	\section{\nurLTT Wartung - nur für Betreuer}
+	\label{sec:wartung-ltt}
+	\textbf{Achtung! Mache folgendes nur, wenn du wirklich Ahnung hast -- Fehler können teuer werden!}
+
+	Die Achsen sind: X links-rechts, Y vor-hinter, Z für den Tisch.
+	
+	\subsection{Handbücher des Herstellers}
+	Normale Reinigung der Optik und Mechanik siehe Benutzerhandbuch des Herstellers. Problembehandlung siehe Wartungshandbuch des Herstellers. Beides liegt auf der Dateifreigabe unter Fablab / Geräte / Laser.
+	
+	\todo{...}
+	
+	\subsection{Riemenspannung / zittriges Schnittbild}
+	Bei zittrigem Schnittbild ist typischerweise der Riemen zu locker. Siehe Wartungshandbuch des Herstellers. Leider ist dieses ziemlich wirr.
+	
+	Wenn man lange genug im Wartungshandbuch sucht, findet man folgende Angabe: Der X-Riemen ist richtig gespannt, wenn er sich \enquote{in der Achsmitte ca. 1-1,5 cm von der Achse wegziehen lässt}. Nicht Übermäßig fest spannen. Y-Riemen muss 10 \% mehr Spannung haben als der X-Riemen (was auch immer das heißen soll). Zum Prüfen immer in die Mitte der Arbeitsfläche fahren (P2). 
+	
+
+	\subsection{Vorgehen nach (vermutlicher) Kollision}
+	Obacht, diese Aufzählung ist grob vereinfacht und sollte noch verbessert und detailliert werden. Bitte unbedingt auch die jeweiligen Abschnitte des Wartungshandbuchs lesen!
+
+	\begin{itemize}
+		\item Netzstecker (Kaltgerätekabel) ziehen!
+		\item Z-Achse prüfen: Sollte der Laser ausgeschaltet werden (auch Not-Aus) und dann in einer Position stehen, bei der Laserkopf nicht in der (XY-)Ebene frei bewegt werden kann, den Tisch vorher per Hand herunterfahren: Netzstecker ziehen (Kaltgerätekabel rechts an Laser), Wartungsklappe vorne unten mit Schlüssel öffnen, durch Schieben des Zahnriemens den Tisch hoch/runter bewegen. Ein Hinweiszettel am Boden des Gehäuses zeigt die nötige Bewegungsrichtung für das Herunterfahren des Tisches.
+		\item Fokusstift prüfen: Muss frei herunterfallen, wenn man ihn hochhebt, und darf nicht krumm o.\,ä. sein.
+		\item Rollen X/Y prüfen: 7 Rollen (2 links an linker Y-Achse, 2 rechts an rechter Y-Achse, 2 oben an X, 1 unten an X) müssen jeweils in der V-Nut im Aluprofil laufen. Siehe Bilder im Wartungshandbuch unter \enquote{5.1 Ausrichten der Achsen - Vorbereitende Maßnahmen}. Das ist nicht einfach zu sehen, man braucht normalerweise Lampe und Spiegel/Handykamera dafür.
+		
+		Wenn das nicht in Ordnung, ist die Achse ausgehängt und muss erst wieder eingehängt werden. Wenn dies nicht durch leichtes Wackeln von selber passiert, muss sie dazu teilweise demontiert werden. Siehe Wartungshandbuch unter \enquote{9. X-Achse ausgehängt}.
+		\item Die Rollen dürfen nicht frei in der Luft drehen, sondern sollen auf der Nut aufliegen. Das prüft man durch vorsichtiges Drehen mit der Hand. Richtig ist es, wenn sie sich nicht frei drehen lassen ohne dass sich der Wagen bewegt, bzw. man erst etwas kräftiger drehen muss bis sie merklich durchrutschen.
+		
+			Wenn sich eine der Y-Rollen frei dreht, dann ziemlich sicher die Ausrichtung der Achsen falsch. Bei der X-Achse kann sich die Rolle eigentlich nur dann frei drehen, wenn der Wagen nicht richtig eingehängt ist.
+		\item An diesem Punkt sollten die Achsen zumindest näherungsweise rechtwinklig zueinander sein (grob mit Geodreieck/Augenmaß schätzen), zumindest nicht merklich zueinander verdreht.
+		\item Die Lichtschranken der X- und Y-Achse prüfen, indem man von Hand die Achsen dort hin verschiebt und sicherstellt, dass das \enquote{Fähnchen} mittig in die Lichtschranke ragt. Beide Lichtschranken sitzen rechts hinten, die zweite etwas versteckt unterhalb der ersten. Siehe Wartungshandbuch unter \enquote{10. Sensoren der Parkposition prüfen}.
+		\item Laser wieder einschalten, prüfen dass Referenzfahrt beim Einschalten funktioniert.
+		\item Riemenspannung prüfen. (siehe vorher). Wenn diese nicht passt, sollte sie vor/während der Justierung der Rechtwinkligkeit korrigiert werden.)
+		\item Rechtwinkligkeit der Achsen prüfen: \todo{Das ist zur Zeit leider ein Riesensch...-Aufwand, wir brauchen dringend eine bessere Lösung. Mal den Hersteller nach dem Aluwinkel fragen, den er bei der Inbetriebnahme dabeihatte, oder doch die Z-Begrenzung so setzen dass sie bis zur unteren Tischplatte geht.} Hier der aktuelle Stand.
+			
+		Als Referenz dient das Lineal des Lasertischs (\textbf{nicht} der Wabentisch, sondern die Platte darunter). Dieses wurde vom Hersteller exakt rechtwinklig eingebaut \todo{ist das tatsächlich hundertprozentig so? Nachprüfen} und darf deshalb auch nicht umgeschraubt werden. Der rote Laserpointer soll beim Verfahren in X-Richtung auf der Linealkante von ganz links bis ganz rechts genau auf der Kante bleiben \todo{wie genau? welche Toleranz? -- wir nehmen mal ca 0.5mm an} und nicht nach vorne oder hinten wegwandern.
+		
+		Man kann aber den Tisch nicht soweit hochfahren, weil wir die Z-Achse so begrenzen, dass bei eingebautem Wabentisch man mit dem Fokusstift nicht viel tiefer als der Wabentisch fahren kann. Also muss man zunächst die Begrenzung der Z-Achse temporär entfernen, weil wir direkt auf der unteren Tischplatte \enquote{lasern} wollen. Dazu mal wieder Netzstecker ziehen, Wartungsklappe unten aufmachen, Fähnchen der Z-Achse mit 3mm Inbus aufschrauben und wegschieben, Wartungsklappe wieder zu. Strom an.
+		
+		Jetzt Lineal prüfen wie oben beschrieben. Wenn es nicht passt, siehe Wartungshandbuch \enquote{5.2 Rechtwinkligkeit der X- und Y-Achsen}.
+		
+		Nun die Z-Begrenzung wieder auf vorherigen Bereich: Tisch auf ungefähr die Höhe der vorherigen Z-Begrenzung fahren, wieder Netzstecker ziehen, Z-Begrenzung wieder einbauen: blauer Strich = Oberkante Fähnchen, sicherstellen dass das Fähnchen mittig in die Lichtschranke passt.
+		
+		Wartungsklappe zu und Strom an.
+		
+		\item Jetzt passt wieder alles.
+	\end{itemize}
+
+
+	
 	\section{\nurLTT Experimentell}
 	In diesem Abschnitt geht es um die Rotationseinheit. Diese darf nur bei ausgeschaltenem Gerät eingebaut werden. Die Verwendung der Rotationseinheit ist nur mit Betreuer zulässig und derzeit funktioniert die Einheit nur mit CoralDraw.
 	Weitere Sonderfunktionen wie Stempel und Fokus verstellen, frage bitte einen Betreuer. Diese Punkte befinden sich zur Zeit noch in der Entwicklung. 
