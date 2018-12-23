@@ -3,12 +3,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+% Um zum Text zu gelangen, einfach herunterscrollen (bzw. nach dem gewünschten Inhalt suchen.)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TeX-Pakete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\basedir}{fablab-document}
 \documentclass{\basedir/fablab-document}
 
 % \usepackage{fancybox} %ovale Boxen für Knöpfe - nicht mehr benötigt
 \usepackage{amssymb} % Symbole für Knöpfe
 \usepackage{subfigure,caption}
+\usepackage[ngerman]{cleveref} % \cref{label} für Verweise wie "Abbildung 6", "Kapitel 3.1"
 
 \usetikzlibrary{shapes,arrows} % für das flowchart
 
@@ -44,11 +50,19 @@ minimum height=2em]
 	\end{tikzpicture}
 }
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% diverse Befehle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\nurZing}{\emph{nur für Epilog Zing:} }
+\newcommand{\nurLTT}{\emph{nur für LTT iLaser:} }
 \renewcommand{\todo}[1]{\textbf{\color{red}{TODO: #1}}}
+\newcommand{\pfeil}{\ensuremath{\rightarrow}}
 
 
-%\newcommand{\laserKnopf}[1]{\,\Ovalbox{\fontsize{9pt}{9pt}\selectfont \textbf{#1}}\ }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Befehle für die Knöpfe,
+% z.B. \laserLTTStop für die Stop-Taste am LTT iLaser
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\laserKnopf}[1]{\knopf{laserknopf}{#1}}
 \newcommand{\laserZingXyAus}{\laserKnopf{X/Y aus}}
 \newcommand{\laserRoterLaser}{\laserKnopf{roter Laser}}
@@ -86,13 +100,13 @@ minimum height=2em]
 
 
 %VisiCut Buttons
-\newcommand{\button}[1]{\knopf{lueftungsknopf}{#1}} %TODO
+\newcommand{\button}[1]{\knopf{lueftungsknopf}{#1}}
 
-\newcommand{\pfeil}{\ensuremath{\rightarrow}}
 
-\newcommand{\nurZing}{\emph{nur für Epilog Zing:} }
-\newcommand{\nurLTT}{\emph{nur für LTT iLaser:} }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inhalt des Dokuments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 	\maketitle
 	
@@ -196,8 +210,6 @@ minimum height=2em]
 	\section{Datei erstellen}
 	Lege mit einem Vektorzeichenprogramm (Inkscape, Corel Draw, Adobe Illustrator) die Datei an. Je nach Programm unterscheidet sich das Vorgehen etwas:
 	
-	% TODO VisiCut + Illustrator/Corel beschreiben?
-	
 	\subsection{Inkscape + VisiCut (empfohlen)}
 	Wenn du Inkscape verwendest, wähle möglichst folgende Aufteilung, damit du es direkt in VisiCut weiterverarbeiten kannst.
 	
@@ -225,14 +237,16 @@ minimum height=2em]
 	
 	Dieses Vorgehen könnte in Zukunft einfacher werden, wenn ein Visicut-Plugin für Corel oder Illustrator fertigentwickelt wird. Wenn du daran mit entwickeln möchtest, um das Vorgehen genauso einfach zu machen wie bei Inkscape, melde dich bei uns.
 	
-	\subsection{Corel Draw, Adobe Illustrator, sonstiges + Windows-Druckertreiber}
-	Als Seitengröße sollten die Maße des Schneidtisches gewählt werden (1000 $\times$ 600~mm / \nurZing 609\,$\times$\,304~mm), da sonst Probleme auftreten können.
+	\subsection{Corel Draw, Adobe Illustrator, sonstiges + Windows-Druckertreiber} \label{sec:einstellungen-windowstreiber}
+	Als Seitengröße müssen die Maße des Schneidtisches gewählt werden (1000 $\times$ 600~mm / \nurZing 609\,$\times$\,304~mm), da sonst Probleme auftreten können.
 	
 	\textbf{Vektor (Schneiden)}: Zu schneidende Linien auf eine Linienbreite von höchstens 0,001 inch stellen (Inkscape: 0,1 px, Corel Draw: Haarline, Adobe Illustrator: 0,1 px, Vectorworks: 0,03 mm). Bei fertigen Zeichnungen aus dem Internet ist Vorsicht geboten, manchmal sind hinter gefüllten Flächen solche dünnen Linien versteckt, die dann durchgeschnitten werden.
 	
 	\textbf{Raster (Gravur)}: Alles, das keine dünne Vektorlinie ist (sicher ab 0,25mm / 0,008 inch), wird graviert, sowohl dicke Linien und Flächen als auch Pixelgrafiken (Fotos). Die Gravur erfolgt im Graustufenmodus, sodass hellere Flächen nur leicht graviert werden, schwarze Flächen jedoch vollständig.
 	
-	Dokument als PDF (oder Corel CDR) auf Windows-Freigabe ablegen. Beim Speichern einen aussagekräftigen Namen wählen, da dieser später auf dem Display erscheint. %Ist das noch nötig?
+	Beim Speichern einen aussagekräftigen Namen wählen, da dieser später auf dem Display erscheint.
+	
+	Corel: Auf dem Rechner ws11 sind unter Nutzer fufablab08 passende Standartwerte konfiguriert.
 	
 	\section{Job senden}
 	
@@ -250,13 +264,13 @@ minimum height=2em]
 	
 	Für jede Stärke von jedem Material speichert Visicut Lasereinstellungen. Größtenteils sind diese bereits auf sinnvolle Werte eingestellt. Prüfe diese aber unbedingt vorher auf Glaubwürdigkeit. 
 	
-	\textbf{Fokus}:
+	\textbf{Fokus}: Damit VisiCut den Fokus anpassen kann, muss es wissen wo anfangs der Fokus steht. Das Setzen des Fokus am Lasercutter wird später noch beschrieben (\cref{fokus}).
 	
 	\nurLTT Ändern des Fokus wird in Visicut noch nicht unterstützt. Der Fokus wird immer auf die Material-Oberseite gesetzt, dazu einfach den Autofokus ausführen.
 	
-	\nurZing Ein besonderes Feature ist, dass man den Fokus nicht verstellen muss, wenn man ihn auf die Grundplatte gesetzt hat, da VisiCut aus zu jedem Material den optimalen Fokus speichert und ihn automatisch anfährt. Dies kann man ausschalten, wenn man den Haken rechts bei \enquote{Fokus ist anfangs auf der Grundplatte...} heraus macht.
+	\nurZing  Normalerweise wird am Lasercutter der Fokus auf die Oberseite des Materials gesetzt, und dazu passend in VisiCut der Haken rechts bei \enquote{Fokus ist anfangs auf der Grundplatte...} \textbf{nicht} gesetzt.
 	
-	\textbf{Mapping}: Im Bereich Mapping kann man auswählen, wie entschieden werden soll, was geschnitten, graviert und markiert wird. Die Unterscheidung kann nach verschiedenen Kriterien erfolgen; standardmäßig wird nach Farbe entschieden: \enquote{schneide rot, graviere Rest, ignoriere blau, markiere grün}.
+	\textbf{Mapping (Zuordnung)}: Im Bereich Mapping kann man auswählen, wie entschieden werden soll, was geschnitten, graviert und markiert wird. Die Unterscheidung kann nach verschiedenen Kriterien erfolgen; standardmäßig wird nach Farbe entschieden: \enquote{schneide rot, graviere Rest, ignoriere blau, markiere grün}.
 	
 	%TODO Position
 	
@@ -268,7 +282,7 @@ minimum height=2em]
 	
 	Da VisiCut in Java programmiert ist, läuft es auf jedem Betriebsystem und man kann es auch bei sich auf den Laptop installieren. Es ist verfügbar unter \url{https://download.visicut.org/}.
 	
-	Die aktuell verwendet Konfiguration für VisiCut kannst du beim ersten Start oder unter \verb|Optionen| / \verb|empfohlene Einstellungen herunterladen...| herunterladen. (Sie ist unter \url{https://github.com/fau-fablab/visicut-settings} in das git Repo eingecheckt. Änderungen müssen dorthin gepusht werden.)
+	Die aktuell verwendet Konfiguration für VisiCut kannst du beim ersten Start oder unter \verb|Optionen| / \verb|empfohlene Einstellungen herunterladen...| herunterladen. (Sie ist unter \url{https://github.com/fau-fablab/visicut-settings} in das git Repo eingecheckt. Änderungen müssen dorthin gepusht werden. Im FabLab werden auf dem Linux-Rechner ws01 die Einstellungen gemeinsam weiterentwickelt und von dort aus ab und zu nach github veröffentlicht. Funktionierende Änderungen daher bitte auf ws01 abspeichern.)
 	
 	VisiCut ist Open Source und wird gemeinschaftlich weiterentwickelt. Wenn du Fehler findest und diese nachvollziehbar beschreiben kannst, freuen wir uns über einen Bericht an \href{mailto:kontakt@fablab.fau.de}{kontakt@fablab.fau.de} oder noch besser direkt auf github unter \url{https://github.com/t-oster/visicut/issues}.
 	
@@ -295,7 +309,7 @@ minimum height=2em]
 		& Die Lichtverhältnisse sind zu schlecht, als dass der Kontrast zw. den weißen und schwarzen Stellen groß genug für die Mustererkennung wäre	& Schalte die Deckenbeleuchtung an oder aus\\ \cline{2-3}
 		& VisiCam läuft nicht														& Frage einen Betreuer, dass er den Dienst auf der ws01 startet \\ \hline
 		\multirow{2}{0.333\textwidth}{Der Laser schneidet nicht da, \\ wo er sollte}	& \nurZing War der Laser in seinem Nullpunkt und nicht links oben auf der Arbeitsfläche?	& \nurZing drücke am Laser \laserZingXyAus und \laserZingReset \\ \cline{2-3}
-		& VisiCam ist verkalibriert &	Frage einen Betreuer, oder führe das Kalibrierungsprogramm in VisiCut durch \\ \hline
+		& VisiCam ist verkalibriert &	Wenn du nicht an Rechner ws01 sitzt, lade aktuellere Einstellungen herunter (Optionen - empfohlene Einstellungen - Erlangen). Wenn das nichts bringt, muss auf ws01 Kalibrierungsprogramm in VisiCut durchgeführt und dann die Einstellungen veröffentlicht werden (Betreuer/Admins fragen).  \\ \hline
 		
 	\end{tabularx}
 	
@@ -310,17 +324,16 @@ minimum height=2em]
 	
 	\todo{LTT: Einschränkungen des Treibers - nur mit fufablab08 Nutzer verwenden!} 
 	\\(Nie zwei Leute/Fenster gleichzeitig bearbeiten, da sonst die Einstellungen überschrieben werden!) \\
-	Geladene Einstellungen überprüfen - bitte bedenke, dass der manuelle Fokus auch Ärger bereiten kann. \\
+	Geladene Einstellungen überprüfen - bedenke dass ein falsch gesetzter Fokus Ärger bereiten kann. \\
 	Scheiden = 0,03 mm rot (RGB) (0,1 funktioniert nur manchmal!)
 	
 	\todo{...}
 	
 	\subsubsection{Epilog Zing}
 	
-	Neben Visicut gibt es auch die Möglichkeit, den Lasercutter über einen Windows-Druckertreiber (Epilog Engraver Win32 Zing) anzusprechen. Wenn es nicht bereits läuft, beim Steuerrechner auf dem Desktop \enquote{Wolfgang} %TODO wie heißt die Verknüpfung atm?
-	öffnen und etwas Geduld haben.
+	Neben Visicut gibt es auch die Möglichkeit, den Lasercutter über einen Windows-Druckertreiber (Epilog Engraver Win32 Zing) anzusprechen.
 	
-	Drucken kann man nur aus Adobe Reader 9 (Datei vorher nach PDF exportieren, geht gut für Inkscape) und Corel Draw (Import anderer Formate funktioniert nicht gescheit).  Das direkte Drucken aus anderen Programmen heraus, z.B. Inkscape, ist nicht möglich!
+	Drucken kann man nur aus Adobe Reader (Datei vorher nach PDF exportieren, geht gut für Inkscape) und Corel Draw (Import anderer Formate funktioniert nicht gescheit).  Das direkte Drucken aus anderen Programmen heraus, z.B. Inkscape, ist nicht möglich!
 	
 	Die Datei mit Adobe Reader bzw.\  Corel Draw öffnen, die Freigabe ist unter Computer$\rightarrow$Z:\textbackslash \ zu finden. Bei Datei$\rightarrow$Drucken \textit{Epilog Engraver} auswählen und in den Druckereinstellungen alles auf das aktuelle Material einstellen - wenn die Materialeinstellung bei Power auf 0 steht, frage einfach einen Betreuer:
 	
@@ -374,9 +387,9 @@ minimum height=2em]
 	\section{Job ausführen}
 	
 	\subsection{Material}
-	Material gibt es im Lagerregal und in den Schubladen nebenan in der Elektrowerkstatt. Platten kann man einfach auf den Schneidetisch legen, entstehender Rauch wird dann nach unten und hinten abgesaugt. Nach dem Job kurz warten, damit verbleibende Dämpfe abgesaugt werden. An den Stellen, an denen der Laser auf das Gitter trifft, gibt es beim Schneiden Reflexionen, die z.B. bei durchsichtigem Acryl störende kleine Macken an Schnittkanten erzeugen können. Um dies zu umgehen, gibt es allerlei Tricks mit Abstandshaltern, die im Wiki dokumentiert sind.
+	Material gibt es im Lagerregal und in den Schubladen nebenan in der Elektrowerkstatt. Platten kann man einfach auf den Schneidetisch legen, entstehender Rauch wird dann nach unten und hinten abgesaugt. Nach dem Job kurz warten, damit verbleibende Dämpfe abgesaugt werden. 
 	
-	%TODO Schneidetisch, Befestigung bauen
+	(An den Stellen, an denen der Laser auf das Gitter trifft, gibt es beim Schneiden Reflexionen, die z.B. bei durchsichtigem Acryl störende kleine Macken an Schnittkanten erzeugen können. Um dies zu umgehen, kann man Abstandshalter unterlegen, muss dann aber aufpassen dass diese richtig platziert sind und nicht brennen.)
 	
 	\subsection{Bezahlung}
 	\label{sec:bezahlung}
@@ -408,7 +421,7 @@ minimum height=2em]
 	
 	\textbf{Sollte der Laser ausgeschaltet werden (auch Not-Aus) und dann in einer Position stehen, bei der Laserkopf nicht in der (XY-)Ebene frei bewegt werden kann, wende dich an einen Betreuer, dass vor erneutem Einschalten der Tisch per Hand heruntergefahren wird. Auf keinen Fall den Laser vorher einschalten, denn er fährt dann automatisch in die Home-Position!}
 	
-	\subsubsection{\nurZing}
+	\subsubsection{\nurZing} \label{fokus-zing}
 	Am Linsenschlitten ist eine Pendelfeder angebracht, mit der der richtige Abstand zur Brennebene gemessen werden kann. Dort wo das Pendel im herunter geklappten Zustand endet, ist der Laserstrahl fokusiert.
 	
 	Dazu muss man \laserFocus drücken, das Pendel herunter klappen und dann die gewünschte Höhe mit \laserPfeilRauf/\laserPfeilRunter einstellen. Wenn man den Fokus an einem speziellen Punkt setzen möchte, kann man auch \laserZingXyAus wählen und dann den Kopf an diese Stelle schieben. Abschließen kann man den Vorgang mit \laserZingReset.
@@ -696,15 +709,34 @@ minimum height=2em]
 	
 	Details dazu stehen im Handbuch.
 	
-	
-	
-	\section{\nurLTT Fehlerbehebung - nur für Betreuer}
+	\section{häufige Fehler}
+	\label{sec:fehler-allgemein}
 	In diesem Abschnitt geht es um die Beseitigung häufiger Fehler. Wenn das Werkstück fehlgeschlagen ist, werden die Laserzeitkosten des Fehlschlags in der Regel erlassen. Material muss weiterhin bezahlt werden.
 	
+	Hinweise speziell für LTT bzw. Zing Lasercutter finden sich in den nachfolgenden Abschnitten. Ebenso Hinweise zur Wartung für Betreuer.
+	
+	\subsection{Windowstreiber}
+	\subsubsection{Objekt wird nicht geschnitten, sondern graviert}
+	\begin{itemize}
+		\item Einstellungen im Programm richtig gemacht? Siehe \cref{sec:einstellungen-windowstreiber}.
+		\item Richtiges Programm verwendet? Siehe Abschnitt \ref{ArbeitsablaufFlowchart} Arbeitsablauf
+		\item Liniendicke 0.1 \textbf{Pixel} bzw. Haarlinie (Corel)
+		\item Inkscape: Deckkraft 100\% (Objekt $\rightarrow$ Füllung und Kontur $\rightarrow$ Schieberegler ganz unten: Deckkraft)
+		\item Keine Transparenz (Alphakanal, Deckkraft) verwenden! Auch nicht in Farbverläufen.
+		\item Illustrator: Gruppen mit Zuschneidepfad machen oft Probleme; diese auflösen.
+		\item Achte auf deinen Farbmodus! Farbmodus auf Datei $\rightarrow$ Farbmodus $\rightarrow$ RGB
+		\item PDFs werden beim Exportieren manchmal gerastert bzw. kaputtgemacht. Keinen PDF-Export aus Corel verwenden!
+	\end{itemize}
+	
+	\section{\nurLTT Fehlerbehebung - nur für Betreuer}
+	In diesem Abschnitt geht es um die Beseitigung häufiger Fehler speziell beim LTT Laser.
 	Informationen zur Wartung und ernsthaften Problemen siehe Abschnitt \ref{sec:wartung-ltt}.
 	
 	
-	\todo{...}
+	\subsection{Unerwünschte Gravur am Rand}
+	Wenn rechts und links von einer Gravur auch dunkle Stellen graviert werden, ist die \enquote{Tickle Power} zu hoch eingestellt. Das ist die Leistung, die bei ausgeschaltetem Laser zum \enquote{Vorglühen} der Laserröhre verwendet wird. In Rücksprache mit dem Hersteller sollte diese dann verringert werden. (Stand Dezember 2018: Frequenz von 20 auf 18 kHz verringert).
+	
+	Zu hohe Tickle Power führt auch dafür, dass bei ausgeschaltetem Laser trotzdem Linien auf das Material markiert werden.
 	
 	
 	\section{\nurLTT Wartung - nur für Betreuer}
@@ -764,21 +796,9 @@ minimum height=2em]
 	\\todo
 	
 	\section{\nurZing Fehlerbehebung}
-	In diesem Abschnitt geht es um die Beseitigung häufiger Fehler. Wenn das Werkstück fehlgeschlagen ist, werden die Laserzeitkosten des Fehlschlags in der Regel erlassen. Material muss weiterhin bezahlt werden.
+	In diesem Abschnitt stehen Hinweise zu häufigen Fehlern speziell für den Epilog Zing. Siehe auch \cref{sec:fehler-allgemein} für allgemeine Hinweise.
 	
-	\subsection{Windows-Druckertreiber}
-	\subsubsection{Objekt wird nicht geschnitten, sondern graviert}
-	\begin{itemize}
-		\item Liniendicke 0.1 \textbf{Pixel} bzw. Haarlinie (Corel)
-		\item Inkscape: Deckkraft 100\% (Objekt $\rightarrow$ Füllung und Kontur $\rightarrow$ Schieberegler ganz unten: Deckkraft)
-		\item Keine Transparenz (Alphakanal, Deckkraft) verwenden! Auch nicht in Farbverläufen.
-		\item Illustrator: Gruppen mit Zuschneidepfad machen oft Probleme; diese auflösen. Achte auf deinen Farbmodus! Farbmodus auf Datei $\rightarrow$ Farbmodus $\rightarrow$ RGB
-		\item Richtiges Programm verwendet? Siehe Abschnitt \ref{ArbeitsablaufFlowchart} Arbeitsablauf
-		\item Corel: Fufablab08 Nutzer hat auf ws11 passende Standartwerte konfiguriert. \\Defaultwerte: Lineal y-Richtung: 600mm, RGB, Dokumentengröße: 1000mm x 600mm
-		\item PDFs werden beim Exportieren manchmal gerastert bzw. kaputtgemacht. Keinen PDF-Export aus Corel verwenden!
-	\end{itemize}
-	
-	
+	\subsection{Windows-Druckertreiber}	
 	\subsubsection{Probleme mit 1000dpi}
 	Verwendet man die Einstellung 1000dpi können Fehler auftreten. Meist hängt der Druckjob ewig fest oder die Data-Leuchte geht nicht mehr aus. Dieses Problem lässt sich nur durch Neustarten aller Geräte lösen. Also zuerst die VM neustarten, dann den Lasercutter. Der Druckjob muss erneut geschickt werden. Jetzt sollten entweder 500dpi genutzt werden oder VisiCut.
 	
