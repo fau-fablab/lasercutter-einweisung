@@ -127,7 +127,7 @@ minimum height=2em]
 		\item \nurLTT Sofortiges Abschalten des Lasercutters geht nur mit dem Not-Aus-Schalter. \laserLTTPause fährt die nächsten Linien noch zu Ende. Dies braucht aber seine Zeit und funktioniert manchmal nicht.
 		\item \nurZing Es gibt hier keinen Not-Aus-Schalter! \laserZingStop  fährt die aktuelle Linie noch zu Ende. Sofortiges Abschalten des Lasercutters geht nur über den Kippschalter rechts unten am Gerät.
 		\item Sicherstellen, dass der Laserkopf sich in seiner Ebene komplett frei bewegen kann, ohne gegen Hindernisse (z.\,B. gegen das Material) zu stoßen.
-		\item Wenn der Laserkopf gegen etwas stößt, sofort Not-Aus betätigen und Betreuer informieren. Das Gerät muss außer Betrieb genommen werden (Netzstecker ziehen, Hinweiszettel anbringen) bis alle Achsen überprüft wurden ($\rightarrow$ S. \pageref{sec:wartung-ltt}). \emph{Auf keinen Fall vorher zum Test wieder einschalten}, weil dadurch noch viel mehr kaputtgeht.
+		\item Wenn der Laserkopf gegen etwas stößt, sofort Not-Aus betätigen und Betreuer informieren. Das Gerät muss außer Betrieb genommen werden (Netzstecker ziehen, Hinweiszettel anbringen) bis alle Achsen überprüft wurden ($\rightarrow$ S. \pageref{sec:wartung-ltt:kollision}). \emph{Auf keinen Fall vorher zum Test wieder einschalten}, weil dadurch hoher Sachschaden entstehen kann.
 		\item \nurLTT Beim Autofokus immer auf den höchsten Punkt des Werkstücks fokussieren. (Es gibt nur etwa 4mm Sicherheitsabstand, bei größerem Fehler kommt es zu einer Kollision.)
 		\item \nurLTT Für den Windows-Treiber sind unbedingt die Hinweise in Abschnitt \ref{sec:ltt-windows} zu beachten.
 	\end{itemize}
@@ -290,12 +290,10 @@ minimum height=2em]
 	VisiCut ist Open Source und wird gemeinschaftlich weiterentwickelt. Wenn du Fehler findest und diese nachvollziehbar beschreiben kannst, freuen wir uns über einen Bericht an \href{mailto:kontakt@fablab.fau.de}{kontakt@fablab.fau.de} oder noch besser direkt auf github unter \url{https://github.com/t-oster/visicut/issues}.
 	
 	\subsubsection{Kamera} \label{kamera}
-	
-	\todo{Die Details sind noch für den Zing. Funktioniert aber genauso für den iLaser}
-	
+
 	Mit VisiCut kann man seine Vektorzeichnung auf einem Bild des eingelegten Materials platzieren. Dazu wird von einer Kamera, die an der Klappe des Lasercutters angebracht ist, ein Bild geschossen, das anhand der 4 Passermarken an den 4 Ecken der Arbeitsfläche des Lasers ausgerichtet und beschnitten wird. So können die Teile, die gelasert werden sollen, je nach Kalibrierung bis auf etwa 2mm genau am Bild ausgerichtet werden, was vor Allem bei Reststücken nützlich ist. Das Bild wird automatisch aktualisiert, es funktioniert nur wenn der Laserdeckel aufgeklappt ist.
 	
-	\nurLTT Es ist zu beachten, dass die Kamera noch ziemlich ungenau ist. Diese beziehen sich zur Zeit noch auf einige Millimeter Unsicherheit! Bitte richte dich am Besten an den Linealen am Rand des Wabengitters und z.B. VisiCut.
+	\nurLTT Es ist zu beachten, dass die Kamera noch ziemlich ungenau ist, 5-10mm Unsicherheit sind möglich! Für eine sehr genaue Ausrichtung richte dich besser nach den Linealen am Rand des Wabengitters und in VisiCut.
 	
 	\nurZing Vor dem Lasern ist noch zu beachten, dass der Laserkopf in den Nullpunkt des Lasercutters (links oben) zurückgefahren ist. Dazu drückt man am Laser die Taste \laserZingXyAus und danach \laserZingReset. Nach dem Start ist der Laserkopf automatisch im Maschinennullpunkt.
 	
@@ -308,11 +306,11 @@ minimum height=2em]
 	\begin{tabularx}{\textwidth}{|X|X|X|}
 		\hline
 		Problem		 										& mögliche Ursache															& mögliche Lösung \\ \hline \hline
-		\multirow{3}{0.333\textwidth}{Das Bild wird nicht aktualisiert}	& Es wurden trotz mehrmaligen Versuchens nicht alle Passermarken erkannt	& Vergewissere dich, dass keine Marke überdeckt ist, sondern alle von der Kammera gut erkannt werden können \\ \cline{2-3}
+		\multirow{3}{0.333\textwidth}{Das Bild wird nicht aktualisiert}	& Es wurden trotz mehrmaligen Versuchens nicht alle Passermarken erkannt	& Deckel ganz öffnen. Vergewissere dich, dass keine Marke überdeckt ist, sondern alle von der Kammera gut erkannt werden können. Eventuell ist die Kamera verdreht. \\ \cline{2-3}
 		& Die Lichtverhältnisse sind zu schlecht, als dass der Kontrast zw. den weißen und schwarzen Stellen groß genug für die Mustererkennung wäre	& Schalte die Deckenbeleuchtung an oder aus\\ \cline{2-3}
 		& VisiCam läuft nicht														& Frage einen Betreuer, dass er den Dienst auf der ws01 startet \\ \hline
 		\multirow{2}{0.333\textwidth}{Der Laser schneidet nicht da, \\ wo er sollte}	& \nurZing War der Laser in seinem Nullpunkt und nicht links oben auf der Arbeitsfläche?	& \nurZing drücke am Laser \laserZingXyAus und \laserZingReset \\ \cline{2-3}
-		& VisiCam ist verkalibriert &	Wenn du nicht an Rechner ws01 sitzt, lade aktuellere Einstellungen herunter (Optionen - empfohlene Einstellungen - Erlangen). Wenn das nichts bringt, muss auf ws01 Kalibrierungsprogramm in VisiCut durchgeführt und dann die Einstellungen veröffentlicht werden (Betreuer/Admins fragen).  \\ \hline
+		& VisiCam ist verkalibriert &	Wenn du nicht an Rechner ws01 sitzt, lade aktuellere Einstellungen herunter (Optionen - empfohlene Einstellungen - Erlangen). Wenn das nichts bringt, muss auf ws01 das Kalibrierungsprogramm in VisiCut durchgeführt und dann die Einstellungen veröffentlicht werden (Betreuer/Admins fragen).  \\ \hline
 		
 	\end{tabularx}
 	
@@ -320,13 +318,12 @@ minimum height=2em]
 	\subsection{Windows-Druckertreiber}
 	
 	\subsubsection{LTT iLaser}\label{sec:ltt-windows}
-	Neben Visicut gibt es auch die kompliziertere Möglichkeit, den Lasercutter über einen Windows-Druckertreiber anzusprechen.
+	Neben Visicut gibt es auch die kompliziertere Möglichkeit, den Lasercutter über einen Windows-Druckertreiber anzusprechen. Wenn möglich, verwende lieber Visicut.
 	
 	
 	Achtung: Der Treiber darf nur von Rechner ws11 und nur mit fufablab08 Nutzer verwendet werden!
 	
-	\todo{LTT: Einschränkungen des Treibers - nur mit fufablab08 Nutzer verwenden!} 
-	\\(Nie zwei Leute/Fenster gleichzeitig bearbeiten, da sonst die Einstellungen überschrieben werden!) \\
+	Achtung: Nie zwei Leute/Fenster gleichzeitig bearbeiten, da sonst die Einstellungen überschrieben werden! \\
 	Geladene Einstellungen überprüfen - bedenke dass ein falsch gesetzter Fokus Ärger bereiten kann. \\
 	Scheiden = 0,03 mm rot (RGB) (0,1 funktioniert nur manchmal!)
 	
@@ -495,7 +492,7 @@ minimum height=2em]
 	Die Data-Leuchte muss ausgegangen sein, bevor man startet. Ansonsten sind die Daten noch nicht vollständig übertragen.
 	
 	\subsection{Ausführen}
-	Wenn du dir unsicher bist, den Deckel öffnen, um einen Testlauf ohne Laser durchzuführen. (Lasercutter fährt den Pfad ab, doch er lasert nicht) Man sollte sich dabei nicht davon verunsichern lassen, dass der Laser beim Gravieren bis zu 3,5cm (\nurZing: etwa 5\,cm)links und rechts über das Gebiet hinausfährt, um abzubremsen und wieder in die andere Richtung zu beschleunigen.
+	Wenn du dir unsicher bist, den Deckel öffnen, um einen Testlauf ohne Laser durchzuführen. (Lasercutter fährt den Pfad ab, doch er lasert nicht) Man sollte sich dabei nicht davon verunsichern lassen, dass der Laser beim Gravieren bis zu 3,5cm (\nurZing: etwa 5\,cm) links und rechts über das Gebiet hinausfährt, um abzubremsen und wieder in die andere Richtung zu beschleunigen.
 	
 	\subsubsection{\nurLTT}
 	Start des Auftrags mit der Grünen Taste {Bild Grüne Taste}.
@@ -753,12 +750,14 @@ minimum height=2em]
 	
 	\todo{...}
 	
-	\subsection{Riemenspannung / zittriges Schnittbild}
-	Bei zittrigem Schnittbild ist typischerweise der Riemen zu locker. Siehe Wartungshandbuch des Herstellers. Leider ist dieses ziemlich wirr.
+	\subsection{wöchentlich: Führungen putzen}
+	Die X-Achse hat 3 Laufrollen - 1 oben und 2 unten. Die zwei Y-Achsen haben jeweils 2 Rollen. Die Rollen laufen in Führungsrillen in einem Aluprofil.
 	
-	Wenn man lange genug im Wartungshandbuch sucht, findet man folgende Angabe: Der X-Riemen ist richtig gespannt, wenn er sich \enquote{in der Achsmitte ca. 1-1,5 cm von der Achse wegziehen lässt}. Nicht Übermäßig fest spannen. Y-Riemen muss 10 \% mehr Spannung haben als der X-Riemen (was auch immer das heißen soll). Zum Prüfen immer in die Mitte der Arbeitsfläche fahren (P2). 
+	Alle Rollen mit weichem Tuch abwischen. Es darf kein Alkohol o.ä. verwendet werden, dieser macht die Rollen spröde.
 	
-	\subsection{Optik putzen}
+	Alle Führungsrillen (am Laserkopf oben und unten, Y ganz links, Y ganz rechts) mit Tuch und ggf. Spiritus abwischen. Es darf kein Spiritus an die Rollen gelangen!
+	
+	\subsection{wöchentlich: Optik putzen}
 	
 	Linsen reinigen:
 	\begin{itemize}
@@ -789,52 +788,96 @@ minimum height=2em]
 		\item Nach Wartungshandbuch Kapitel 4.6 (S. 16) vorgehen: Abdeckung laut Wartungshandbuch öffnen und kontrollieren ob Spiegel und Einkoppelspiegel sauber sind, NICHT verstellen.
 	\end{itemize}
 
+	
+\subsection{wöchentlich: Ansauglüfter der Laser-Elektronik säubern}
+	Der Lasercutter hat vier Ansaugfilter - zwei unten, zwei hinten. Staubsauger auf niedrigste Stufe stellen und mit etwas Abstand (!) die Filter aussaugen. Es besteht die Gefahr, dass man versehentlich den Filter einsaugt - ein Reservefilter (G2 Grobfilter, Amazon) findet sich im Gehäuse des Lasercutters unten.
+	
+	Normalerweise reicht das. Wenn man trotzdem von innen an die Filter und Lüfter rankommen will:
+	\begin{itemize}
+		\item Stecker ziehen!
+		\item Seitenklappe unten mit Schlüssel aus der Betreuerschublade öffnen
+		\item Lüfterfilter reinigen, wenn sich diese zusetzten verdreckt der Laser auch unten beschleunigt, da er sich dreckige Luft zum kühlen einzieht.
+	\end{itemize}
+	
+\subsection{ab und zu: Riemenspannung / zittriges Schnittbild}
+	Zu schwache Riemenspannung führt dazu, das das Schnittbild zittrig wird. Außerdem kann dann bei Crash einer der der Y-Riemen durchrutschen, sodass die X-Achse dann schief läuft. Zu starke Riemenspannung hingegen führt zu überhöhtem Verschleiß und letztlich einem gerissenen Riemen.
+	
+	Zum Prüfen der Riemenspannung immer in die Mitte der Arbeitsfläche fahren (P2).
+	
+	\paragraph{Korrekte Riemenspannung der Y-Achse (links und rechts):} Bei mäßigem Druck (ca. 2\,kg) gegen die Y-Achse links/rechts (nahe an den Laufrollen mit denen sie an der Führung läuft, nicht zuweit oben in Z) soll sie sich um nicht mehr als ca 1mm bewegen.
+	
+	\paragraph{Korrekte Riemenspannung der X-Achse:} Wenn man lange genug im Wartungshandbuch sucht, findet man folgende Angabe: Der X-Riemen ist richtig gespannt, wenn er sich \enquote{in der Achsmitte ca. 1-1,5 cm von der Achse wegziehen lässt}. Nicht Übermäßig fest spannen. Y-Riemen muss 10 \% mehr Spannung haben als der X-Riemen.
 
-\subsection{Lüfter der Laser-Elektronik säubern}
-\begin{itemize}
-	\item Stecker ziehen!
-	\item Seitenklappe unten mit Schlüssel aus der Betreuerschublade öffnen
-	\item Lüfterfilter reinigen, wenn sich diese zusetzten verdreckt der Laser auch unten beschleunigt, da er sich dreckige Luft zum kühlen einzieht.
-\end{itemize}
+\subsection{Ausrichtung der Optik prüfen (bei schlechter Leistung, obwohl sonst alles stimmt)}
+Ziel ist, dass die Position des Laserstrahls an jedem einzelnen Spiegeln gleich bleibt, egal wie man die X- und Y-Achse bewegt. Toleranz entlang Y-Achse: Bei über 0,5mm sollte man nachjustieren, besser ist deutlich weniger. Toleranz entlang X ggf. etwas größer.
 
-	\subsection{Vorgehen nach (vermutlicher) Kollision}
-	Obacht, diese Aufzählung ist grob vereinfacht und sollte noch verbessert und detailliert werden. Bitte unbedingt auch die jeweiligen Abschnitte des Wartungshandbuchs lesen!
+Es gibt ein Fadenkreuz, das an die Position der Linse eingesetzt wird. Dieses wird aus Kassenzettelpapier ausgelasert. Die Datei liegt in fablab-data/Maschinen/Novograv (LTT) iLaser 4000/.
+
+Alles weitere steht im Wartungshandbuch.
+
+Wenn die Ausrichtung nicht stimmt, kann auch 
+
+\subsection{Vorgehen nach (vermutlicher) Kollision} \label{sec:wartung-ltt:kollision}
+	Obacht, diese Aufzählung ist vereinfacht und sollte noch verbessert und detailliert werden. Bitte unbedingt auch die jeweiligen Abschnitte des Wartungshandbuchs lesen!
+
+Siehe auch die Fotos unter fablab-data/Maschinen/Novograv (LTT) iLaser 4000/Fotos Wartung 2019-04-11/ .
 
 	\begin{itemize}
 		\item Netzstecker (Kaltgerätekabel) ziehen!
 		\item Z-Achse prüfen: Sollte der Laser ausgeschaltet werden (auch Not-Aus) und dann in einer Position stehen, bei der Laserkopf nicht in der (XY-)Ebene frei bewegt werden kann, den Tisch vorher per Hand herunterfahren: Netzstecker ziehen (Kaltgerätekabel rechts an Laser), Wartungsklappe vorne unten mit Schlüssel öffnen, durch Schieben des Zahnriemens den Tisch hoch/runter bewegen. Ein Hinweiszettel am Boden des Gehäuses zeigt die nötige Bewegungsrichtung für das Herunterfahren des Tisches.
-		\item Fokusstift prüfen: Muss frei herunterfallen, wenn man ihn hochhebt, und darf nicht krumm o.\,ä. sein.
+		\item Fokusstift prüfen: Muss frei herunterfallen, wenn man ihn hochhebt, und darf nicht krumm o.\,ä. sein. Etwas Spiel der Fokusstifthalterung ist normal, diese ist relativ lose am Laserwagen befestigt.
 		\item Rollen X/Y prüfen: 7 Rollen (2 links an linker Y-Achse, 2 rechts an rechter Y-Achse, 2 oben an X, 1 unten an X) müssen jeweils in der V-Nut im Aluprofil laufen. Siehe Bilder im Wartungshandbuch unter \enquote{5.1 Ausrichten der Achsen - Vorbereitende Maßnahmen}. Das ist nicht einfach zu sehen, man braucht normalerweise Lampe und Spiegel/Handykamera dafür.
 		
 		Wenn das nicht in Ordnung, ist die Achse ausgehängt und muss erst wieder eingehängt werden. Wenn dies nicht durch leichtes Wackeln von selber passiert, muss sie dazu teilweise demontiert werden. Siehe Wartungshandbuch unter \enquote{9. X-Achse ausgehängt}.
-		\item Die Rollen dürfen nicht frei in der Luft drehen, sondern sollen auf der Nut aufliegen. Das prüft man durch vorsichtiges Drehen mit der Hand. Richtig ist es, wenn sie sich nicht frei drehen lassen ohne dass sich der Wagen bewegt, bzw. man erst etwas kräftiger drehen muss bis sie merklich durchrutschen.
+		\item Die Rollen dürfen nicht frei in der Luft drehen, sondern sollen auf der Nut aufliegen. Das prüft man durch vorsichtiges Drehen mit der Hand. Richtig ist es, wenn sie sich nicht frei drehen lassen ohne dass sich der Wagen bewegt, bzw. man erst etwas kräftiger drehen muss bis sie merklich durchrutschen. 	Bei allen Rollen einer Achse soll das ungefähr gleich sein.
 		
-			Wenn sich eine der Y-Rollen frei dreht, dann ziemlich sicher die Ausrichtung der Achsen falsch. Bei der X-Achse kann sich die Rolle eigentlich nur dann frei drehen, wenn der Wagen nicht richtig eingehängt ist.
+		Wenn sich eine der Y-Rollen frei dreht, dann ziemlich sicher die Ausrichtung der Achsen falsch. Bei der X-Achse kann sich die Rolle eigentlich nur dann frei drehen, wenn der Wagen nicht richtig eingehängt ist.
+		
+
 		\item An diesem Punkt sollten die Achsen zumindest näherungsweise rechtwinklig zueinander sein (grob mit Geodreieck/Augenmaß schätzen), zumindest nicht merklich zueinander verdreht.
-		\item Die Lichtschranken der X- und Y-Achse prüfen, indem man von Hand die Achsen dort hin verschiebt und sicherstellt, dass das \enquote{Fähnchen} mittig in die Lichtschranke ragt. Beide Lichtschranken sitzen rechts hinten, die zweite etwas versteckt unterhalb der ersten. Siehe Wartungshandbuch unter \enquote{10. Sensoren der Parkposition prüfen}.
+		\item Die Lichtschranken der X- und Y-Achse prüfen. Zunächst sicherstellen, dass diese festgeschraubt und nicht lose oder abgebrochen sind. Dann von Hand die X-/Y-Achsen dort hin verschieben und sicherstellen, dass das \enquote{Fähnchen} mittig in die Lichtschranke ragt. Beide Lichtschranken sitzen rechts hinten, die zweite etwas versteckt unterhalb der ersten. Siehe Wartungshandbuch unter \enquote{10. Sensoren der Parkposition prüfen}.
 		\item Laser wieder einschalten, prüfen dass Referenzfahrt beim Einschalten funktioniert.
-		\item Riemenspannung prüfen. (siehe vorher). Wenn diese nicht passt, sollte sie vor/während der Justierung der Rechtwinkligkeit korrigiert werden.)
-		\item Rechtwinkligkeit der Achsen prüfen: \todo{Das ist zur Zeit leider ein Riesensch...-Aufwand, wir brauchen dringend eine bessere Lösung. Mal den Hersteller nach dem Aluwinkel fragen, den er bei der Inbetriebnahme dabeihatte, oder doch die Z-Begrenzung so setzen dass sie bis zur unteren Tischplatte geht.} Hier der aktuelle Stand.
-			
-		Als Referenz dient das Lineal des Lasertischs (\textbf{nicht} der Wabentisch, sondern die Platte darunter). Dieses wurde vom Hersteller exakt rechtwinklig eingebaut \todo{ist das tatsächlich hundertprozentig so? Nachprüfen} und darf deshalb auch nicht umgeschraubt werden. Der rote Laserpointer soll beim Verfahren in X-Richtung auf der Linealkante von ganz links bis ganz rechts genau auf der Kante bleiben \todo{wie genau? welche Toleranz? -- wir nehmen mal ca 0.5mm an} und nicht nach vorne oder hinten wegwandern.
+		\item Riemenspannung prüfen. (siehe vorher). Wenn diese nicht passt, sollte sie vor/während der Justierung der Rechtwinkligkeit korrigiert werden.
+		\item Rechtwinkligkeit der Achsen prüfen: Das ist leider zur Zeit ein relativ hoher Aufwand, weil die Z-Begrenzung verstellt werden muss. Durch eine andere Konstruktion der Unterlegteile (siehe später) könnte man das umgehen. Hier der aktuelle Stand.
 		
-		Man kann aber den Tisch nicht soweit hochfahren, weil wir die Z-Achse so begrenzen, dass bei eingebautem Wabentisch man mit dem Fokusstift nicht viel tiefer als der Wabentisch fahren kann. Also muss man zunächst die Begrenzung der Z-Achse temporär entfernen, weil wir direkt auf der unteren Tischplatte \enquote{lasern} wollen. Dazu mal wieder Netzstecker ziehen, Wartungsklappe unten aufmachen, Fähnchen der Z-Achse mit 3mm Inbus aufschrauben und wegschieben, Wartungsklappe wieder zu. Strom an.
+		Die Lineale am Wabentisch oder der Grundplatte gelten \emph{nicht} als Referenz, sie können schief zur Achse sein. (Dies ist im Wartungshandbuch falsch beschrieben!) Das einzige was gilt sind die bei etwa Y=54.2mm auf der Grundplatte (unter dem Wabentisch) eingeritzten Linien. Diese wurden vom Service genau achsparallel eingeritzt, genau senkrecht zur linken Y-Achse, welche als Referenz dient.
 		
-		Jetzt Lineal prüfen wie oben beschrieben. Wenn es nicht passt, siehe Wartungshandbuch \enquote{5.2 Rechtwinkligkeit der X- und Y-Achsen}.
+		Man kann aber den Tisch nicht weit genug hochfahren, um zu testen ob der Laser zu dieser Linie passt, weil wir die Z-Achse so begrenzen, dass bei eingebautem Wabentisch man mit dem Fokusstift nicht viel tiefer als der Wabentisch fahren kann. Also muss man zunächst die Begrenzung der Z-Achse temporär entfernen, weil wir direkt auf der unteren Tischplatte \enquote{lasern} wollen. Dazu mal wieder Netzstecker ziehen, Wartungsklappe unten aufmachen, Fähnchen der Z-Achse mit 3mm Inbus aufschrauben und abnehmen, Wartungsklappe wieder zu. Strom an.
 		
-		Nun die Z-Begrenzung wieder auf vorherigen Bereich: Tisch auf ungefähr die Höhe der vorherigen Z-Begrenzung fahren, wieder Netzstecker ziehen, Z-Begrenzung wieder einbauen: blauer Strich = Oberkante Fähnchen, sicherstellen dass das Fähnchen mittig in die Lichtschranke passt.
+		Der rote Laserpointer soll beim Verfahren in X-Richtung auf der Referenzmarkierung von ganz links bis ganz rechts genau auf der Markierung bleiben und nicht nach vorne oder hinten wegwandern (Toleranz ca 0.5mm). Wenn das nicht so ist, stimmt entweder die Optik-Ausrichtung oder die Achsausrichtung oder beides nicht.
+		
+		\item Wenn die Prüfung nicht gut ausfällt, Rechtwinkligkeit der Achsen korrigieren:
+		
+		Achtung, das im Wartungshandbuch unter \enquote{5.2 Rechtwinkligkeit der X- und Y-Achsen} beschriebene Vorgehen ist problematisch - es funktioniert nur wenn die Optik hunderprozentig korrekt ausgerichtet und das Lineal achsparallel ist, und die Optik kann man nur ausrichten, wenn die Achse bereits korrekt ausgerichtet wurde. Da beißt sich die Katze also in den Schwanz.
+		
+		Besser ist es, rein mechanisch die Rechtwinkligkeit der Achse zu justieren. Benötigt werden hierzu ein rechtwinkliges Alublech (Ein entsprechend beschriftetes lagert in der E-Werkstatt unter dem Plotter-PC-Bildschirm), zwei ca. 40mm dicke Unterlegwinkel (\todo{noch zu fertigen, siehe Fotos fablab-data/Maschinen/Novograv (LTT) iLaser 4000/Fotos Wartung 2019-04-11/ } und \url{https://cad.onshape.com/documents/bccee6264ce702916cd9ce98/w/eebe4988cdecfe89ec7acab5} ), sowie ein ebenso dicker Unterlegklotz.
+		
+		Gerät ausschalten. Vorgehen wie im Wartungshandbuch unter 5.2 beschrieben, aber die Rechtwinkligkeit nicht anhand des Laserpunkts, sondern nach der folgenden Art bestimmen: Klemmkupplung zwischen linker und rechter Y-Achse lösen. Das Aluprofil der linken Y-Achse dient als Referenz. An dieses wird das rechtwinklige Alublech angelegt und dann gegen die X-Achse geschoben, sodass sich diese passend rechtwinklig schiebt. Damit die Verbindung der X- und Y-Achse dem Blech nicht im Weg ist, werden dabei Unterlegwinkel vor die X-Achse gelegt. (siehe Fotos fablab-data/Maschinen/Novograv (LTT) iLaser 4000/Fotos Wartung 2019-04-11/ ). 
+		
+		\item Nun die Z-Begrenzung wieder auf vorherigen Bereich: Tisch auf ungefähr die Höhe der vorherigen Z-Begrenzung fahren, wieder Netzstecker ziehen, Z-Begrenzung wieder einbauen: blauer Strich = Oberkante Fähnchen, sicherstellen dass das Fähnchen mittig in die Lichtschranke passt. (Die Höhe der Begrenzung ist knapp unter der Wabentisch-Höhe gewählt, dass man beim Fokussieren nicht tief im Wabentisch steckenbleiben kann, aber noch problemlos ein dünnes Blatt Papier fokussieren kann.)
 		
 		Wartungsklappe zu und Strom an.
 		
 		\item Jetzt passt wieder alles.
 	\end{itemize}
 
+\subsection{Fokus-Abstand ändern (sollte nie nötig sein)}
+	Es sollte nie nötig sein, den Fokus-Abstand nachzukalibrieren, außer am Lasersystem wird grundlegend etwas geändert (z.\,B. anderer Linsentyp).
+	
+	Der Linsenhalter hat drei \glqq Stockwerke\grqq, je 0.5 Zoll (12.5mm) voneinander entfernt. Um etwas mehr Sicherheitsabstand zwischen Fokusstift und Material zu haben als ursprünglich vom Hersteller vorgesehen, nutzen wir eine 3-Zoll-Linse im oberen Halter. Theoretisch könnte man stattdessen auch die 2-Zoll-Linse im unteren einbauen, doch dafür ist das Loch in der \glqq Düse\grqq (Kegel) zu eng und der Strahl würde beschnitten.
+	
+	Verkleinert man den Parameter \glqq focusoffset\grqq in der Firmware (i4000adv.cfg), erhöht das den Abstand, den der Laser nach dem Fokussieren hochfährt. Bedeutung: in Zoll, kleinerer Wert = größerer Abstand! Dafür die auf der CF-Karte liegende Datei bearbeiten und Laser wieder einschalten. Der Wert von focusoffset ist speziell auf die 3-Zoll-Linse angepasst. Die 2-Zoll-Linse ist nun nicht mehr nutzbar (außer man fokussiert von Hand ca 8 mm näher als der Autofokus).
+	
+	Durch die 3-Zoll-Linse ist die nutzbare Leistung etwas geringer (Acryl 3mm XT ohne Schutzfolie gerade so durchschneiden: Speed 12 mit 3 Zoll statt 14 mit 2 Zoll).
+	
+	Mögliche Verbesserung für die Zukunft: 2-Zoll-Linse in unteren Halter einbauen, Fokusoffset neu kalibrieren, das braucht aber eine modifizierte \glqq Düse\grqq (Kegel) da sonst der Strahl abgeschnitten wird
+	
 
 	
 	\section{\nurLTT Experimentell}
 	In diesem Abschnitt geht es um die Rotationseinheit. Diese darf nur bei ausgeschaltenem Gerät eingebaut werden. Die Verwendung der Rotationseinheit ist nur mit Betreuer zulässig und derzeit funktioniert die Einheit nur mit CoralDraw.
 	Weitere Sonderfunktionen wie Stempel und Fokus verstellen, frage bitte einen Betreuer. Diese Punkte befinden sich zur Zeit noch in der Entwicklung. 
-	\\todo
+	\todo{}
 	
 	\section{\nurZing Fehlerbehebung}
 	In diesem Abschnitt stehen Hinweise zu häufigen Fehlern speziell für den Epilog Zing. Siehe auch \cref{sec:fehler-allgemein} für allgemeine Hinweise.
@@ -867,7 +910,7 @@ minimum height=2em]
 	Zum Testen wird VisiCut gestartet und ein spezielles LaserScript geladen: Datei \pfeil Beispiele \pfeil vordefiniert \pfeil LaserScript \pfeil Focustest und auf \enquote{Papier 80g, alles cut} gestellt.
 	Als nächste muss ein A3 Blatt Papier im Querformat (oder 2x A4 nebeneinander) eingelegt und auf die Materialoberseite fokussiert werden.
 	
-	Das Script testet auf dem Papier verschiedene Fokusabstände und wenn der Fokus so wie eingestellt stimmt, sollte der dünnste, präzieseste Schnitt bei Höhe 0 vorliegen.
+	Das Script testet auf dem Papier verschiedene Fokusabstände und wenn der Fokus so wie eingestellt stimmt, sollte der dünnste, präziseste Schnitt bei Höhe 0 vorliegen.
 	
 	
 	\subsubsection{Material wird in einer Ecke nicht durchtrennt}
