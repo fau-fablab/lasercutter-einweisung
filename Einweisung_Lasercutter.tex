@@ -808,14 +808,24 @@ minimum height=2em]
 	
 	\paragraph{Korrekte Riemenspannung der X-Achse:} Wenn man lange genug im Wartungshandbuch sucht, findet man folgende Angabe: Der X-Riemen ist richtig gespannt, wenn er sich \enquote{in der Achsmitte ca. 1-1,5 cm von der Achse wegziehen lässt}. Nicht Übermäßig fest spannen. Y-Riemen muss 10 \% mehr Spannung haben als der X-Riemen.
 
+\subsection{Laserleistung prüfen (bei Bedarf)}
+3mm Acryl XT ohne Schutzfolie sollte bei Speed 10-11, Power 100, gerade noch durchgeschnitten werden (fällt von selber oder mit sehr leichtem Klopfen noch raus). Dies soll in allen Ecken des Lasercutters der Fall sein (meist ist es unten rechts um 1 Speed-Einheit schlechter). Ein Vergleichsmuster liegt in der Kiste mit Wartungsmaterial.
+
+Ein Stück Acryl 3mm XT (XT hat bessere Dickentoleranzen als GS, XT ist an blauer Schutzfolie zu erkennen) einlegen und Autofokus ausführen.
+
+Zum Testen wird VisiCut gestartet und ein spezielles LaserScript geladen, das Rechtecke mit verschiedenen Geschwindigkeiten schneidet: Datei \pfeil Beispiele \pfeil vordefiniert \pfeil LaserScript \pfeil Speedtest. Bei den Abfragen dann Maximum Speed 13, Minimum Speed 7, Step 1 eingeben und auf \enquote{Acryl, alles cut} stellen. Wenn beim Senden nochmal die Abfrage nach Speed-Werten kommt, erneut die vorherigen Werte eingeben.
+
+
+
+
 \subsection{Ausrichtung der Optik prüfen (bei schlechter Leistung, obwohl sonst alles stimmt)}
 Ziel ist, dass die Position des Laserstrahls an jedem einzelnen Spiegeln gleich bleibt, egal wie man die X- und Y-Achse bewegt. Toleranz entlang Y-Achse: Bei über 0,5mm sollte man nachjustieren, besser ist deutlich weniger. Toleranz entlang X ggf. etwas größer.
 
-Es gibt ein Fadenkreuz, das an die Position der Linse eingesetzt wird. Dieses wird aus Kassenzettelpapier ausgelasert. Die Datei liegt in fablab-data/Maschinen/Novograv (LTT) iLaser 4000/.
+Wenn die Ausrichtung nicht stimmt, kann das auch an einer falsch ausgerichteten X-Achse liegen! Siehe Notizen im nächsten Abschnitt zum Thema Kollision.
+
+Es gibt ein Fadenkreuz, das an die Position der Linse eingesetzt wird. Dieses wird aus Kassenzettelpapier ausgelasert. Die Datei liegt in fablab-data/Maschinen/Novograv (LTT) iLaser 4000/. Die Position des Laserpunkts darauf sollte sich nicht mehr als ca. 2mm verändern, besser deutlich weniger. Mittigkeit des Laserpunkts sollte unter ca. 3mm sein, besser deutlich weniger.
 
 Alles weitere steht im Wartungshandbuch.
-
-Wenn die Ausrichtung nicht stimmt, kann auch 
 
 \subsection{Vorgehen nach (vermutlicher) Kollision} \label{sec:wartung-ltt:kollision}
 	Obacht, diese Aufzählung ist vereinfacht und sollte noch verbessert und detailliert werden. Bitte unbedingt auch die jeweiligen Abschnitte des Wartungshandbuchs lesen!
