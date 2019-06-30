@@ -122,7 +122,7 @@ minimum height=2em]
 		\item Alle Arbeiten erfolgen eigenverantwortlich und auf eigenes Risiko. Das FabLab haftet nicht für Beschädigungen, auch nicht wenn dein schickes Handy beim Gravieren kaputt geht.
 		\item Nichts schrauben, nichts verstellen. Einzige Ausnahme sind die grünen Schrauben des Schneidetischs. % Betätigen der grünen Schrauben ist nötig, um den Schneidetisch zu reinigen! Deshalb kann man es nicht ganz verbieten.
 		\item Das Wabengitter ist empfindlich, daher: Nicht darauf abstützen und nichts schweres darauf stellen!
-		\item Im Brandfall nur mit CO\subscript{2}-Löscher, niemals mit Pulver-, Schaum- oder Wasserlöscher löschen (Verschmutzung, Stromschlaggefahr)! Der Feuerlöscher steht gegenüber vom Lasercutter beim Kassenterminal.
+		\item Im Brandfall nur mit CO\subscript{2}-Löscher, niemals mit Pulver-, Schaum- oder Wasserlöscher löschen (Verschmutzung, Stromschlaggefahr)! Der Feuerlöscher steht gegenüber vom Laser beim Kassenterminal.
 		\item Keine Magnete in den Bauraum oder in die Nähe des Lasercutters bringen. (\nurLTT Einzige erlaubte Ausnahme ist die in der Gravureinheit enthaltene Magnethalterung. Mit dieser ist besondere Vorsicht erforderlich, damit nicht die magnetischen Positionsgeber (Lineardecoder) an den Achsen beschädigt werden.)
 		\item \nurLTT Sofortiges Abschalten des Lasercutters geht nur mit dem Not-Aus-Schalter. \laserLTTPause fährt die nächsten Linien noch zu Ende. Dies braucht aber seine Zeit und funktioniert manchmal nicht.
 		\item \nurZing Es gibt hier keinen Not-Aus-Schalter! \laserZingStop  fährt die aktuelle Linie noch zu Ende. Sofortiges Abschalten des Lasercutters geht nur über den Kippschalter rechts unten am Gerät.
@@ -137,7 +137,7 @@ minimum height=2em]
 	Eine \emph{kleinere} Flamme am Laserpunkt und leichter Geruch kann manchmal auftreten:
 	\begin{itemize}
 		\item Zum Pausieren \laserLTTPause (\nurZing \laserZingStop) drücken. Bis zum Anhalten kann es unter Umständen lange dauern, da der Lasercutter erst noch die nächsten Linien zu Ende fährt!
-		\nurLTT Manchmal reagiert der Laser auch garnicht nicht auf Pause, als hätte er den Tastendruck nicht mitbekommen, auch wenn es später die Möglichkeit zur Pause gäbe. \todo{Unklar, wann und wieso.}
+		\nurLTT Manchmal reagiert der Laser garnicht nicht auf Pause, so als hätte er den Tastendruck nicht mitbekommen. Das Problem ist dem Hersteller bekannt.
 		\item Sicherstellen, dass die Absaugung angeschaltet ist und Air Assist (Druckluft bei der Linse) an ist.
 		\item Bei manchem Material lässt es sich nicht vermeiden und dann ist es auch nicht weiter schlimm.
 	\end{itemize}
@@ -201,7 +201,7 @@ minimum height=2em]
 		\itemCross spritzendes oder stark wässriges Material (Schokolade, ...)
 		\itemCross ABS, Epoxidharz (GFK, CFK, Platinen), weil es übelst stinkt
 		\itemCross PS Polystyrol / PC Polycarbonat dicker als 1\,mm, weil es beim Lasern spritzt
-		\itemCross PA Polyamid / PU Polyurethan / Textilien mit Nylon- oder Elastan-Anteil: entwickelt Blausäure % PA wäre noch zu prüfen, PU laut Mail von Markus
+		\itemCross PA Polyamid / PU Polyurethan / Textilien mit Nylon- oder Elastan-Anteil / NBR-Gummi Nitrilkautschuk / alle Stoffe, die gleichzeitig H-, C- und N-Atome enthalten: entwickelt Blausäure (HCN)
 		\itemCross halogenhaltige Kunststoffe: PVC = Vinyl = Neopren, PTFE = Teflon (z.B. als \enquote{glitschige} Beschichtung von Taschenmessern), PFA, ...
 	\end{itemize}
 	
@@ -495,7 +495,7 @@ minimum height=2em]
 	Wenn du dir unsicher bist, den Deckel öffnen, um einen Testlauf ohne Laser durchzuführen. (Lasercutter fährt den Pfad ab, doch er lasert nicht) Man sollte sich dabei nicht davon verunsichern lassen, dass der Laser beim Gravieren bis zu 3,5cm (\nurZing: etwa 5\,cm) links und rechts über das Gebiet hinausfährt, um abzubremsen und wieder in die andere Richtung zu beschleunigen.
 	
 	\subsubsection{\nurLTT}
-	Start des Auftrags mit der Grünen Taste {Bild Grüne Taste}.
+	Start des Auftrags mit \laserLTTPause.
 	
 	Wenn der Lasercutter Unfug macht, im Zweifelsfall den Not-Aus-Schalter betätigen.
 	
@@ -504,7 +504,7 @@ minimum height=2em]
 	Falls der Laser nicht mehr weiter lasern soll, öffne den Glasdeckel des Lasers etwas. Der Laser fährt dann weiter. Bei Gefahr drücke die Notaustaste und rufe einen Betreuer.
 	
 	Wenn keine Eile besteht, kannst du den Auftrag auch pausieren, das braucht aber etwas und funktioniert manchmal nicht: Drücke 1x fest auf die Taste \laserLTTPause und warte ab. Manchmal fährt der Laser wieder in die Homeposition. Manchmal auch nicht. Im zweiten Fall ist es besser, Du wartest weiter ab.
-	Ist der Laser an seine Homeposition gefahren, musst Du nun noch die Taste {Bild Stop} drücken, damit der augenblickliche Auftrag zurückgesetzt wird. Jetzt ist der Laserauftrag abgebrochen.	
+	Ist der Laser an seine Homeposition gefahren, musst Du nun noch die Taste \laserLTTStop drücken, damit der augenblickliche Auftrag zurückgesetzt wird. Jetzt ist der Laserauftrag abgebrochen.	
 	
 	\subsubsection{\nurZing}
 	Zum Starten auf \laserZingStart drücken (Finger weg aus dem Verfahrbereich des Laserarms!).
@@ -734,9 +734,9 @@ minimum height=2em]
 	
 	
 	\subsection{Unerwünschte Gravur am Rand}
-	Wenn rechts und links von einer Gravur auch dunkle Stellen graviert werden, ist die \enquote{Tickle Power} zu hoch eingestellt. Das ist die Leistung, die bei ausgeschaltetem Laser zum \enquote{Vorglühen} der Laserröhre verwendet wird. In Rücksprache mit dem Hersteller sollte diese dann verringert werden. (Stand Dezember 2018: Frequenz von 20 auf 18 kHz verringert).
+	Wenn rechts und links von einer Gravur auch dunkle Stellen graviert werden, ist die \enquote{Tickle Power} zu hoch eingestellt. Das ist die Leistung, die bei ausgeschaltetem Laser zum \enquote{Vorglühen} der Laserröhre verwendet wird. In Rücksprache mit dem Hersteller sollte diese dann verringert werden. (Auslieferung: Tickle Frequency 20kHz, Dezember 2018: verringert auf 18 kHz, Juni 2019: 16 kHz).
 	
-	Zu hohe Tickle Power führt auch dafür, dass bei ausgeschaltetem Laser trotzdem Linien auf das Material markiert werden.
+	Zu hohe Tickle Power führt auch dazu, dass bei ausgeschaltetem Laser trotzdem Linien auf das Material markiert werden. Bei Thermopapier (Kassenzettel) lässt sich das nicht hunderprozentig vermeiden, bei anderem Material sollte es nicht vorkommen.
 	
 	
 	\section{\nurLTT Wartung - nur für Betreuer}
@@ -747,8 +747,6 @@ minimum height=2em]
 	
 	\subsection{Handbücher des Herstellers}
 	Normale Reinigung der Optik und Mechanik siehe Benutzerhandbuch des Herstellers. Problembehandlung siehe Wartungshandbuch des Herstellers. Beides liegt auf der Dateifreigabe unter Fablab / Geräte / Laser.
-	
-	\todo{...}
 	
 	\subsection{wöchentlich: Führungen putzen}
 	Die X-Achse hat 3 Laufrollen - 1 oben und 2 unten. Die zwei Y-Achsen haben jeweils 2 Rollen. Die Rollen laufen in Führungsrillen in einem Aluprofil.
@@ -774,7 +772,7 @@ minimum height=2em]
 			\item 	Wartungshandbuch hier falsch: der Spiegel kann nicht herausgezogen werden, deshalb statdessen den Spiegel vorsichtig mit Wattestäbchen und Linsenreiniger ähnlich der Linse durch die seitliche Öffnung reinigen.
 		\end{itemize}
 		\item Spiegel 4 (Am Ende der Schiene, auf der der Linsenwagen fährt): Nach gleicher Methode mit Wattestäbchen und Linsenreiniger
-		\item Spiegel 3 und Linse daneben: Nach gleicher Methode mit Wattestäbchen und Linsenreiniger
+		\item Spiegel 3 und Austrittsfenster daneben: Nach gleicher Methode mit Wattestäbchen und Linsenreiniger
 	\end{itemize}
 
 \textbf{Nach der Wartung kontrollieren, dass KEINE GEGENSTÄNDE im Laser liegen, BEVOR man ihn anschaltet, sonst Kollisionsgefahr!}
@@ -790,13 +788,15 @@ minimum height=2em]
 
 	
 \subsection{wöchentlich: Ansauglüfter der Laser-Elektronik säubern}
-	Der Lasercutter hat vier Ansaugfilter - zwei unten, zwei hinten. Staubsauger auf niedrigste Stufe stellen und mit etwas Abstand (!) die Filter aussaugen. Es besteht die Gefahr, dass man versehentlich den Filter einsaugt - ein Reservefilter (G2 Grobfilter, Amazon) findet sich im Gehäuse des Lasercutters unten.
+	Der Lasercutter hat vier Ansaugfilter - zwei unten, zwei hinten. Wenn sich diese zusetzten verdreckt der Laser auch unten beschleunigt, da er dann dreckige Luft aus dem oberen Bereich ansaugt.
+	
+	 Staubsauger auf niedrigste Stufe stellen und mit etwas Abstand (!) die Filter aussaugen. Es besteht die Gefahr, dass man versehentlich den Filter einsaugt - ein Reservefilter (G2 Grobfilter, Amazon) findet sich im Gehäuse des Lasercutters unten.
 	
 	Normalerweise reicht das. Wenn man trotzdem von innen an die Filter und Lüfter rankommen will:
 	\begin{itemize}
 		\item Stecker ziehen!
 		\item Seitenklappe unten mit Schlüssel aus der Betreuerschublade öffnen
-		\item Lüfterfilter reinigen, wenn sich diese zusetzten verdreckt der Laser auch unten beschleunigt, da er sich dreckige Luft zum kühlen einzieht.
+		\item Lüfterfilter reinigen.
 	\end{itemize}
 	
 \subsection{ab und zu: Riemenspannung / zittriges Schnittbild}
@@ -805,6 +805,8 @@ minimum height=2em]
 	Zum Prüfen der Riemenspannung immer in die Mitte der Arbeitsfläche fahren (P2).
 	
 	\paragraph{Korrekte Riemenspannung der Y-Achse (links und rechts):} Bei mäßigem Druck (ca. 2\,kg) gegen die Y-Achse links/rechts (nahe an den Laufrollen mit denen sie an der Führung läuft, nicht zuweit oben in Z) soll sie sich um nicht mehr als ca 1mm bewegen.
+	
+	Achtung: 2kg sind weniger als du denkst. Nicht stärker drücken, sonst rutscht der Riemen durch und man hat großen Justieraufwand. 
 	
 	\paragraph{Korrekte Riemenspannung der X-Achse:} Wenn man lange genug im Wartungshandbuch sucht, findet man folgende Angabe: Der X-Riemen ist richtig gespannt, wenn er sich \enquote{in der Achsmitte ca. 1-1,5 cm von der Achse wegziehen lässt}. Nicht Übermäßig fest spannen. Y-Riemen muss 10 \% mehr Spannung haben als der X-Riemen.
 
@@ -841,7 +843,7 @@ Siehe auch die Fotos unter fablab-data/Maschinen/Novograv (LTT) iLaser 4000/Foto
 		Wenn das nicht in Ordnung, ist die Achse ausgehängt und muss erst wieder eingehängt werden. Wenn dies nicht durch leichtes Wackeln von selber passiert, muss sie dazu teilweise demontiert werden. Siehe Wartungshandbuch unter \enquote{9. X-Achse ausgehängt}.
 		\item Die Rollen dürfen nicht frei in der Luft drehen, sondern sollen auf der Nut aufliegen. Das prüft man durch vorsichtiges Drehen mit der Hand. Richtig ist es, wenn sie sich nicht frei drehen lassen ohne dass sich der Wagen bewegt, bzw. man erst etwas kräftiger drehen muss bis sie merklich durchrutschen. 	Bei allen Rollen einer Achse soll das ungefähr gleich sein.
 		
-		Wenn sich eine der Y-Rollen frei dreht, dann ziemlich sicher die Ausrichtung der Achsen falsch. Bei der X-Achse kann sich die Rolle eigentlich nur dann frei drehen, wenn der Wagen nicht richtig eingehängt ist.
+		Wenn sich eine der Y-Rollen frei dreht, dann ist ziemlich sicher die Ausrichtung der Achsen falsch. Bei der X-Achse kann sich die Rolle eigentlich nur dann frei drehen, wenn der Wagen nicht richtig eingehängt ist.
 		
 
 		\item An diesem Punkt sollten die Achsen zumindest näherungsweise rechtwinklig zueinander sein (grob mit Geodreieck/Augenmaß schätzen), zumindest nicht merklich zueinander verdreht.
