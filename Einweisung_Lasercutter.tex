@@ -802,11 +802,11 @@ minimum height=2em]
 \subsection{ab und zu: Riemenspannung / zittriges Schnittbild}
 	Zu schwache Riemenspannung führt dazu, das das Schnittbild zittrig wird. Außerdem kann dann bei Crash einer der der Y-Riemen durchrutschen, sodass die X-Achse dann schief läuft. Zu starke Riemenspannung hingegen führt zu überhöhtem Verschleiß und letztlich einem gerissenen Riemen.
 	
-	Zum Prüfen der Riemenspannung immer in die Mitte der Arbeitsfläche fahren (P2).
+	Zum Prüfen der Riemenspannung immer in die Mitte der Arbeitsfläche fahren (P2). Leider gibt es vom Hersteller nur sehr vage Beschreibungen der Riemenspannung:
 	
 	\paragraph{Korrekte Riemenspannung der Y-Achse (links und rechts):} Bei mäßigem Druck (ca. 2\,kg) gegen die Y-Achse links/rechts (nahe an den Laufrollen mit denen sie an der Führung läuft, nicht zuweit oben in Z) soll sie sich um nicht mehr als ca 1mm bewegen.
 	
-	Achtung: 2kg sind weniger als du denkst. Nicht stärker drücken, sonst rutscht der Riemen durch und man hat großen Justieraufwand. 
+	Achtung: 2kg sind weniger Druck als du denkst. (Balanciere eine Wasserflasche auf deinem Daumen, das ist etwa 1\,kg.) Nicht stärker drücken, sonst rutscht der Riemen durch und man hat großen Justieraufwand. 
 	
 	\paragraph{Korrekte Riemenspannung der X-Achse:} Wenn man lange genug im Wartungshandbuch sucht, findet man folgende Angabe: Der X-Riemen ist richtig gespannt, wenn er sich \enquote{in der Achsmitte ca. 1-1,5 cm von der Achse wegziehen lässt}. Nicht Übermäßig fest spannen. Y-Riemen muss 10 \% mehr Spannung haben als der X-Riemen.
 
@@ -820,58 +820,111 @@ Zum Testen wird VisiCut gestartet und ein spezielles LaserScript geladen, das Re
 
 
 
-\subsection{Ausrichtung der Optik prüfen (bei schlechter Leistung, obwohl sonst alles stimmt)}
+\subsection{Ausrichtung der Optik prüfen (bei schlechter Leistung, obwohl sonst alles stimmt)}\label{ltt-wartung-optik}
 Ziel ist, dass die Position des Laserstrahls an jedem einzelnen Spiegeln gleich bleibt, egal wie man die X- und Y-Achse bewegt. Toleranz entlang Y-Achse: Bei über 0,5mm sollte man nachjustieren, besser ist deutlich weniger. Toleranz entlang X ggf. etwas größer.
 
-Wenn die Ausrichtung nicht stimmt, kann das auch an einer falsch ausgerichteten X-Achse liegen! Siehe Notizen im nächsten Abschnitt zum Thema Kollision.
+Wenn die Ausrichtung nicht stimmt, kann das auch an einer falsch ausgerichteten X-Achse liegen! Deshalb vor dem Justieren der Optik zunächst die Checkliste in \cref{sec:wartung-ltt:kollision} abarbeiten.
 
-Es gibt ein Fadenkreuz, das an die Position der Linse eingesetzt wird. Dieses wird aus Kassenzettelpapier ausgelasert. Die Datei liegt in fablab-data/Maschinen/Novograv (LTT) iLaser 4000/. Die Position des Laserpunkts darauf sollte sich nicht mehr als ca. 2mm verändern, besser deutlich weniger. Mittigkeit des Laserpunkts sollte unter ca. 3mm sein, besser deutlich weniger.
+Es gibt ein Fadenkreuz, das an die Position der Linse eingesetzt wird. Dieses wird aus Kassenzettelpapier ausgelasert, fertige Exemplare finden sich in der Wartungskiste. Die Datei liegt in fablab-data/Maschinen/Novograv (LTT) iLaser 4000/. Die Position des Laserpunkts darauf sollte sich nicht mehr als ca. 2mm verändern, besser deutlich weniger. Mittigkeit des Laserpunkts sollte unter ca. 3mm sein, besser deutlich weniger.
+
+Tips:
+\begin{itemize}
+	\item Der rote Laserstrahl passt nicht hundertprozentig zum eigentlichen infraroten. Allerdings bewegt er sich, wenn man die Optik verstellt, in die gleiche Richtung und um den gleichen Weg. Das ist sehr hilfreich um zu sehen ob man in die richtige Richtung verstellt hat. Am besten die alte Position mit einem Stift markieren.
+
+	\item Die Stellschrauben muss man normalerweise nur äußerst wenig verdrehen. Eine viertel Umdrehung ist meist viel zu viel.
+\end{itemize}
 
 Alles weitere steht im Wartungshandbuch.
 
-\subsection{Vorgehen nach (vermutlicher) Kollision} \label{sec:wartung-ltt:kollision}
-	Obacht, diese Aufzählung ist vereinfacht und sollte noch verbessert und detailliert werden. Bitte unbedingt auch die jeweiligen Abschnitte des Wartungshandbuchs lesen!
-
-Siehe auch die Fotos unter fablab-data/Maschinen/Novograv (LTT) iLaser 4000/Fotos Wartung 2019-04-11/ .
-
+\subsection{Prüfen der Achsen nach (vermutlicher) Kollision} \label{sec:wartung-ltt:kollision}
 	\begin{itemize}
 		\item Netzstecker (Kaltgerätekabel) ziehen!
-		\item Z-Achse prüfen: Sollte der Laser ausgeschaltet werden (auch Not-Aus) und dann in einer Position stehen, bei der Laserkopf nicht in der (XY-)Ebene frei bewegt werden kann, den Tisch vorher per Hand herunterfahren: Netzstecker ziehen (Kaltgerätekabel rechts an Laser), Wartungsklappe vorne unten mit Schlüssel öffnen, durch Schieben des Zahnriemens den Tisch hoch/runter bewegen. Ein Hinweiszettel am Boden des Gehäuses zeigt die nötige Bewegungsrichtung für das Herunterfahren des Tisches.
+		\item Position Z-Achse prüfen: Kann der Laserkopf frei in der (XY-)Ebene bewegt werden? Wenn nein, musst du den Tisch vorher per Hand herunterfahren: Netzstecker ziehen (Kaltgerätekabel rechts an Laser), Wartungsklappe vorne unten mit Schlüssel öffnen (Betreuerschublade), durch Schieben des Zahnriemens den Tisch hoch/runter bewegen. Ein Hinweiszettel am Boden des Gehäuses zeigt die nötige Bewegungsrichtung für das Herunterfahren des Tisches. Wartungsklappe wieder schließen. Gerät noch nicht in Betrieb nehmen, erst die folgenden Punkte abarbeiten.
 		\item Fokusstift prüfen: Muss frei herunterfallen, wenn man ihn hochhebt, und darf nicht krumm o.\,ä. sein. Etwas Spiel der Fokusstifthalterung ist normal, diese ist relativ lose am Laserwagen befestigt.
 		\item Rollen X/Y prüfen: 7 Rollen (2 links an linker Y-Achse, 2 rechts an rechter Y-Achse, 2 oben an X, 1 unten an X) müssen jeweils in der V-Nut im Aluprofil laufen. Siehe Bilder im Wartungshandbuch unter \enquote{5.1 Ausrichten der Achsen - Vorbereitende Maßnahmen}. Das ist nicht einfach zu sehen, man braucht normalerweise Lampe und Spiegel/Handykamera dafür.
 		
-		Wenn das nicht in Ordnung, ist die Achse ausgehängt und muss erst wieder eingehängt werden. Wenn dies nicht durch leichtes Wackeln von selber passiert, muss sie dazu teilweise demontiert werden. Siehe Wartungshandbuch unter \enquote{9. X-Achse ausgehängt}.
+		Wenn das nicht in Ordnung, ist die Achse oder der Laserkopf ausgehängt und muss erst wieder eingehängt werden. Wenn dies nicht durch leichtes Wackeln von selber passiert, muss sie dazu teilweise demontiert werden. Siehe Wartungshandbuch unter \enquote{9. X-Achse ausgehängt}.
 		\item Die Rollen dürfen nicht frei in der Luft drehen, sondern sollen auf der Nut aufliegen. Das prüft man durch vorsichtiges Drehen mit der Hand. Richtig ist es, wenn sie sich nicht frei drehen lassen ohne dass sich der Wagen bewegt, bzw. man erst etwas kräftiger drehen muss bis sie merklich durchrutschen. 	Bei allen Rollen einer Achse soll das ungefähr gleich sein.
 		
-		Wenn sich eine der Y-Rollen frei dreht, dann ist ziemlich sicher die Ausrichtung der Achsen falsch. Bei der X-Achse kann sich die Rolle eigentlich nur dann frei drehen, wenn der Wagen nicht richtig eingehängt ist.
+		Wenn sich eine der Y-Rollen frei dreht, dann ist ziemlich sicher die Rechtwinkligkeit der X-Achse falsch. Bei der X-Achse kann sich die Rolle eigentlich nur dann frei drehen, wenn der Laserkopf nicht richtig eingehängt ist.
 		
 
-		\item An diesem Punkt sollten die Achsen zumindest näherungsweise rechtwinklig zueinander sein (grob mit Geodreieck/Augenmaß schätzen), zumindest nicht merklich zueinander verdreht.
-		\item Die Lichtschranken der X- und Y-Achse prüfen. Zunächst sicherstellen, dass diese festgeschraubt und nicht lose oder abgebrochen sind. Dann von Hand die X-/Y-Achsen dort hin verschieben und sicherstellen, dass das \enquote{Fähnchen} mittig in die Lichtschranke ragt. Beide Lichtschranken sitzen rechts hinten, die zweite etwas versteckt unterhalb der ersten. Siehe Wartungshandbuch unter \enquote{10. Sensoren der Parkposition prüfen}.
-		\item Laser wieder einschalten, prüfen dass Referenzfahrt beim Einschalten funktioniert.
-		\item Riemenspannung prüfen. (siehe vorher). Wenn diese nicht passt, sollte sie vor/während der Justierung der Rechtwinkligkeit korrigiert werden.
-		\item Rechtwinkligkeit der Achsen prüfen: Das ist leider zur Zeit ein relativ hoher Aufwand, weil die Z-Begrenzung verstellt werden muss. Durch eine andere Konstruktion der Unterlegteile (siehe später) könnte man das umgehen. Hier der aktuelle Stand.
+		\item Rechtwinkligkeit der X-Achse grob prüfen, zunächst bei ausgeschaltetem Lasercutter:
 		
-		Die Lineale am Wabentisch oder der Grundplatte gelten \emph{nicht} als Referenz, sie können schief zur Achse sein. (Dies ist im Wartungshandbuch falsch beschrieben!) Das einzige was gilt sind die bei etwa Y=54.2mm auf der Grundplatte (unter dem Wabentisch) eingeritzten Linien. Diese wurden vom Service genau achsparallel eingeritzt, genau senkrecht zur linken Y-Achse, welche als Referenz dient.
+		Zum Prüfen (auf etwa $\pm$ 0,5 mm genau) werden 1-2 spezielle Justierwinkel\footnote{Dateifreigabe/1\_fablab/1\_Geraete/Laser/Justierwinkel.svg, gelasert oder idealerweise gefräst, mindestens 8mm dick} und 2-3 Stücke 0,5\,mm dicke Folie benötigt (Wartungskiste).
+		
+		Laserkopf vorsichtig von Hand in die X-Mitte bewegen damit er aus dem Weg ist.
+		
+		Y-Achse (durch Drehen am Riemenrad hinten mitte) so bewegen dass die Vorderkante der X-Achse genau über der Vorderkante des \emph{linken} schwarzen Befestigungsblocks steht (Bild). Zuerst grob nach Augenmaß, dann für die Feinjustierung den Justierwinkel anlegen:
+		
+		\includegraphics[width=.5\linewidth]{img/laserjustierwinkel}
+		
+		Der Justierwinkel liegt korrekt an, wenn man weder oben noch unten ein 0,5mm Stück Folie komplett dazwischenstecken kann.
+		
+		Achse so stehen lassen. Jetzt den zweiten Justierwinkel am \emph{gegenüberliegenden} (rechten) Befestigungsblock anlegen. Wenn die Achse schräg ist, ergibt sich jetzt oben oder unten ein Spalt zwischen Prüfwinkel und Achse bzw. Befestigungsblock.
+		
+		Wie groß der Spalt ist, kann man durch Dazwischenstecken mehrerer Folien messen. Gut sind 0,5\,mm. Schlecht sind 1,5\,mm oder mehr. Bis etwa 5\,mm kann man den Lasercutter noch gefahrlos für Justierzwecke betreiben, auch wenn er dann schon lange nicht mehr sinnvoll schneidet.
+		
+		\item Wenn die Abweichung über 4\,mm ist, zuerst die Rechtwinkligkeit korrigieren (siehe nächster Abschnitt). Ansonsten zunächst die nachfolgenden Punkte weitermachen bevor korrigiert wird.
+		
+		\item Die Lichtschranken der X- und Y-Achse prüfen. Zunächst sicherstellen, dass diese festgeschraubt und nicht lose oder abgebrochen sind. Dann von Hand die X-/Y-Achsen dort hin verschieben und sicherstellen, dass das \enquote{Fähnchen} mittig in die Lichtschranke ragt. Beide Lichtschranken sitzen rechts hinten, die zweite etwas versteckt unterhalb der ersten. Siehe Wartungshandbuch unter \enquote{10. Sensoren der Parkposition prüfen}.
+		
+		\item Laser wieder einschalten, prüfen dass Referenzfahrt beim Einschalten funktioniert.
+		
+		\item Prüfen dass die Riemenspannung grob stimmt (siehe vorher). Wenn diese nicht passt, sollte sie vor/während der Justierung der Rechtwinkligkeit korrigiert werden.
+		
+		\item Messung der Rechtwinkligkeit bei eingeschaltetem Laser wiederholen, so wie vorher beschrieben. Weil die Achse jetzt fest stehen bleibt, ist die Messung genauer möglich (auf ca. 0,5\,mm). Messe lieber zweimal, um Messfehler auszuschließen --- wenn man den Justierwinkel nicht flächig auf den Boden auflegt, misst man schnell 1\,mm falsch.
+		
+		Ist die Abweichung 1\,mm oder weniger? Dann bist du hier fertig und darfst den Laser wieder in Betrieb nehmen. Ansonsten geht es weiter mit dem nächsten Abschnitt.
+	\end{itemize}
+\subsection{Rechtwinkligkeit der Achsen korrigieren}
+	Wenn die Prüfung (siehe vorheriger Abschnitt) zeigt, dass die Achse schräg steht, hast du etwas mehr Aufwand. 
+	
+	\emph{Beachte:} Wenn die Achse schräg steht, stimmt dadurch auch die Ausrichtung der Optik nicht mehr. Wird die Achse neu justiert, muss danach meist auch die Optik ein bisschen (paar Millimeter im Fadenkreuz) nachjustiert werden.
+	
+	Gerät ausschalten. Vorgehen wie im Wartungshandbuch unter 5.2 beschrieben, aber die Rechtwinkligkeit nicht anhand des Laserpunkts, sondern mit dem Justierwinkel (siehe vorheriger Abschnitt) bestimmen. Klemmkupplung zwischen linker und rechter Y-Achse etwas lösen sodass man sie mit etwas Widerstand verdreht werden kann. In kleinen Schritten verdrehen solange bis die Prüfung mit dem Justierwinkel erfolgreich ist. Die gesamte Achse kann man durch Drehen am Riemenrad des Motors (hinten mitte) bewegen.
+	
+	Klemmkupplung wieder festschrauben (ohne Gewalt!).
+	
+	\subsubsection*{Weitere Notizen}
+	Zur Erklärung, wieso das Vorgehen laut Wartungshandbuch nicht so sinnvoll ist:
+	\begin{itemize}		
+		\item Der Laserstrahl ist nicht zum Ausrichten der Achse geeignet, denn der ist selber nie hunderprozentig genau justiert. Obendrein kann man die Optik erst ausrichten, wenn die Achse bereits korrekt ausgerichtet wurde. Da beißt sich die Katze also in den Schwanz.
+		
+		\item Die Optik (Linse) dafür, dass der Laserpunkt auf der Arbeitsfläche tendentiell andersherum schräg wandert als die Achse schräg ist. Weil Spiegel 4 mit auf der Achse sitzt, bewegt sich beim Schrägstellen der Achse der Laserpunkt etwa doppelt so weit wie die Achse selbst.
+		
+		\item Der rote Laserstrahl passt nie hundertprozentig zum eigentlichen Infrarotlaser, passt also noch weniger.
+		
+		\item Das Lineal am Wabentisch ist nicht exakt achsparallel. Das unten auf der Grundplatte ist es halbwegs, man müsste aber den Anschlag der Z-Achse temporär ausbauen um so tief fokussieren zu können. (Genau, aber für uns nicht nützlich, sind die bei Y=54.2mm auf der Grundplatte unter dem Wabentisch eingeritzten Linien. Diese wurden vom Service genau achsparallel eingeritzt, genau senkrecht zur linken Y-Achse, welche als Referenz dient.)
+		
+		\item Weil man die Achse nie ganz exakt wiederholgenau justiert bekommt, kann es nach Neu-Ausrichten der Achse sein, dass die Optik ein bisschen (paar Millimeter Abweichung im Fadenkreuz) nachjustiert werden muss. $\rightarrow$ \cref{ltt-wartung-optik}
+	\end{itemize}
+
+	Bei größerer Unsicherheit (sollte nicht nötig sein) kann man abschließend folgendes prüfen, nachdem Optik und Achse justiert wurden:
+
+	\begin{itemize}
+		\item Das ist leider ein relativ hoher Aufwand, weil die Z-Begrenzung verstellt werden muss.
 		
 		Man kann aber den Tisch nicht weit genug hochfahren, um zu testen ob der Laser zu dieser Linie passt, weil wir die Z-Achse so begrenzen, dass bei eingebautem Wabentisch man mit dem Fokusstift nicht viel tiefer als der Wabentisch fahren kann. Also muss man zunächst die Begrenzung der Z-Achse temporär entfernen, weil wir direkt auf der unteren Tischplatte \enquote{lasern} wollen. Dazu mal wieder Netzstecker ziehen, Wartungsklappe unten aufmachen, Fähnchen der Z-Achse mit 3mm Inbus aufschrauben und abnehmen, Wartungsklappe wieder zu. Strom an.
 		
-		Der rote Laserpointer soll beim Verfahren in X-Richtung auf der Referenzmarkierung von ganz links bis ganz rechts genau auf der Markierung bleiben und nicht nach vorne oder hinten wegwandern (Toleranz ca 0.5mm). Wenn das nicht so ist, stimmt entweder die Optik-Ausrichtung oder die Achsausrichtung oder beides nicht.
-		
-		\item Wenn die Prüfung nicht gut ausfällt, Rechtwinkligkeit der Achsen korrigieren:
-		
-		Achtung, das im Wartungshandbuch unter \enquote{5.2 Rechtwinkligkeit der X- und Y-Achsen} beschriebene Vorgehen ist problematisch - es funktioniert nur wenn die Optik hunderprozentig korrekt ausgerichtet und das Lineal achsparallel ist, und die Optik kann man nur ausrichten, wenn die Achse bereits korrekt ausgerichtet wurde. Da beißt sich die Katze also in den Schwanz.
-		
-		Besser ist es, rein mechanisch die Rechtwinkligkeit der Achse zu justieren. Benötigt werden hierzu ein rechtwinkliges Alublech (Ein entsprechend beschriftetes lagert in der E-Werkstatt unter dem Plotter-PC-Bildschirm), zwei ca. 40mm dicke Unterlegwinkel (\todo{noch zu fertigen, siehe Fotos fablab-data/Maschinen/Novograv (LTT) iLaser 4000/Fotos Wartung 2019-04-11/ } und \url{https://cad.onshape.com/documents/bccee6264ce702916cd9ce98/w/eebe4988cdecfe89ec7acab5} ), sowie ein ebenso dicker Unterlegklotz.
-		
-		Gerät ausschalten. Vorgehen wie im Wartungshandbuch unter 5.2 beschrieben, aber die Rechtwinkligkeit nicht anhand des Laserpunkts, sondern nach der folgenden Art bestimmen: Klemmkupplung zwischen linker und rechter Y-Achse lösen. Das Aluprofil der linken Y-Achse dient als Referenz. An dieses wird das rechtwinklige Alublech angelegt und dann gegen die X-Achse geschoben, sodass sich diese passend rechtwinklig schiebt. Damit die Verbindung der X- und Y-Achse dem Blech nicht im Weg ist, werden dabei Unterlegwinkel vor die X-Achse gelegt, und der X-Riemen wird in das Aluprofil der Achse \enquote{hineingestopft}. (siehe Fotos fablab-data/Maschinen/Novograv (LTT) iLaser 4000/Fotos Wartung 2019-04-11/ ). 
+		Der rote Laserpointer soll beim Verfahren in X-Richtung auf der Referenzmarkierung von ganz links bis ganz rechts genau auf der Markierung bleiben und nicht nach vorne oder hinten wegwandern (Toleranz ca 0.5mm). Wenn das nicht so ist, stimmen entweder die Optik-Ausrichtung, die Justierung des roten Lasers relativ zur Optik oder die Achsausrichtung oder mehrere davon nicht.
 		
 		\item Nun die Z-Begrenzung wieder auf vorherigen Bereich: Tisch auf ungefähr die Höhe der vorherigen Z-Begrenzung fahren, wieder Netzstecker ziehen, Z-Begrenzung wieder einbauen: blauer Strich = Oberkante Fähnchen, sicherstellen dass das Fähnchen mittig in die Lichtschranke passt. (Die Höhe der Begrenzung ist knapp unter der Wabentisch-Höhe gewählt, dass man beim Fokussieren nicht tief im Wabentisch steckenbleiben kann, aber noch problemlos ein dünnes Blatt Papier fokussieren kann.)
 		
 		Wartungsklappe zu und Strom an.
-		
-		\item Jetzt passt wieder alles.
 	\end{itemize}
+
+Zur Vollständigkeit hier noch das Vorgehen wie es der Hersteller vorschlägt:
+
+\begin{itemize}
+	\item Benötigt werden hierzu ein rechtwinkliges Alublech (Ein entsprechend beschriftetes lagert in der E-Werkstatt unter dem Plotter-PC-Bildschirm), zwei ca. 40mm dicke Unterlegwinkel (\todo{noch zu fertigen, siehe Fotos fablab-data/Maschinen/Novograv (LTT) iLaser 4000/Fotos Wartung 2019-04-11/ } und \url{https://cad.onshape.com/documents/bccee6264ce702916cd9ce98/w/eebe4988cdecfe89ec7acab5} ), sowie ein ebenso dicker Unterlegklotz.
+	
+	\item Z-Begrenzung deaktivieren wie in der vorherigen Auflistung beschrieben.
+	
+	\item Gerät ausschalten. Vorgehen wie im Wartungshandbuch unter 5.2 beschrieben, aber die Rechtwinkligkeit nicht anhand des Laserpunkts, sondern nach der folgenden Art bestimmen: Klemmkupplung zwischen linker und rechter Y-Achse lösen. Das Aluprofil der linken Y-Achse dient als Referenz. An dieses wird das rechtwinklige Alublech angelegt und dann gegen die X-Achse geschoben, sodass sich diese passend rechtwinklig schiebt. Damit die Verbindung der X- und Y-Achse dem Blech nicht im Weg ist, werden dabei Unterlegwinkel vor die X-Achse gelegt, und der X-Riemen wird in das Aluprofil der Achse \enquote{hineingestopft}. (siehe Fotos fablab-data/Maschinen/Novograv (LTT) iLaser 4000/Fotos Wartung 2019-04-11/ ). 
+	
+	\item Z-Begrenzung wieder aktivieren wie in der vorherigen Auflistung beschrieben.
+\end{itemize}
 
 \subsection{Fokus-Abstand ändern (sollte nie nötig sein)}
 	Es sollte nie nötig sein, den Fokus-Abstand nachzukalibrieren, außer am Lasersystem wird grundlegend etwas geändert (z.\,B. anderer Linsentyp).
