@@ -875,7 +875,7 @@ Alles weitere steht im Wartungshandbuch.
 		
 		\item Messung der Rechtwinkligkeit bei eingeschaltetem Laser wiederholen, so wie vorher beschrieben. Weil die Achse jetzt fest stehen bleibt, ist die Messung genauer möglich (auf ca. 0,5\,mm). Messe lieber zweimal, um Messfehler auszuschließen --- wenn man den Justierwinkel nicht flächig auf den Boden auflegt, misst man schnell 1\,mm falsch.
 		
-		Ist die Abweichung 1\,mm oder weniger? Dann bist du hier fertig und darfst den Laser wieder in Betrieb nehmen. Ansonsten geht es weiter mit dem nächsten Abschnitt.
+		Ist die Abweichung 1\,mm oder weniger? Dann bist du hier fertig und darfst den Laser wieder in Betrieb nehmen, und noch den Nullpunkt (\cref{sec:wartung-ltt:nullpunkt}) prüfen. Ansonsten geht es weiter mit dem nächsten Abschnitt.
 	\end{itemize}
 \subsection{Rechtwinkligkeit der Achsen korrigieren}
 	Wenn die Prüfung (siehe vorheriger Abschnitt) zeigt, dass die Achse schräg steht, hast du etwas mehr Aufwand. 
@@ -925,6 +925,21 @@ Zur Vollständigkeit hier noch das Vorgehen wie es der Hersteller vorschlägt:
 	
 	\item Z-Begrenzung wieder aktivieren wie in der vorherigen Auflistung beschrieben.
 \end{itemize}
+
+\subsection{Nullpunkt korrigieren} \label{sec:wartung-ltt:nullpunkt}
+Der Nullpunkt (linke obere Ecke der Seite in VisiCut, und gleichzeitig die Position die mit Knopf \laserKnopf{P1} angefahren wird) sollte minimal (ca. 0,5\,mm) rechts unterhalb vom Nullpunkt des Lineals (linke obere Ecke des Arbeitsbereichs) liegen.
+Gründe für falschen Nullpunkt können sein:
+\begin{itemize}
+    \item Achse ist schief nach Crash $\rightarrow$ \cref{sec:wartung-ltt:kollision} abarbeiten.
+    \item Schneidetisch sitzt nicht richtig im Lasercutter, z.B. nicht festgeschraubt
+    \item P1-Position wurde im Menü geändert (Prüfen, ob nach Fahrt auf P1 im Menü unter System Status als Position 0,0 steht. Man kann den Knopf P1 leider umprogrammieren, dass er auf einen anderen Punkt fährt als den Nullpunkt.) $\rightarrow$ übers Menü zurück ändern oder notfalls auf der CF-Karte der Firmware in i4000adv.cfg korrigieren.
+    \item Lichtschranke ist lose oder zerbrochen weil der Laser dagegengecrasht ist, und hängt deshalb lose herum. Dann verändert sich der Nullpunkt zufällig von Tag zu Tag. $\rightarrow$ festschrauben, ggf. tauschen
+    \item Lichtschrankenhalterung verbogen $\rightarrow$ vorsichtig zurückbiegen bis Nullpunkt wieder stimmt. \textbf{Den Punkt P1 nie über das Menü verstellen!}
+    \item Unterbrecher (die Bleche die in die X- bzw. Y-Lichtschranke ragen) verbogen oder wurde neu montiert
+(die wurden neu montiert, daher kann der fehlerhafte Nullpunkt kommen)
+    \item Unterbrecher ist nicht mittig zur Lichtschranke -> beheben, damit sie nicht zerbricht!
+\end{itemize}
+ Siehe Wartungshandbuch unter \enquote{10. Sensoren der Parkposition prüfen} und \enquote{Anhang 1}.
 
 \subsection{Fokus-Abstand ändern (sollte nie nötig sein)}
 	Es sollte nie nötig sein, den Fokus-Abstand nachzukalibrieren, außer am Lasersystem wird grundlegend etwas geändert (z.\,B. anderer Linsentyp).
