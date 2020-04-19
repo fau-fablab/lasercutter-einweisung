@@ -622,6 +622,58 @@ minimum height=2em]
 	Beispiele sind \url{https://svgnest.com/} (im Browser) oder \url{https://deepnest.io/} (zum Installieren).
 	
 	
+	\subsection{Konstruktion Besonderheiten}
+\begin{itemize} 
+  \item Toleranzen
+	\begin{itemize}
+      \item Der Laserschnitt ist etwa 0,4mm breit und liegt praktisch exakt mittig auf der Linie, die man im Dokument einzeichnet. Ein in der Zeichnung 10x10mm großes Quadrat wird also beim Ausschneiden 9,6x9,6mm groß und hinterlässt ein 10,4x10,4mm langes Loch.
+      \item Bei der Dicke der Platten ist zu beachten, dass diese eine sehr grosse Toleranz haben, laut Hersteller: 
+		\begin{itemize}
+			\item für Acryl GS (gegossen): ± (0,4mm + 0,1 x Dicke). Eine "5 mm" dicke Platte ist somit zwischen 4,1 und 5,9 mm dick.
+			\item für Acryl XT (extrudiert): Dickentoleranz 10\% bis 3mm Dicke, 5\% ab 4mm Dicke
+		\end{itemize}
+	\end{itemize}
+  \item Spannungsrisse: Acryl reißt, sobald an einer Stelle die Spannung zu hoch wird. Dies tritt hauptsächlich an konkaven (nach innen gewandten) spitzen Ecken auf. Konkave Ecken sollten deshalb abgerundet werden.
+  \item Löcher
+	\begin{itemize}
+		\item werden etwas größer, siehe "Toleranzen", aber auch leicht schief/kegelförmig
+		\item für präzise Löcher: etwa 1mm kleiner machen und mit Bohrmaschine aufbohren
+		\item ansonsten: etwa 0,5mm bis 1mm größer machen, damit es sicher nicht zu klein wird
+	\end{itemize}
+  \item Gewinde
+	\begin{itemize}
+		\item Loch etwas kleiner machen und passend aufbohren
+		\item Gewindeschneiden in Acryl ist etwas unschön, Gewinde sind nicht allzu belastbar
+	\end{itemize}
+  \item Steckverbindungen
+	\begin{itemize}
+		\item Erfahrungswert: bei 5mm Materialdicke je 0,75mm Spiel links und rechts lassen
+		\item wenn es trotz der hohen Dickentoleranz exakt passend sein soll: Eine bestimmte Acrylplatte aussuchen, Materialdicke an allen Ecken der Platte ausmessen und die Zeichnung dafür passend ändern.
+	\end{itemize}  
+  \item Schnappverbindungen sind möglich - scharfe Ecken vermeiden wegen Spannungsrissen		
+  \item T-Schlitze als Mutternhalter für 90° Verbindungen (Beispiel: \url{http://store.curiousinventor.com/blog/how-to-make-cheap-lasercut-custom-boxes-for-your-diy-electronics/}
+  \item sechseckige Löcher zum Festhalten von Muttern: eine Platte mit sechseckigem Loch, darüber eine mit kleinerem runden Loch, Platten miteinander verkleben
+  \item Für Zahnräder gibt es in Inkscape ein Feature, das auch halbwegs funktioniert.
+	\begin{itemize}
+      \item Einfach ausprobieren.
+      \item exakter Abstand zwischen Zahnradmittelpunkten -> Formel %TODO
+      \item 2 Zahnräder gehen
+      \item 3 direkt hintereinandergeschaltet (nebeneinander in gleicher Ebene liegend) verklemmen sich - dafür lieber Zwischenstufen einbauen
+	\end{itemize}
+  \item Faltschachteln aus Pappe
+	\begin{itemize}
+		\item Falze mit gestrichelter Linie schneiden?
+		\item Inkscape Plugin \url{http://www.inkscapeforum.com/viewtopic.php?f=34&t=10880}
+	\end{itemize}
+\end{itemize}
+
+Fertige Beispiele zum Umbauen:
+\begin{itemize}
+  \item Kasten mit Verschraubungen: \url{http://store.curiousinventor.com/blog/how-to-make-cheap-lasercut-custom-boxes-for-your-diy-electronics/}
+  \item Laufroboter (Zahnräder funktionieren nicht wirklich, aber Gehäuse ist gut) \url{http://maxgaukler.de/2011/walkerv1/}
+\end{itemize}
+	
+	
 	\newpage
 	\section{Hinweise für Betreuer: Wartung - Epilog Zing}
 	
