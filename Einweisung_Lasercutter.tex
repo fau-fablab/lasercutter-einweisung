@@ -19,6 +19,7 @@
 \usetikzlibrary{shapes,arrows} % für das flowchart
 
 \usepackage{marvosym} % für Briefumschlag-Symbol
+\usepackage{fontawesome} % für Haus-Symbol
 \usepackage{eurosym}
 \usepackage{tabularx} % Tabellen mit bestimmtem Breitenverhältnis der Spalten
 \usepackage{multirow} % Tabellen Zellen die sich über mehrere Zeilen ausdehnen
@@ -79,6 +80,7 @@ minimum height=2em]
 \newcommand{\laserFocus}{\laserKnopf{Focus}}
 \newcommand{\laserPfeilRauf}{\laserKnopf{$\blacktriangle$}}
 \newcommand{\laserPfeilRunter}{\laserKnopf{$\blacktriangledown$}}
+\newcommand{\laserLTTHome}{\laserKnopf{\Large \faHome}}
 
 
 \newcommand{\laserDisplay}[1]{\fbox{\texttt{#1}}}
@@ -898,7 +900,7 @@ Alles weitere steht im Wartungshandbuch.
 		\item Fokusstift prüfen: Muss frei herunterfallen, wenn man ihn hochhebt, und darf nicht krumm o.\,ä. sein. Etwas Spiel der Fokusstifthalterung ist normal, diese ist relativ lose am Laserwagen befestigt.
 		\item Rollen X/Y prüfen: 7 Rollen (2 links an linker Y-Achse, 2 rechts an rechter Y-Achse, 2 oben an X, 1 unten an X) müssen jeweils in der V-Nut im Aluprofil laufen. Siehe Bilder im Wartungshandbuch unter \enquote{5.1 Ausrichten der Achsen - Vorbereitende Maßnahmen}. Das ist nicht einfach zu sehen, man braucht normalerweise Lampe und Spiegel/Handykamera dafür.
 
-		Wenn das nicht in Ordnung, ist die Achse oder der Laserkopf ausgehängt und muss erst wieder eingehängt werden. Wenn dies nicht durch leichtes Wackeln von selber passiert, muss sie dazu teilweise demontiert werden. Siehe Wartungshandbuch unter \enquote{9. X-Achse ausgehängt}.
+		Wenn das nicht in Ordnung ist, sind die Achse oder der Laserkopf ausgehängt und müssen erst wieder eingehängt werden. Wenn dies nicht durch leichtes Wackeln von selber passiert, müssen sie dazu teilweise demontiert werden. Siehe Wartungshandbuch unter \enquote{9. X-Achse ausgehängt}.
 		\item Die Rollen dürfen nicht frei in der Luft drehen, sondern sollen auf der Nut aufliegen. Das prüft man durch vorsichtiges Drehen mit der Hand. Richtig ist es, wenn sie sich nicht frei drehen lassen ohne dass sich der Wagen bewegt, bzw. man erst etwas kräftiger drehen muss bis sie merklich durchrutschen. 	Bei allen Rollen einer Achse soll das ungefähr gleich sein.
 
 		Wenn sich eine der Y-Rollen frei dreht, dann ist ziemlich sicher die Rechtwinkligkeit der X-Achse falsch. Bei der X-Achse kann sich die Rolle eigentlich nur dann frei drehen, wenn der Laserkopf nicht richtig eingehängt ist.
@@ -946,7 +948,7 @@ Alles weitere steht im Wartungshandbuch.
 	\begin{itemize}
 		\item Der Laserstrahl ist nicht zum Ausrichten der Achse geeignet, denn der ist selber nie hunderprozentig genau justiert. Obendrein kann man die Optik erst ausrichten, wenn die Achse bereits korrekt ausgerichtet wurde. Da beißt sich die Katze also in den Schwanz.
 
-		\item Die Optik (Linse) dafür, dass der Laserpunkt auf der Arbeitsfläche tendentiell andersherum schräg wandert als die Achse schräg ist. Weil Spiegel 4 mit auf der Achse sitzt, bewegt sich beim Schrägstellen der Achse der Laserpunkt etwa doppelt so weit wie die Achse selbst.
+		\item Die Optik (Linse) sorgt dafür, dass der Laserpunkt auf der Arbeitsfläche tendentiell andersherum schräg wandert als die Achse schräg ist. Weil Spiegel 4 mit auf der Achse sitzt, bewegt sich beim Schrägstellen der Achse der Laserpunkt etwa doppelt so weit wie die Achse selbst.
 
 		\item Der rote Laserstrahl passt nie hundertprozentig zum eigentlichen Infrarotlaser, passt also noch weniger.
 
@@ -1019,7 +1021,8 @@ Gründe für falschen Nullpunkt können sein:
 	\begin{itemize}
 		\item Diese darf nur bei ausgeschaltenem Gerät ein-/ausgebaut werden, sonst wird der Motor oder Motortreiber zerstört.
 		\item Die Rotationseinheit darf nicht auf den Wabentisch gestellt werden, dieser muss vorher ausgebaut werden. Er ist nicht stabil genug.
-		\item Der Laserkopf kann mit der Rotationseinheit kollidieren. Immer erst in der Luft (Fokus ganz nach oben) ausprobieren, ob eine Gravur wie gewünscht funktioniert.
+		\item Der Laserkopf kann mit der Rotationseinheit kollidieren. Immer erst in der Luft (Z-Achse ganz runterfahren) ausprobieren, ob der komplette Auftrag wie gewünscht funktioniert.
+		\item Beim Gravieren fährt der Lasercutter links und rechts mehrere Zentimeter über den verwendeten Bereich hinaus. Dieser Bremsweg wird kleiner wenn man die Geschwindigkeit reduziert.
 		\item Der Halteblock der Rotationseinheit ist magnetisch und darf nicht in die Nähe der X-Achse des Lasercutters gehalten werden. Sonst wird der Encoder beschädigt.
 	\end{itemize}
 	Deshalb die Anleitung genau beachten.
@@ -1027,147 +1030,152 @@ Gründe für falschen Nullpunkt können sein:
 	\subsection{Einbau}
 
 	Für die Rundgravur wie folgt vorgehen.
-
-	Maschine anschalten.
-
-	\textbf{Wabentisch ausbauen}, dazu die zwei Schrauben unter dem Tisch lösen.
-
-	Z-Achse ganz nach unten fahren
-
-	{\includegraphics[height=5cm]{img/rotationseinheit/6ca5b3f580d30255d941d5c11fcb8009bef08d39.png}}
-
-	-\textgreater{} \textbf{Maschine abschalten}
-
-
-	-\textgreater{} Rotationsachse hinten links anlegen und den Stecker in
-	die Buchse für die Rotationseinheit stecken
-
+	\begin{enumerate}
+		\item Maschine anschalten.
+		
+		\item Graue Absaugschläuche links und rechts vom Wabentisch abziehen. Die Schlauchschelle sollte bereits so locker sein, dass man sie dazu nicht weiter aufschrauben muss.
+		
+		\item \textbf{Wabentisch ausbauen}, dazu die vordere Klappe am Laser öffnen und die zwei Flügelschrauben unter dem Tisch von Hand lösen. Tisch nach vorne dem Laser schieben, am besten zusammen mit einer zweiten Person.
+		
+		\item 	Z-Achse ganz nach unten fahren (Table \laserPfeilRunter)
+		
+		{\includegraphics[height=5cm]{img/rotationseinheit/6ca5b3f580d30255d941d5c11fcb8009bef08d39.png}}
+		
+		\item \textbf{Maschine abschalten}
+		
+		\item Rotationsachse hinten links anlegen und \textbf{bei ausgeschalteter Maschine} den Stecker in
+		die Buchse für die Rotationseinheit stecken und \textbf{vorsichtig festschrauben}
+	\end{enumerate}
+	
 	\subsection{Nutzung}
-
-	- \textgreater{} Maschine einschalten
-
-
-
-	-\textgreater{} Glas einspannen
-
-	{\includegraphics[height=5cm]{img/rotationseinheit/38358ef6ae653ec2e9c5f955a59b064e9fc93d55.png}}
-
-
-
-
-
-
-
-
-
-	In Corel Hilfrechteck mit dem Umfang ($D \cdot \Pi$) des Glases und der Höhe
-	platzieren - ist zur Orientierung.
-
-	Design machen und das Ganze dann 90 Grad drehen damit die Orientierung
-	des Designs mit dem Glas übereinstimmt
-
-
-
-	{\includegraphics[height=5cm]{img/rotationseinheit/2ddfed951537c92f612bb310068bfb1863091218.png}}
-
-
-
-
-
-	Position ist erst einmal unwichtig da wir mit temp Ref-Punkt arbeiten
-
-
-
-	Objekt anwählen - Drucken - nur Auswahl -
-
-
-
-	{\includegraphics[height=5cm]{img/rotationseinheit/15637ec2f50b784addef4b18e06609a5e3e1a861.png}}
-
-
-
-
-
-	Einstellung Laser
-
-
-
-	{\includegraphics[height=7cm]{img/rotationseinheit/8fbb2d73cc1fb43cc120170a5d8de06295c60b70.png}}
-	{\includegraphics[height=7cm]{img/rotationseinheit/b80d0b448a255c3e0948040833bef1772f565741.png}}
-	{\includegraphics[height=7cm]{img/rotationseinheit/c207a27e6fec93830f6c59b31fe79151862d4ecb.png}}
-
-
-
-	Durchmesser vom Glas eingeben und Optionen wie auf Abb.
-
-
-
-	- \textgreater{}jetzt Drucken - damit ist die Datei im Laser und startet
-	dort wo wir im Anschluss nun festlegen
-
-
-
-
-
-	!!!!!!!!!!!!!!!!!! Wichtig !!!!!!!!!!!!!!!!!!!!!!
-
-
-
-	-\textgreater{} vergewissern dass genügend Platz in der Höhe ist um
-	Kollisionen zu vermeiden.
-
-
-
-	\protect\hypertarget{Bild8}{}{\includegraphics[height=5cm]{img/rotationseinheit/0680f038ffe19febe18861785b44851784749183.png}}
-
-
-
-	-\textgreater{} Home Taset drücken
-
-	-\textgreater{} Menüpunkt Adjust Rotary temp bestätigen
-
-	{Laserkopf fähr nun in Zentrum Rotary Y und irgenwo in X-Achse}
-
-
-
-	-\textgreater{} Mit Richtungstasten in X verfahren und Rotation
-	verfahren bis di egewünschte Position zur Mittigen Ausgabe erreicht ist.
-
-	{bestätigen und Menü verlassen.}
-
-
-
-	- \textgreater{} Start am Laser drücken
-
-
-
-	Am besten erst einen Leerlauf machen mit ausreichend DSistanz zum
-	Werkstück.
-
-	Erst nach korrekter Einstellung auf die Fokusdistanz gehen.
-
-
-
-	Bitte Speed unter 60\% wählen, damit der Laser nicht so weit ausholt -
-	es sei denn es ist ausreichend Platz da.
+	\begin{enumerate}		
+		\item Maschine einschalten
+		
+		
+		
+		\item Glas einspannen
+		
+		{\includegraphics[height=5cm]{img/rotationseinheit/38358ef6ae653ec2e9c5f955a59b064e9fc93d55.png}}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		In Corel Hilfrechteck mit dem Umfang ($D \cdot \Pi$) des Glases und der Höhe
+		platzieren - ist zur Orientierung und wird später wieder gelöscht.
+		
+		Design machen und das Ganze dann 90 Grad drehen damit die Orientierung
+		des Designs mit dem Glas übereinstimmt
+		
+		
+		
+		{\includegraphics[height=5cm]{img/rotationseinheit/2ddfed951537c92f612bb310068bfb1863091218.png}}
+		
+		
+		
+		
+		
+		Position ist erst einmal unwichtig da wir mit temp Ref-Punkt arbeiten
+		
+		
+		
+		Objekt anwählen - Drucken - nur Auswahl -
+		
+		
+		
+		{\includegraphics[height=5cm]{img/rotationseinheit/15637ec2f50b784addef4b18e06609a5e3e1a861.png}}
+		
+		
+		
+		
+		
+		Einstellung Laser
+		
+		
+		
+		{\includegraphics[height=7cm]{img/rotationseinheit/8fbb2d73cc1fb43cc120170a5d8de06295c60b70.png}}
+		{\includegraphics[height=7cm]{img/rotationseinheit/b80d0b448a255c3e0948040833bef1772f565741.png}}
+		{\includegraphics[height=7cm]{img/rotationseinheit/c207a27e6fec93830f6c59b31fe79151862d4ecb.png}}
+		
+		
+		
+		Durchmesser vom Glas eingeben und Optionen wie auf Abb.
+		
+		Bitte Speed unter 60\% wählen, damit der Laser nicht so weit ausholt -
+		es sei denn es ist ausreichend Platz links/rechts von der Gravur da.
+		
+		
+		
+		\item jetzt Drucken - damit ist die Datei im Laser und startet
+		dort wo wir im Anschluss nun festlegen
+		
+		
+		
+		
+		
+		\item \textbf{Z-Achse ganz nach unten fahren (Table \laserPfeilRunter) damit genügend Platz in der Höhe ist um
+			Kollisionen zu vermeiden.}
+		
+		
+		
+		\protect\hypertarget{Bild8}{}{\includegraphics[height=5cm]{img/rotationseinheit/0680f038ffe19febe18861785b44851784749183.png}}
+		
+		
+		
+		\item \laserLTTHome drücken
+		
+		\item Menüpunkt Adjust Rotary temp bestätigen
+		
+		{Laserkopf fähr nun in Zentrum Rotary Y und irgenwo in X-Achse}
+		
+		
+		
+		\item Mit Richtungstasten in X verfahren und Rotation
+		verfahren bis die gewünschte Position zur Mittigen Ausgabe erreicht ist.
+		
+		{bestätigen und Menü verlassen.}
+		
+		
+		
+		\item Start am Laser drücken
+		
+		
+		
+		Erst einen Leerlauf machen mit ausreichend Distanz zum
+		Werkstück (Z-Achse ganz nach unten).
+		
+		Wenn der Laser zu weit links/rechts ausholt, Speed geringer wählen.
+		
+		\item Nach erfolgreichem Leerlauf auf die richtige Fokusdistanz gehen.
+	\end{enumerate}
 
 	\subsection{Ausbau}
 	\textbf{Z nach ganz unten fahren}
 
 	\textbf{Maschine ausschalten!}
+	
+	Stecker der Rotationseinheit \textbf{bei ausgeschalteter Maschine} abschrauben und ausstecken
+	
+	Verschlusskappe auf Buchse schrauben
 
-	Rotationseinheit ausbauen
+	Rotationseinheit nach oben aus dem Laser entnehmen
 
 	Maschine einschalten
 
-	Wabentisch einbauen, dabei auch die zwei Absaugschläuche links und rechts anschließen. Wabentisch festschrauben.
+	Wabentisch einbauen und festschrauben (Vordere Klappe öffnen. Wabentisch von vorne in den Laser einschieben, bis an den hinteren linken Anschlag. Für die Flügelschrauben reicht vorsichtige Handkraft aus. Zuerst Schrauben nur lose einschrauben, dabei am besten mit der linken anfangen. Den Tisch noch einmal soweit es geht nach hinten links schieben und dann die Schrauben von Hand festschrauben.)
+	
+	 Die zwei Absaugschläuche links und rechts an den Wabentisch anschließen. Nur schieben, nicht die Schlauchschelle zuschrauben.
 
 	\section{\nurZing Fehlerbehebung}
 	In diesem Abschnitt stehen Hinweise zu häufigen Fehlern speziell für den Epilog Zing. Siehe auch \cref{sec:fehler-allgemein} für allgemeine Hinweise.
 
 	\subsection{Windows-Druckertreiber}
 	\subsubsection{Probleme mit 1000dpi}
-	Verwendet man die Einstellung 1000dpi können Fehler auftreten. Meist hängt der Druckjob ewig fest oder die Data-Leuchte geht nicht mehr aus. Dieses Problem lässt sich nur durch Neustarten aller Geräte lösen. Also zuerst die VM neustarten, dann den Lasercutter. Der Druckjob muss erneut geschickt werden. Jetzt sollten entweder 500dpi genutzt werden oder VisiCut.
+	Verwendet man die Einstellung 1000dpi können Fehler auftreten. Meist hängt der Druckjob ewig fest oder die Data-Leuchte geht nicht mehr aus. Dieses Problem lässt sich nur durch Neustarten aller Geräte lösen. Also zuerst Windows neustarten, dann den Lasercutter. Der Druckjob muss erneut geschickt werden. Jetzt sollten entweder 500dpi genutzt werden oder VisiCut.
 
 	\subsubsection{Data leuchtet ständig, Job hält an}
 	Data soll vor dem Starten eines Jobs ausgegangen sein! Ansonsten hält der Job manchmal irgendwann in der Mitte an.
@@ -1208,7 +1216,7 @@ Gründe für falschen Nullpunkt können sein:
 	\subsubsection{unterbrochene Schnittkanten}
 	Wenn der Laser zu heiß wird, scheint er einfach den Strahl für einen kurzen Moment abzuschalten. Dies zeigt sich dann in einer mehrfach unterbrochenen Schnittlinie. Die einzelnen \enquote{Wiedereinstiche} liegen dabei direkt nebeneinander. Eine Lösung scheint zu sein, sicherzustellen, dass der Laser auf der linken Seite kühle Luft ansaugt und dort kein Dreck ist.
 	\subsubsection{Leistungseinbrüche}
-	Wenn der Laser für ein vernünftiges Ergebnis deutlich höhere Leistungseinstellungen als gewöhnlich benötigt, ist das ein Hinweis auf eine verschmutzte Linse. Nach Abschalten des roten Lasers, kann man den Verschmutzungsgrad der Linse mit einem Spiegel überprüfen. Die Reinigungsprozedur ist in \ref{linsenreinigung} auf Seite \pageref{linsenreinigung} beschrieben. Bei schlechten Lichtverhältnissen kann es auch sein, dass eine Verschmutzung erst nach Ausbau der Linse erkennbar ist.
+	Wenn der Laser für ein vernünftiges Ergebnis deutlich höhere Leistungseinstellungen als gewöhnlich benötigt, ist das ein Hinweis auf eine verschmutzte Linse. Nach Abschalten des roten Lasers, kann man den Verschmutzungsgrad der Linse mit einem Spiegel überprüfen. Die Reinigungsprozedur ist in \cref{linsenreinigung} auf Seite \pageref{linsenreinigung} beschrieben. Bei schlechten Lichtverhältnissen kann es auch sein, dass eine Verschmutzung erst nach Ausbau der Linse erkennbar ist.
 	\subsubsection{Müdigkeit}
 	Wenn der Laser mehrere Tage nicht genutzt wird, ist er in der ersten halben Stunde etwas müde -- wahrscheinlich ist die Ionisierung der Laserröhre dann noch nicht so gut. Die Röhre hat dann manchmal Probleme zu zünden, sodass manche Stellen nicht oder nur teilweise gelasert werden. Nach etwas Benutzung verschwindet das Problem von selber.
 
