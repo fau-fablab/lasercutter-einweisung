@@ -19,7 +19,6 @@
 \usetikzlibrary{shapes,arrows} % für das flowchart
 
 \usepackage{marvosym} % für Briefumschlag-Symbol
-\usepackage{fontawesome} % für Haus-Symbol
 \usepackage{eurosym}
 \usepackage{tabularx} % Tabellen mit bestimmtem Breitenverhältnis der Spalten
 \usepackage{multirow} % Tabellen Zellen die sich über mehrere Zeilen ausdehnen
@@ -80,7 +79,7 @@ minimum height=2em]
 \newcommand{\laserFocus}{\laserKnopf{Focus}}
 \newcommand{\laserPfeilRauf}{\laserKnopf{$\blacktriangle$}}
 \newcommand{\laserPfeilRunter}{\laserKnopf{$\blacktriangledown$}}
-\newcommand{\laserLTTHome}{\laserKnopf{\Large \faHome}}
+\newcommand{\laserLTTHome}{\laserKnopf{\includegraphics{img/icon-home.pdf}}}
 
 
 \newcommand{\laserDisplay}[1]{\fbox{\texttt{#1}}}
@@ -1149,6 +1148,8 @@ Gründe für falschen Nullpunkt können sein:
 		Werkstück (Z-Achse ganz nach unten).
 		
 		Wenn der Laser zu weit links/rechts ausholt, Speed geringer wählen.
+		
+		Wenn die Fehlermeldung \enquote{X Axis out of bounds} erscheint, war die Gravur viel zu weit links. Dann muss sie nach rechts verschoben oder Speed geringer gewählt werden.
 		
 		\item Nach erfolgreichem Leerlauf auf die richtige Fokusdistanz gehen.
 	\end{enumerate}
