@@ -1,11 +1,14 @@
 Lasercutter Einweisung
 =====================
 
-Einweisung des [FAU FabLab](https://fablab.fau.de) für die Lasercutter [Cameo Zing 6030](https://fablab.fau.de/tool/lasercutter) und LTT iLaser 4000.
+Einweisung des [FAU FabLab](https://fablab.fau.de) für die Lasercutter [Epilog (Cameo) Zing 6030](https://fablab.fau.de/tool/lasercutter) und LTT iLaser 4000.
 
 Die neueste Version gibt es hier zum Download als PDF:
 * [Einweisung](https://brain.fablab.fau.de/build/lasercutter-einweisung/Einweisung_Lasercutter.pdf)
 * [Einweisungsliste](https://brain.fablab.fau.de/build/lasercutter-einweisung/Einweisungsliste_Lasercutter.pdf)
+* [Wartungsliste LTT](https://brain.fablab.fau.de/build/lasercutter-einweisung/Wartungsliste_Lasercutter_LTT.pdf)
+* [Wartungsliste Epilog Zing](https://brain.fablab.fau.de/build/lasercutter-einweisung/Wartungsliste_Lasercutter_Epilog_Zing.pdf)
+
 
 auschecken
 ----------
