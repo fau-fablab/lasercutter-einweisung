@@ -1014,7 +1014,8 @@ Gründe für falschen Nullpunkt können sein:
 	% basierend auf einer Anleitung von Hr. Noll, Verwendung mit Genehmigung
 	In diesem Abschnitt geht es um die Rotationseinheit.
 
-	 Die Verwendung der Rotationseinheit ist nur mit Betreuer zulässig und derzeit funktioniert die Einheit nur mit CorelDraw.
+	 Die Verwendung der Rotationseinheit ist nur mit Betreuer zulässig.
+	 Am einfachsten geht es mit VisiCut. Komplizierter, aber dafür mit mehr Einstellungsmöglichkeiten ist der Windowstreiber mit CorelDraw, dazu unbedingt auch die Hinweise in \cref{sec:ltt-windows} beachten!
 
 	\textbf{Gefahren:}
 	\begin{itemize}
@@ -1050,76 +1051,45 @@ Gründe für falschen Nullpunkt können sein:
 	\begin{enumerate}
 		\item Maschine einschalten
 
-
-
 		\item Glas einspannen
 
 		{\includegraphics[height=5cm]{img/rotationseinheit/38358ef6ae653ec2e9c5f955a59b064e9fc93d55.png}}
 
 
+		Zur Orientierung am besten ein Rechteck platzieren, Höhe = Umfang des Glases (Durchmesser mal 3,14), Breite = Länge des Glases.
 
-
-
-
-
-
-
-		In Corel Hilfrechteck mit dem Umfang ($D \cdot \Pi$) des Glases und der Höhe
-		platzieren - ist zur Orientierung und wird später wieder gelöscht.
-
-		Design machen und das Ganze dann 90 Grad drehen damit die Orientierung
-		des Designs mit dem Glas übereinstimmt
-
-
+		Design erstellen. Schrift muss normalerweise 90 Grad gedreht sein damit die Orientierung mit dem Glas übereinstimmt (siehe Foto). Die Richtung \enquote{nach oben/unten} auf dem Bildschirm entspricht einer Drehung um das Werkstück herum.
 
 		{\includegraphics[height=5cm]{img/rotationseinheit/2ddfed951537c92f612bb310068bfb1863091218.png}}
 
 
+		Rechteck irgendwo innerhalb der Seite positionieren. Die Position ist egal, da wir den Mittelpunkt später noch am Lasercutter setzen (\enquote{temporärer Referenzpunkt}).
 
+		\paragraph{VisiCut:} Datei an VisiCut senden, Material auswählen. Die Dicke ist fürs Gravieren egal. Checkbox für Rotationseinheit setzen und den Durchmesser eingeben. Weiter zum nächsten Punkt.
 
-
-		Position ist erst einmal unwichtig da wir mit temp Ref-Punkt arbeiten
-
-
+		\paragraph{Corel mit Windowstreiber:} Folgendes ganz genau beachten.
 
 		Objekt anwählen - Drucken - nur Auswahl -
 
-
-
 		{\includegraphics[height=5cm]{img/rotationseinheit/15637ec2f50b784addef4b18e06609a5e3e1a861.png}}
 
-
-
-
-
 		Einstellung Laser
-
-
 
 		{\includegraphics[height=7cm]{img/rotationseinheit/8fbb2d73cc1fb43cc120170a5d8de06295c60b70.png}}
 		{\includegraphics[height=7cm]{img/rotationseinheit/b80d0b448a255c3e0948040833bef1772f565741.png}}
 		{\includegraphics[height=7cm]{img/rotationseinheit/c207a27e6fec93830f6c59b31fe79151862d4ecb.png}}
 
-
-
 		Durchmesser vom Glas eingeben und Optionen wie auf Abb.
 
-		Bitte Speed unter 60\% wählen, damit der Laser nicht so weit ausholt -
-		es sei denn es ist ausreichend Platz links/rechts von der Gravur da.
+		\item Bitte Geschwindigkeit (Speed) unter 60\% wählen, damit der Laser nicht so weit ausholt -
+		es sei denn es ist ausreichend Platz (4\,cm) links/rechts von der Gravur da. Bei geringerer Geschwindigkeit muss für ein gleich starke Gravur auch die Leistung reduziert werden.
 
+		Bei VisiCut nicht auf Speichern klicken, sonst wird die neue Geschwindigkeit dauerhaft für dieses Material gespeichert!
 
-
-		\item jetzt Drucken - damit ist die Datei im Laser und startet
-		dort wo wir im Anschluss nun festlegen
-
-
-
-
+		\item Jetzt an den Laser senden.
 
 		\item \textbf{Z-Achse ganz nach unten fahren (Table \laserPfeilRunter) damit genügend Platz in der Höhe ist um
 			Kollisionen zu vermeiden.}
-
-
 
 		\protect\hypertarget{Bild8}{}{\includegraphics[height=5cm]{img/rotationseinheit/0680f038ffe19febe18861785b44851784749183.png}}
 
@@ -1129,20 +1099,13 @@ Gründe für falschen Nullpunkt können sein:
 
 		\item Menüpunkt Adjust Rotary temp bestätigen
 
-		{Laserkopf fähr nun in Zentrum Rotary Y und irgenwo in X-Achse}
+		{Laserkopf fährt nun in Y auf die Mitte der Rotationseinheit, und in X irgendwo hin}
 
+		\item Mittelpunkt der Gravur festlegen: Mit den Richtungstasten in X und Rotation verfahren bis der gewünschte Punkt erreicht ist.
 
-
-		\item Mit Richtungstasten in X verfahren und Rotation
-		verfahren bis die gewünschte Position zur Mittigen Ausgabe erreicht ist.
-
-		{bestätigen und Menü verlassen.}
-
-
+		{Bestätigen und Menü verlassen.}
 
 		\item Start am Laser drücken
-
-
 
 		Erst einen Leerlauf machen mit ausreichend Distanz zum
 		Werkstück (Z-Achse ganz nach unten).
