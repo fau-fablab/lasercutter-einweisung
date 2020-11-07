@@ -280,13 +280,13 @@ minimum height=2em]
 
 	\textbf{Laser Einstellungen}: Im Bereich Laser Einstellungen können die Lasereinstellungen überprüft und verstellt werden. Überprüfe vor Allem wenn es sich um ausgefallenere Materialien handelt, ob hier sinnvolle Einstellungen stehen. Oft ist es so, dass die Standardeinstellungen (Power: 0, Speed: 100, Fokus 0) gesetzt sind da diese noch nicht angepasst wurden). \textbf{Speichere deine Veränderungen nur, wenn sie auch für andere Benutzer sinnvoll sind.} Experimente bitte nicht abspeichern, sondern einfach nur den Auftrag abschicken ohne auf Speichern zu klicken.
 
-	\button{Berechnen}: Dadurch wird die benötigte Zeit im Vorraus berechnet. Dies ist allerdings nur ein Richtwert und kann von der tatsächlichen Dauer abweichen. \nurLTT Wird momentan nicht unterstützt.
+	\button{Berechnen}: Dadurch wird die benötigte Zeit im Voraus berechnet. Dies ist allerdings nur ein Richtwert und kann von der tatsächlichen Dauer abweichen.
 
 	\button{Ausführen}: Dies schickt den Auftrag an den Lasercutter. Wenn eine Erfolgsmeldung erscheint, kann der Auftrag im Laser gestartet werden.
 
 	Da VisiCut in Java programmiert ist, läuft es auf jedem Betriebsystem und man kann es auch bei sich auf den Laptop installieren. Es ist verfügbar unter \url{https://download.visicut.org/}.
 
-	Die aktuell verwendete Konfiguration für VisiCut kannst du beim ersten Start oder unter \verb|Optionen| / \verb|empfohlene Einstellungen herunterladen...| herunterladen. (Sie ist unter \url{https://github.com/fau-fablab/visicut-settings} in das git Repo eingecheckt. Änderungen müssen dorthin gepusht werden. Im FabLab werden auf dem Rechner beim linken Fenster des Hauptraums mit dem dortigen fu-Nutzer (\texttt{fufablab05}) die Einstellungen in einem Git-Repo abgelegt. Von dort aus können diese auf GitHub gepusht und per Pull Request mit dem Repo des FabLab abgeglichen werden. Dazu muss ein Pull Request von \url{https://github.com/FAUFabLabWS/visicut-settings} nach \url{https://github.com/fau-fablab/visicut-settings} gestellt werden: \href{https://github.com/fau-fablab/visicut-settings/compare/master...FAUFabLabWS:master}{Hier klicken}. Speichere funktionierende Änderungen bitte mit dem Nutzer \texttt{fufablab05} auf dem beschriebenen Rechner ab, damit sie bei nächster Gelegenheit auf GitHub gepusht werden können. Wenn du weißt, was du tust, kannst du das Repo auch pushen. Ein passender SSH-Key für den GitHub-Nutzer FAUFabLabWS ist im \texttt{fufablab05} hinterlegt.)
+	Die aktuell verwendete Konfiguration für VisiCut kannst du beim ersten Start oder unter \verb|Optionen| / \verb|empfohlene Einstellungen herunterladen...| herunterladen. (Details zum Ändern und Verteilen dieser Einstellungen siehe \cref{sec:wartung-epilog:visicut} auf Seite \pageref{sec:wartung-epilog:visicut}.)
 
 	VisiCut ist Open Source und wird gemeinschaftlich weiterentwickelt. Wenn du Fehler findest und diese nachvollziehbar beschreiben kannst, freuen wir uns über einen Bericht an \href{mailto:kontakt@fablab.fau.de}{kontakt@fablab.fau.de} oder noch besser direkt auf github unter \url{https://github.com/t-oster/visicut/issues}.
 
@@ -764,6 +764,11 @@ Fertige Beispiele zum Umbauen:
 	Der Lasercutter graviert die Zeilen immer abwechseld von links nach rechts und umgekehrt. Dabei kann ein leichter Versatz zwischen links- und rechtsherum gravierten Zeilen auftreten, der vertikale Gravurkanten kammförmig erscheinen lässt. Zum Testen lasert man mit 1000dpi eine feine vertikale Linke oder feine Schrift (ein kleines i in 9pt Times). Dies wiederholt man mit verschiedenen Lasermatch-Einstellungen und wählt die, bei der die Kante optimal aussieht.
 
 	Details dazu stehen im Handbuch.
+
+	\subsection{VisiCut Einstellungen verteilen (für Epilog und LTT)}
+	\label{sec:wartung-epilog:visicut}
+	Die Einstellungen die man mit VisiCut im Menü herunterlagen kann, sind wie folgt hinterlegt:
+	Sie sind unter \url{https://github.com/fau-fablab/visicut-settings} in das git Repo eingecheckt. Änderungen müssen dorthin gepusht werden. Im FabLab werden auf dem Rechner beim linken Fenster des Hauptraums mit dem dortigen fu-Nutzer (\texttt{fufablab05}) die Einstellungen in einem Git-Repo abgelegt. Von dort aus können diese auf GitHub gepusht und per Pull Request mit dem Repo des FabLab abgeglichen werden. Dazu muss ein Pull Request von \url{https://github.com/FAUFabLabWS/visicut-settings} nach \url{https://github.com/fau-fablab/visicut-settings} gestellt werden: \href{https://github.com/fau-fablab/visicut-settings/compare/master...FAUFabLabWS:master}{Hier klicken}. Speichere funktionierende Änderungen bitte mit dem Nutzer \texttt{fufablab05} auf dem beschriebenen Rechner ab, damit sie bei nächster Gelegenheit auf GitHub gepusht werden können. Wenn du weißt, was du tust, kannst du das Repo auch pushen. Ein passender SSH-Key für den GitHub-Nutzer FAUFabLabWS ist im \texttt{fufablab05} hinterlegt.
 
 	\section{häufige Fehler}
 	\label{sec:fehler-allgemein}
