@@ -771,8 +771,16 @@ Fertige Beispiele zum Umbauen:
 
 	\subsection{VisiCut Einstellungen verteilen (für Epilog und LTT)}
 	\label{sec:wartung-epilog:visicut}
-	Die Einstellungen die man mit VisiCut im Menü herunterlagen kann, sind wie folgt hinterlegt:
-	Sie sind unter \url{https://github.com/fau-fablab/visicut-settings} in das git Repo eingecheckt. Änderungen müssen dorthin gepusht werden. Im FabLab werden auf dem Rechner beim linken Fenster des Hauptraums mit dem dortigen fu-Nutzer (\texttt{fufablab05}) die Einstellungen in einem Git-Repo abgelegt. Von dort aus können diese auf GitHub gepusht und per Pull Request mit dem Repo des FabLab abgeglichen werden. Dazu muss ein Pull Request von \url{https://github.com/FAUFabLabWS/visicut-settings} nach \url{https://github.com/fau-fablab/visicut-settings} gestellt werden: \href{https://github.com/fau-fablab/visicut-settings/compare/master...FAUFabLabWS:master}{Hier klicken}. Speichere funktionierende Änderungen bitte mit dem Nutzer \texttt{fufablab05} auf dem beschriebenen Rechner ab, damit sie bei nächster Gelegenheit auf GitHub gepusht werden können. Wenn du weißt, was du tust, kannst du das Repo auch pushen. Ein passender SSH-Key für den GitHub-Nutzer FAUFabLabWS ist im \texttt{fufablab05} hinterlegt.
+	Im FabLab werden auf dem Rechner beim linken Fenster des Hauptraums mit dem dortigen fu-Nutzer (\texttt{fufablab05}) gesammelt. Von dort werden sie manuell geprüft und in mehreren Schritten auf Github veröffentlicht (siehe später, bitte genau lesen). Alle anderen Rechner laden sie sich regelmäßig von Github herunter und überschreiben dabei lokale Änderungen. Man kann das Herunterladen auch im Menü von Visicut anstoßen.
+	
+	\paragraph{Technischer Hintergrund:}
+	VisiCut läd die Einstellungen von dem Git-Repo \url{https://github.com/fau-fablab/visicut-settings}.
+	Änderungen müssen dorthin gepusht werden. 
+	Im Nutzer \texttt{fufablab05} ist ein passender SSH-Key für den GitHub-Nutzer FAUFabLabWS hinterlegt. Dieser hat einen Fork des Repo (\url{https://github.com/FAUFabLabWS/visicut-settings}), aus dem per Pull Request dann in das Haupt-Repo (fau-fablab/visicut-settings) dann die Änderungen übernommen werden. Um Unfug zu vermeiden darf der Nutzer nicht direkt in das Haupt-Repo pushen.
+	
+	\paragraph{Verteilen der Einstellungen:}
+	Am oben beschriebenen Rechner und Benutzer werden die Einstellungen in einem Git-Repo abgelegt.
+	Von dort aus können diese auf GitHub gepusht (Explorer -- C:/Users/fufablab05/.visicut/ -- Rechtsklick in diesem Ordner) werden. Bitte die einzelnen Änderungen genau überprüfen, nicht blind durchklicken --- oft speichern die Leute Unfug ab, z.B. Dicken von Acryl die es nicht gibt. Nach dem Pushen muss ein Pull Request von \href{https://github.com/FAUFabLabWS/visicut-settings}{FAUFabLabWS} nach \href{https://github.com/fau-fablab/visicut-settings}{fau-fablab} gestellt werden: Auf irgendeinem Rechner mit deinem persönlichen Benutzer (nicht FAUFabLabWS!) bei Github einloggen und \href{https://github.com/fau-fablab/visicut-settings/compare/master...FAUFabLabWS:master}{hier klicken}. (Nicht auf dem fufablab-Benutzer irgendwelche persönlichen Zugangsdaten eingeben!)
 
 	\section{häufige Fehler}
 	\label{sec:fehler-allgemein}
@@ -807,7 +815,7 @@ Fertige Beispiele zum Umbauen:
 	\section{\nurLTT Wartung - nur für Betreuer}
 	\label{sec:wartung-ltt}
 	\textbf{Achtung! Mache folgendes nur, wenn du wirklich Ahnung hast -- Fehler können teuer werden!}
-
+	
 	\textbf{Bitte trage alles auch im Wartungsbuch ein -- es liegt meist oben auf dem Lasercutter beim Lüfterkasten.}
 
 	Die Achsen sind: X links-rechts, Y vor-hinter, Z für den Tisch.
@@ -900,7 +908,7 @@ Ziel ist, dass die Position des Laserstrahls an jedem einzelnen Spiegeln gleich 
 
 Wenn die Ausrichtung nicht stimmt, kann das auch an einer falsch ausgerichteten X-Achse liegen! Deshalb vor dem Justieren der Optik zunächst die Checkliste in \cref{sec:wartung-ltt:kollision} abarbeiten.
 
-Es gibt ein Fadenkreuz, das an die Position der Linse eingesetzt wird. Dieses wird aus Kassenzettelpapier ausgelasert, fertige Exemplare finden sich in der Wartungskiste. Die Datei liegt in fablab-data/Maschinen/Novograv (LTT) iLaser 4000/ und auch in der Dateifreigabe/1_fablab/1_Geraete/Laser/Anleitungen Novograv  (LTT) iLaser 4000/. Die Position des Laserpunkts darauf sollte sich nicht mehr als ca. 2mm verändern, besser deutlich weniger. Mittigkeit des Laserpunkts sollte unter ca. 3mm sein, besser deutlich weniger.
+Es gibt ein Fadenkreuz, das an die Position der Linse eingesetzt wird. Dieses wird aus Kassenzettelpapier ausgelasert, fertige Exemplare finden sich in der Wartungskiste. Die Datei liegt in fablab-data/Maschinen/Novograv (LTT) iLaser 4000/ und auch in der Dateifreigabe/1\_fablab/1\_Geraete/Laser/Anleitungen Novograv  (LTT) iLaser 4000/. Die Position des Laserpunkts darauf sollte sich nicht mehr als ca. 2mm verändern, besser deutlich weniger. Mittigkeit des Laserpunkts sollte unter ca. 3mm sein, besser deutlich weniger.
 
 \textbf{Bitte klebe das Ergebnis des Fadenkreuzes (nachdem in allen 4 Ecken mal kurz draufgelasert wurde) auch ins Wartungsbuch ein. So kann man nachvollziehen wie gut es vor und nach der Wartung ist.}
 
