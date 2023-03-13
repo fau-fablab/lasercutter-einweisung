@@ -23,6 +23,7 @@
 \usepackage{tabularx} % Tabellen mit bestimmtem Breitenverhältnis der Spalten
 \usepackage{multirow} % Tabellen Zellen die sich über mehrere Zeilen ausdehnen
 \usepackage{wrapfig} % Textumlauf um Bilder
+
 \renewcommand{\texteuro}{\euro}
 
 \linespread{1.2}
@@ -103,7 +104,22 @@ minimum height=2em]
 %VisiCut Buttons
 \newcommand{\button}[1]{\knopf{lueftungsknopf}{#1}}
 
+% English translation in gray:
+% \english{text}
+\makeatletter
+% \smaller: switch to small fontsize if current font is > 10pt (i.e., not footnote)
+\newcommand{\smaller}{\ifdim\f@size pt>10pt \small \fi}
+\makeatother
+\newcommand{\english}[1]{{\smaller \color{gray} \itshape #1}}
 
+%% REMOVE THE FOLLOWING LINE TO SHOW THE ENGLISH TRANSLATIONS
+\renewcommand{\english}[1]{}
+
+% Reference to previous footnote, needed when translating footnotes.
+% Usage:
+%   Hallo Welt \footnote{\label{myLabel} Fußnote}
+%   Hello World \footnoteref{myLabel}.
+\newcommand{\footnoteref}[1]{\textsuperscript{\ref{#1}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inhalt des Dokuments
@@ -111,20 +127,38 @@ minimum height=2em]
 \begin{document}
 	\maketitle
 
-	Diese Einweisung erklärt die Lasercutter LTT iLaser 4000 (seit Sept. 2018 im FAU FabLab) und Epilog Zing (kleiner, Vorgänger, aus Platzmangel normalerweise nicht im FabLab).
+	Diese Einweisung erklärt die Lasercutter LTT iLaser 4000 (seit 2018 im FAU FabLab) und Epilog Zing (kleiner, normalerweise nicht im FabLab).
 
-	\section{Was du dir merken musst}
+	\english{This instruction explains the laser cutters LTT iLaser 4000 (in the FAU FabLab since 2018) and Epilog Zing (smaller, usually not in the FabLab).}
+
+	\section{Was du dir merken musst \english{What you need to remember}}
 	Den Inhalt dieses Kapitels musst du wissen, alles andere kannst du bei Bedarf nachlesen.
-	\subsection{Regeln und Hinweise}
+
+	\english{You must know the content of this chapter. You can look up everything else as needed.}
+	\subsection{Regeln \english{Rules}}
 	\begin{itemize}
-		\item Nur zweifelsfrei geeignete Materialien verwenden, die in der Liste (auf den nächsten Seiten) stehen. Keine unbekannten Materialien. Besonders keine Materialien die giftige Gase entwickeln können, wie zum Beispiel PVC, Teflon, etc.
+		\item Nur erlaubte Materialien verwenden. Beachte die Liste auf Seite \pageref{sec:material}. Keine unbekannten Materialien. Ungeeignete Materialien können deiner Gesundheit und dem Lasercutter schaden.
+
+            \english{Only use allowed materials. Check the list on page \pageref{sec:material}. No unknown materials. Unsuitable materials can damage your health and the lasercutter.}
+
 		\item Ebenfalls nicht erlaubt sind leichtentzündliche oder gefährliche Dinge, wie z.\,B. Feuer\-zeuge (außer diese wurden noch nie befüllt). Wenn das Gehäuse nicht aus Metall ist, muss bei Handys der Akku herausgenommen werden.
-		\item Solange der Laser arbeitet, muss immer eine Person \emph{direkt} beim Lasercutter sein und zusehen. \footnote{Bei vollständig unbrennbaren Materialien wie Stein, Metall oder Glas (keinesfalls bei Plexiglas!) dürfen Betreuer für besonders lange Aufträge eine Ausnahme erlauben, wenn vorher alle brennbaren Reste aus dem Schneidetisch entleert wurden.}
+
+            \english{TODO: The english translation of this document is not yet finished. Please ask the advisors for a translation.}
+
+		\item Solange der Laser arbeitet, \emph{direkt} beim Lasercutter bleiben und zusehen. (Brandgefahr!)
+            \footnote{\label{footnote:rules:nonflammable}
+                Bei vollständig unbrennbaren Materialien wie Stein, Metall oder Glas (keinesfalls bei Plexiglas!) dürfen Betreuer für besonders lange Aufträge eine Ausnahme erlauben, wenn vorher alle brennbaren Reste aus dem Schneidetisch entleert wurden.
+
+                \english{TODO translate the footnote}
+            }
+
+            \english{TODO translate the main text\footnoteref{footnote:rules:nonflammable}}
+
 		\item Alle Arbeiten erfolgen eigenverantwortlich und auf eigenes Risiko. Das FabLab haftet nicht für Beschädigungen, auch nicht wenn dein schickes Handy beim Gravieren kaputt geht.
 		\item Nichts schrauben, nichts verstellen. Einzige Ausnahme sind die grünen Schrauben des Schneidetischs. % Betätigen der grünen Schrauben ist nötig, um den Schneidetisch zu reinigen! Deshalb kann man es nicht ganz verbieten.
 		\item Das Wabengitter ist empfindlich, daher: Nicht darauf abstützen und nichts schweres darauf stellen!
 		\item Im Brandfall nur mit CO\subscript{2}-Löscher, niemals mit Pulver-, Schaum- oder Wasserlöscher löschen (Verschmutzung, Stromschlaggefahr)! Der Feuerlöscher steht gegenüber vom Laser beim Kassenterminal.
-		\item Keine Magnete in den Bauraum oder in die Nähe des Lasercutters bringen. (\nurLTT Einzige erlaubte Ausnahme ist die in der Gravureinheit enthaltene Magnethalterung. Mit dieser ist besondere Vorsicht erforderlich, damit nicht die magnetischen Positionsgeber (Lineardecoder) an den Achsen beschädigt werden.)
+		\item Keine Magnete in die Nähe des Lasercutters bringen. \footnote{\nurLTT Einzige erlaubte Ausnahme ist die in der Gravureinheit enthaltene Magnethalterung. Mit dieser ist besondere Vorsicht erforderlich, damit nicht die magnetischen Positionsgeber (Lineardecoder) an den Achsen beschädigt werden.}
 		\item \nurLTT Sofortiges Abschalten des Lasercutters geht nur mit dem Not-Aus-Schalter. \laserLTTPause fährt die nächsten Linien noch zu Ende. Dies braucht aber seine Zeit und funktioniert manchmal nicht.
 		\item \nurZing Es gibt hier keinen Not-Aus-Schalter! \laserZingStop  fährt die aktuelle Linie noch zu Ende. Sofortiges Abschalten des Lasercutters geht nur über den Kippschalter rechts unten am Gerät.
 		\item Sicherstellen, dass der Laserkopf sich in seiner Ebene komplett frei bewegen kann, ohne gegen Hindernisse (z.\,B. gegen das Material) zu stoßen.
@@ -172,10 +206,8 @@ minimum height=2em]
 
 	\newpage %Sieht ein bisschen schöner aus
 
-	\section{Materialien}
+	\section{Materialien}\label{sec:material}
 	Wenn dein Material nicht in der Liste steht, ist es nicht erlaubt! Viele Kunststoffe sehen ähnlich aus, und Baumärkte haben schon oft falsche Sorten verkauft, weshalb Kunststoff ohne eindeutige Beschriftung nicht gelasert werden darf.
-
-	Um ein neues Material in die Liste aufzunehmen, frage an kontakt@fablab.fau.de. Die Entscheidung treffen Betreuer mit ausreichendem chemischen Sachverstand in Absprache mit der Arbeitssicherheits-Gruppe des FabLabs. Es wird zuerst geprüft, ob korrosive oder relevante giftige Dämpfe entstehen. Dann gibt es einen Versuch ob das Material beim Lasern nicht spritzt, fürchterlich stinkt oder ähnliches. Wenn alles passt, wird das Material in die Liste aufgenommen.
 
 	\subsection{Erlaubt}
 	\newcommand{\itemCheck}{\item[\checkmark]}
@@ -207,8 +239,11 @@ minimum height=2em]
 		\itemCross ABS, Epoxidharz (GFK, CFK, Platinen), weil es übelst stinkt
 		\itemCross PS Polystyrol / PC Polycarbonat dicker als 1\,mm, weil es beim Lasern spritzt
 		\itemCross PA Polyamid / PU Polyurethan / Textilien mit Nylon- oder Elastan-Anteil / NBR-Gummi Nitrilkautschuk / alle Stoffe, die gleichzeitig H-, C- und N-Atome enthalten: entwickelt Blausäure (HCN)
-		\itemCross halogenhaltige Kunststoffe: PVC = Vinyl = Neopren, PTFE = Teflon (z.\,B. als \enquote{glitschige} Beschichtung von Taschenmessern), PFA, ...
+		\itemCross halogenhaltige Kunststoffe: PVC = Vinyl = Neopren, PTFE = Teflon (z.\,B. als \enquote{glitschige} Beschichtung von Taschenmessern), PFA, ...: Entwickelt Salzsäure bzw. Flussäure
 	\end{itemize}
+
+	\subsection{Neues Material}
+	Um ein neues Material in die Liste aufzunehmen, frage an kontakt@fablab.fau.de. Die Entscheidung treffen Betreuer mit ausreichendem chemischen Sachverstand in Absprache mit der Arbeitssicherheits-Gruppe des FabLabs. Es wird zuerst geprüft, ob korrosive oder relevante giftige Dämpfe entstehen. Dann gibt es einen Versuch ob das Material beim Lasern nicht spritzt, fürchterlich stinkt oder ähnliches. Wenn alles passt, wird das Material in die Liste aufgenommen.
 
 	\section{Grundlagen}
 	Der Lasercutter hat zwei Laser: Einen roten Laserpointer, der weitestgehend harmlos ist. Dieser ist wie ein Laserpointer ungefährlich, solange man den direkten Strahl (z.\,B. mit einem Spiegel) höchstens für sehr kurze Zeit betrachtet. Das Betrachten des roten Punkts auf einem Objekt ist harmlos.
