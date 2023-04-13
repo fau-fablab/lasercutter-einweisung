@@ -1061,6 +1061,15 @@ Gründe für falschen Nullpunkt können sein:
 \end{itemize}
  Siehe Wartungshandbuch unter \enquote{10. Sensoren der Parkposition prüfen} und \enquote{Anhang 1}.
 
+ \subsection{Gravur ist schattig oder ausgefranst}
+ Wird nur ein sehr schmaler Bereich graviert und sieht die Gravur trotzdem schlecht aus, dann liegt es wahrscheinlich am Parameter Engrave-Shift (Versatz zwischen links- und rechts-laufenden Gravurzeilen). Beim Gravieren auf Acryl ergibt das einen leicht fransigen Rand von senkrechten Linien.
+
+ Hat die Gravur einen \enquote{Schatten}, der umso mehr versetzt ist je breiter der gravierte Bereich ist, dann liegt das wahrscheinlich am Servogetriebefaktor (vereinfacht gesagt: Skalierungsfaktor für Motorumdrehungen pro Gravurpixel). Dieser muss nach Riementausch neu justiert werden.
+
+ Details hierzu sind auf fablab-data/Maschinen/LTT iLaser 4000/Servokalibrierung/ abgelegt, für Zugriff wende dich an die Admins.
+
+  Eine viel zu schwache Riemenspannung kann auch eine Ursache von Problemen sein.
+
 \subsection{Fokus-Abstand ändern (sollte nie nötig sein)}
 	Es sollte nie nötig sein, den Fokus-Abstand nachzukalibrieren, außer am Lasersystem wird grundlegend etwas geändert (z.\,B. anderer Linsentyp).
 
@@ -1072,7 +1081,7 @@ Gründe für falschen Nullpunkt können sein:
 
 	Mögliche Verbesserung für die Zukunft: 2-Zoll-Linse in unteren Halter einbauen, Fokusoffset neu kalibrieren, das braucht aber eine modifizierte \glqq Düse\grqq (Kegel) da sonst der Strahl abgeschnitten wird
 
-
+    Der Lasercutter unterstützt theoretisch das Verstellen des Fokus (Ansteuerung der Z-Achse) innerhalb eines Auftrags, um auf unterschiedlicher Höhe zu schneiden und zu gravieren. In VisiCut ist das aber nicht umgesetzt, daher haben wir als Kompromiss zwischen Schneiden und Gravieren den Fokus so kalibriert, dass der Autofokus 3 mm zu tief (unterhalb der Oberkante der Platte) fokussiert.
 
 	\section{\nurLTT Rotationseinheit}
 	% basierend auf einer Anleitung von Hr. Noll, Verwendung mit Genehmigung
@@ -1188,7 +1197,7 @@ Gründe für falschen Nullpunkt können sein:
 
 	Stecker der Rotationseinheit \textbf{bei ausgeschalteter Maschine} abschrauben und ausstecken
 
-	Verschlusskappe auf Buchse schrauben
+	\textbf{Verschlusskappe} auf Buchse schrauben
 
 	Rotationseinheit nach oben aus dem Laser entnehmen
 
@@ -1196,7 +1205,7 @@ Gründe für falschen Nullpunkt können sein:
 
 	Wabentisch einbauen und festschrauben (Vordere Klappe öffnen. Wabentisch von vorne in den Laser einschieben, bis an den hinteren linken Anschlag. Für die Flügelschrauben reicht vorsichtige Handkraft aus. Zuerst Schrauben nur lose einschrauben, dabei am besten mit der linken anfangen. Den Tisch noch einmal soweit es geht nach hinten links schieben und dann die Schrauben von Hand festschrauben.)
 
-	 Die zwei Absaugschläuche links und rechts an den Wabentisch anschließen. Nur schieben, nicht die Schlauchschelle zuschrauben.
+	 Die zwei \textbf{Absaugschläuche} links und rechts an den Wabentisch anschließen. Nur schieben, nicht die Schlauchschelle zuschrauben.
 
 	\section{\nurZing Fehlerbehebung}
 	In diesem Abschnitt stehen Hinweise zu häufigen Fehlern speziell für den Epilog Zing. Siehe auch \cref{sec:fehler-allgemein} für allgemeine Hinweise.
