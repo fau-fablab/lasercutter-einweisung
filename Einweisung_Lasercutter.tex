@@ -333,27 +333,11 @@ minimum height=2em]
 
 	Mit VisiCut kann man seine Vektorzeichnung auf einem Bild des eingelegten Materials platzieren. Dazu wird von einer Kamera, die an der Klappe des Lasercutters angebracht ist, ein Bild geschossen, das anhand der 4 Passermarken an den 4 Ecken der Arbeitsfläche des Lasers ausgerichtet und beschnitten wird. So können die Teile, die gelasert werden sollen, je nach Kalibrierung bis auf etwa 2mm genau am Bild ausgerichtet werden, was vor allem bei Reststücken nützlich ist. Das Bild wird automatisch aktualisiert, es funktioniert nur wenn der Laserdeckel aufgeklappt ist.
 
-	\nurLTT Es ist zu beachten, dass die Kamera noch ziemlich ungenau ist, 5-10mm Unsicherheit sind möglich! Für eine sehr genaue Ausrichtung richte dich besser nach den Linealen am Rand des Wabengitters und in VisiCut.
+	\nurLTT Die Kamera ist eher ungenau, 5-10mm Unsicherheit sind möglich! Für eine sehr genaue Ausrichtung richte dich besser nach den Linealen am Rand des Wabengitters und in VisiCut.
 
-	\nurZing Vor dem Lasern ist noch zu beachten, dass der Laserkopf in den Nullpunkt des Lasercutters (links oben) zurückgefahren ist. Dazu drückt man am Laser die Taste \laserZingXyAus und danach \laserZingReset. Nach dem Start ist der Laserkopf automatisch im Maschinennullpunkt.
+	\nurZing Vor dem Lasern muss der Laserkopf in den Nullpunkt des Lasercutters (links oben) zurückgefahren werden. Dazu drückt man am Laser die Taste \laserZingXyAus und danach \laserZingReset. Nach dem Start ist der Laserkopf automatisch im Maschinennullpunkt.
 
-
-	\subsubsection{Fehlerbehebung}
-	Sollte dies nicht funktionieren, könnten folgende Punkte hilfreich sein:
-
-	%TODO Tabelle schön machen
-
-	\begin{tabularx}{\textwidth}{|X|X|X|}
-		\hline
-		Problem		 										& mögliche Ursache															& mögliche Lösung \\ \hline \hline
-		\multirow{3}{0.333\textwidth}{Das Bild wird nicht aktualisiert}	& Es wurden trotz mehrmaligen Versuchens nicht alle Passermarken erkannt	& Deckel ganz öffnen. Vergewissere dich, dass keine Marke überdeckt ist, sondern alle von der Kammera gut erkannt werden können. Eventuell ist die Kamera verdreht. \\ \cline{2-3}
-		& Die Lichtverhältnisse sind zu schlecht, als dass der Kontrast zw. den weißen und schwarzen Stellen groß genug für die Mustererkennung wäre	& Schalte die Deckenbeleuchtung an oder aus\\ \cline{2-3}
-		& VisiCam läuft nicht														& Frage einen Betreuer, dass er den Dienst auf der ws01 startet \\ \hline
-		\multirow{2}{0.333\textwidth}{Der Laser schneidet nicht da, \\ wo er sollte}	& \nurZing War der Laser in seinem Nullpunkt und nicht links oben auf der Arbeitsfläche?	& \nurZing drücke am Laser \laserZingXyAus und \laserZingReset \\ \cline{2-3}
-		& VisiCam ist verkalibriert &	Wenn du nicht an Rechner ws01 sitzt, lade aktuellere Einstellungen herunter (Optionen - empfohlene Einstellungen - Erlangen). Wenn das nichts bringt, muss auf ws01 das Kalibrierungsprogramm in VisiCut durchgeführt und dann die Einstellungen veröffentlicht werden (Betreuer/Admins fragen).  \\ \hline
-
-	\end{tabularx}
-
+	Fehlerbehebung siehe \cref{sec:wartung-visicam}.
 
 	\subsection{Windows-Druckertreiber}
 
@@ -361,7 +345,7 @@ minimum height=2em]
 	Neben Visicut gibt es auch die kompliziertere Möglichkeit, den Lasercutter über einen Windows-Druckertreiber anzusprechen. Wenn möglich, verwende lieber Visicut.
 
 
-	Achtung: Der Treiber darf nur von Rechner ws11 und nur mit fufablab08 Nutzer verwendet werden!
+	Achtung: Der Treiber darf nur von Rechner am Fenster in Richtung Besprechungsraum und nur mit fufablab08 Nutzer verwendet werden!
 
 	Achtung: Nie zwei Leute/Fenster gleichzeitig bearbeiten, da sonst die Einstellungen überschrieben werden! \\
 	Geladene Einstellungen überprüfen - bedenke dass ein falsch gesetzter Fokus Ärger bereiten kann. \\
@@ -806,7 +790,7 @@ Fertige Beispiele zum Umbauen:
 
 	\subsection{VisiCut Einstellungen verteilen (für Epilog und LTT)}
 	\label{sec:wartung-epilog:visicut}
-	Im FabLab werden auf dem Rechner beim linken Fenster des Hauptraums mit dem dortigen fu-Nutzer (\texttt{fufablab05}) gesammelt. Von dort werden sie manuell geprüft und in mehreren Schritten auf Github veröffentlicht (siehe später, bitte genau lesen). Alle anderen Rechner laden sie sich regelmäßig von Github herunter und überschreiben dabei lokale Änderungen. Man kann das Herunterladen auch im Menü von Visicut anstoßen.
+	Im FabLab werden auf dem Rechner beim linken Fenster des Hauptraums beim Durchgang zur Elektrowerkstatt mit dem dortigen fu-Nutzer (\texttt{fufablab05}) gesammelt. Von dort werden sie manuell geprüft und in mehreren Schritten auf Github veröffentlicht (siehe später, bitte genau lesen). Alle anderen Rechner laden sie sich regelmäßig von Github herunter und überschreiben dabei lokale Änderungen. Man kann das Herunterladen auch im Menü von Visicut anstoßen.
 	
 	\paragraph{Technischer Hintergrund:}
 	VisiCut läd die Einstellungen von dem Git-Repo \url{https://github.com/fau-fablab/visicut-settings}.
@@ -817,7 +801,7 @@ Fertige Beispiele zum Umbauen:
 	Am oben beschriebenen Rechner und Benutzer werden die Einstellungen in einem Git-Repo abgelegt.
 	Von dort aus können diese auf GitHub gepusht (Explorer -- C:/Users/fufablab05/.visicut/ -- Rechtsklick in diesem Ordner) werden. Bitte die einzelnen Änderungen genau überprüfen, nicht blind durchklicken --- oft speichern die Leute Unfug ab, z.B. Dicken von Acryl die es nicht gibt. Nach dem Pushen muss ein Pull Request von \href{https://github.com/FAUFabLabWS/visicut-settings}{FAUFabLabWS} nach \href{https://github.com/fau-fablab/visicut-settings}{fau-fablab} gestellt werden: Auf irgendeinem Rechner mit deinem persönlichen Benutzer (nicht FAUFabLabWS!) bei Github einloggen und \href{https://github.com/fau-fablab/visicut-settings/compare/master...FAUFabLabWS:master}{hier klicken}. (Nicht auf dem fufablab-Benutzer irgendwelche persönlichen Zugangsdaten eingeben!)
 
-	\section{häufige Fehler}
+	\section{Häufige Fehler}
 	\label{sec:fehler-allgemein}
 	In diesem Abschnitt geht es um die Beseitigung häufiger Fehler. Wenn das Werkstück fehlgeschlagen ist, werden die Laserzeitkosten des Fehlschlags in der Regel erlassen. Material muss weiterhin bezahlt werden.
 
@@ -845,6 +829,39 @@ Fertige Beispiele zum Umbauen:
 	Wenn rechts und links von einer Gravur auch dunkle Stellen graviert werden, ist die \enquote{Tickle Power} zu hoch eingestellt. Das ist die Leistung, die bei ausgeschaltetem Laser zum \enquote{Vorglühen} der Laserröhre verwendet wird. In Rücksprache mit dem Hersteller sollte diese dann verringert werden. (Auslieferung: Tickle Frequency 20kHz, Dezember 2018: verringert auf 18 kHz, Juni 2019: 16 kHz).
 
 	Zu hohe Tickle Power führt auch dazu, dass bei ausgeschaltetem Laser trotzdem Linien auf das Material markiert werden. Bei Thermopapier (Kassenzettel) lässt sich das nicht hunderprozentig vermeiden, bei anderem Material sollte es nicht vorkommen.
+
+
+	\subsection{Kamerabild defekt / ungenau}
+	\label{sec:wartung-visicam}
+	\paragraph{Funktionsweise der Kamera}
+	Im Deckel des Lasercutters ist ein Raspberry Pi mit Kameramodul montiert. Getrennt davon läuft auf dem FabLab-Server das Programm VisiCam.
+	VisiCam holt sich das Kamerabild, erkennt die kreisförmigen Markierungen im Laser, und korrigiert damit die Bewegungen der Kamera. (Der Deckel des Lasercutters bleibt nie in der exakt gleichen Position stehen. Das fertige Bild von VisiCam sieht am Ende trotzdem immer gleich aus.)
+	VisiCut holt dieses Bild von VisiCam und rechnet es dann von \enquote{schiefen Pixeln} in rechteckige Millimeter um.
+
+	\paragraph{Prüfung von VisiCam} Gehe als erstes die folgende Checkliste durch:
+	\begin{enumerate}
+		\item Der Laser ist an.
+		\item Bei mehrmaligem Öffnen und Schließen öffnet sich der Laser-Deckel über die eingebaute Gasfeder immer ähnlich weit. (Wenn die Gasfeder schwächelt, dann öffnet der Deckel manchmal nicht weit genug und der Marker ist außerhalb des eingestellten Bildbereichs.)
+		\item Die Marker (schwarz-weiße Kreise) im Lasercutter sind vorhanden, nicht verschmutzt, und fest befestigt. (Ersatz-Datei: \verb|Dateifreigabe/1_fablab/1_Geraete/Laser/VisiCam|)
+		\item Der Kamera-Server (Raspi im Lasercutter) liefert ein Bild: \url{http://lasercam.lab.fablab.uni-erlangen.de}
+		\item VisiCam zeigt dieses rohe Bild an: Linke Spalte (raw image) von \url{https://fablab.fau.de/visicam}
+		\item Alle vier Marker sind im eingestellten Bildbereich. Der Bereich wird im \enquote{raw image} von VisiCam als rotes Rechteck angezeigt. Er sollte nicht zu groß sein, weil Spiegelungen und Lichtpunkte gerne falsch als Marker erkannt werden. Er sollte aber auch nicht zu klein sein, dass bei leicht anders stehendem Laserdeckel der Marker außerhalb des Bereichs landet. Bei Bedarf kann man den bereich in den Einstellungen auf der VisiCam-Webseite ändern. Hilfe dazu: \url{https://github.com/t-oster/VisiCam/wiki/Configuration}.
+		\item Alle vier Marker werden korrekt erkannt (grünes Kreuz in VisiCam ist in der Mitte des Markers).
+		\item Auch bei mehrmaligem Neuladen werden die Marker richtig erkannt. (Sonst \enquote{hüpft} das Bild in VisiCut hin und her).
+		\item VisiCam zeigt ein Ergebnis-Bild an (rechte Spalte von \url{https://fablab.fau.de/visicam})
+	\end{enumerate}
+	Wenn das alles stimmt, geht es weiter mit der Kalibrierung von VisiCut.
+
+	\paragraph{Kalibrierung in VisiCut prüfen}
+	Zum ersten Prüfen reicht es aus, an verschiedenen Stellen und in der Mitte des Laserbetts jeweils etwas zu lasern, z.B. ein Rechteck aus Holz ausschneiden. Das Ergebnis im Lasercutter liegen lassen, nicht bewegen(!). Laser-Deckel öffnen und schauen dass das Kamerabild in VisiCut auf ca. 5 mm zu der Schnitt-Linie in VisiCut passt.
+
+	\paragraph{VisiCut neu kalibrieren}
+	\begin{enumerate}
+		\item Muss auf dem richtigen Rechner gemacht und dann an alle anderen verteilt werden (\cref{sec:wartung-epilog:visicut})!
+		\item Grundsätzliches Vorgehen siehe \url{https://github.com/t-oster/VisiCut/wiki/VisiCut-manual#camera-calibration}
+		\item Benötigt wird ein vollflächiges Stück Material. Dazu sollte ein großes Stück Architekten-Pappe mit mit Aufschrift \enquote{VisiCam Testseite} in der Elektrowerkstatt rechts neben dem Plotterregal lagern.  Mit Post-Its kann man die alten Gravurmarkierungen überkleben und dann drüber gravieren. Die Kamera-Auflösung ist nicht gut genug um die gravierte Markierung zu erkennen, also nimmt man ein zweites andersfarbiges Post-It und klebt dessen Ecke genau auf die Position der Gravurmarkierung. Das ist dann im Kamerabild gut zu erkennen.
+		\item Verteilen der Einstellungen nicht vergessen.
+	\end{enumerate}
 
 
 	\section{\nurLTT Wartung - nur für Betreuer}
