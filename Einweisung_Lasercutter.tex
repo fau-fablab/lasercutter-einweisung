@@ -333,11 +333,14 @@ minimum height=2em]
 
 	Mit VisiCut kann man seine Vektorzeichnung auf einem Bild des eingelegten Materials platzieren. Dazu wird von einer Kamera, die an der Klappe des Lasercutters angebracht ist, ein Bild geschossen, das anhand der 4 Passermarken an den 4 Ecken der Arbeitsfläche des Lasers ausgerichtet und beschnitten wird. So können die Teile, die gelasert werden sollen, je nach Kalibrierung bis auf etwa 2mm genau am Bild ausgerichtet werden, was vor allem bei Reststücken nützlich ist. Das Bild wird automatisch aktualisiert, es funktioniert nur wenn der Laserdeckel aufgeklappt ist.
 
-	\nurLTT Die Kamera ist eher ungenau, 5-10mm Unsicherheit sind möglich! Für eine sehr genaue Ausrichtung richte dich besser nach den Linealen am Rand des Wabengitters und in VisiCut.
+	\nurLTT Die Kamera ist eher ungenau, 5-10mm Unsicherheit sind möglich! Ein noch genauerer Weg wird im nächsten Abschnitt erklärt.
 
 	\nurZing Vor dem Lasern muss der Laserkopf in den Nullpunkt des Lasercutters (links oben) zurückgefahren werden. Dazu drückt man am Laser die Taste \laserZingXyAus und danach \laserZingReset. Nach dem Start ist der Laserkopf automatisch im Maschinennullpunkt.
 
 	Fehlerbehebung siehe \cref{sec:wartung-visicam}.
+
+	\subsubsection{Genauere Position -- ohne Kamera}
+	\nurLTT Wenn du ganz genau positionieren willst, dann kannst du den Lasercutter mit den Pfeiltasten genau auf einen Punkt bewegen und dann die Position im Menü ablesen: Schalte den roten Hilfslaser an um den Punkt zu sehen (Knopf mit Lasersymbol unterhalb von \laserKnopf{P2}). Bewege den Laser mit den Pfeiltasten an den gewünschten Punkt. Gehe mit \laserLTTExit ins Hauptmenü, dann mit mehrmals \laserLTTNextJob den Punkt \laserDisplay{4. System Setup} auswählen und \laserLTTOkay. Drücke wieder mehrmals \laserLTTNextJob bis \laserDisplay{Position Status} ausgewählt ist und dann \laserLTTOkay. Jetztwird die exakte Position des Laserpunkts angezeigt (X: Abstand vom linken Rand, Y: Abstand von oben). Diesen Wert kannst du in Inkscape oder VisiCut zur Positionierung verwenden. Zurück ins Hauptmenü mit \laserLTTExit \laserLTTExit.
 
 	\subsection{Windows-Druckertreiber}
 
