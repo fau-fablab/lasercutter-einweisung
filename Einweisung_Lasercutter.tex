@@ -801,9 +801,15 @@ Fertige Beispiele zum Umbauen:
 	Änderungen müssen dorthin gepusht werden. 
 	Im Nutzer \texttt{fufablab05} ist ein passender SSH-Key für den GitHub-Nutzer FAUFabLabWS hinterlegt. Dieser hat einen Fork des Repo (\url{https://github.com/FAUFabLabWS/visicut-settings}), aus dem per Pull Request dann in das Haupt-Repo (fau-fablab/visicut-settings) dann die Änderungen übernommen werden. Um Unfug zu vermeiden darf der Nutzer nicht direkt in das Haupt-Repo pushen.
 	
+	Wegen technischer Randbedingungen der Windows-IT wird das Nutzerprofil von fufablab05 regelmäßig automatisch gelöscht. Daher wird das git-repo über ein Skript manuell vom Nutzerprofil auf ein Netzlaufwerk gesichert bzw. wiederhergestellt.
+
+	\paragraph{Vorbereitung: Git-Repo wiederherstellen:} Am oben beschriebenen Rechner und Benutzer Visicut schließen, C:/Users/fufablab05/.visicut/ öffnen. Wenn dort \textbf{kein} Ordner .git existiert, dann Fenster schließen, W:/visicut-backup-AUTOMATIC/.visicut/ öffnen und dort Rechtsklick auf fablab-fufablab05-backup-restore.ps1, Mit PowerShell ausführen, ggf. Sicherheitsabfrage mit J und Enter bestätigen.
+
 	\paragraph{Verteilen der Einstellungen:}
 	Am oben beschriebenen Rechner und Benutzer werden die Einstellungen in einem Git-Repo abgelegt.
 	Von dort aus können diese auf GitHub gepusht (Explorer -- C:/Users/fufablab05/.visicut/ -- Rechtsklick in diesem Ordner) werden. Bitte die einzelnen Änderungen genau überprüfen, nicht blind durchklicken --- oft speichern die Leute Unfug ab, z.B. Dicken von Acryl die es nicht gibt. Nach dem Pushen muss ein Pull Request von \href{https://github.com/FAUFabLabWS/visicut-settings}{FAUFabLabWS} nach \href{https://github.com/fau-fablab/visicut-settings}{fau-fablab} gestellt werden: Auf irgendeinem Rechner mit deinem persönlichen Benutzer (nicht FAUFabLabWS!) bei Github einloggen und \href{https://github.com/fau-fablab/visicut-settings/compare/master...FAUFabLabWS:master}{hier klicken}. (Nicht auf dem fufablab-Benutzer irgendwelche persönlichen Zugangsdaten eingeben!)
+
+	\paragraph{Nachbereitung: Git-Repo sichern:} Visicut schließen. Alle Explorer-Fenster schließen. C:/Users/fufablab05/.visicut/ öffnen und dort Rechtsklick auf fablab-fufablab05-backup-restore.ps1, Mit PowerShell ausführen, ggf. Sicherheitsabfrage mit J und Enter bestätigen. (Das Skript erkennt automatisch ob es Backup oder Restore machen soll: Wenn der .git-Ordner existiert dann macht es eine Sicherung, sonst macht es eine Wiederherstellung. Um Fehler mit gesperrten Dateien zu vermeiden ist es wichtig das Skript zwecks Backup von C:/... zu starten und zwecks Restore von W:/..., obwohl es das gleiche Skript ist.)
 
 	\section{Häufige Fehler}
 	\label{sec:fehler-allgemein}
@@ -838,17 +844,20 @@ Fertige Beispiele zum Umbauen:
 	\subsection{Kamerabild defekt / ungenau}
 	\label{sec:wartung-visicam}
 	\paragraph{Funktionsweise der Kamera}
-	Im Deckel des Lasercutters ist ein Raspberry Pi mit Kameramodul montiert. Getrennt davon läuft auf dem FabLab-Server das Programm VisiCam.
-	VisiCam holt sich das Kamerabild, erkennt die kreisförmigen Markierungen im Laser, und korrigiert damit die Bewegungen der Kamera. (Der Deckel des Lasercutters bleibt nie in der exakt gleichen Position stehen. Das fertige Bild von VisiCam sieht am Ende trotzdem immer gleich aus.)
+	Im Deckel des Lasercutters ist ein Raspberry Pi mit Kameramodul montiert. Getrennt davon laufen auf dem FabLab-Server die Programme Undistort-Webcam und VisiCam.
+	Undistort-Webcam holt sich das Kamerabild und rechnet es von "Fischaugen-Linse" auf "ideale Linse" um, sodass gerade Linien wieder gerade sind. Als nächstes holt sich VisiCam das Ergebnis, erkennt die kreisförmigen Markierungen im Laser, und korrigiert damit die Bewegungen der Kamera. (Der Deckel des Lasercutters bleibt nie in der exakt gleichen Position stehen. Das fertige Bild von VisiCam sieht am Ende trotzdem immer gleich aus.)
 	VisiCut holt dieses Bild von VisiCam und rechnet es dann von \enquote{schiefen Pixeln} in rechteckige Millimeter um.
 
-	\paragraph{Prüfung von VisiCam} Gehe als erstes die folgende Checkliste durch:
+	\paragraph{Prüfung von VisiCam} Gehe als erstes die folgende Checkliste \textbf{ganz} durch:
 	\begin{enumerate}
 		\item Der Laser ist an.
-		\item Bei mehrmaligem Öffnen und Schließen öffnet sich der Laser-Deckel über die eingebaute Gasfeder immer ähnlich weit. (Wenn die Gasfeder schwächelt, dann öffnet der Deckel manchmal nicht weit genug und der Marker ist außerhalb des eingestellten Bildbereichs.)
+		\item Bei mehrmaligem Öffnen und Schließen öffnet sich der Laser-Deckel über die eingebaute Gasfeder vollständig und immer ähnlich weit. (Wenn die Gasfeder schwächelt, dann öffnet der Deckel manchmal nicht weit genug und der Marker ist außerhalb des eingestellten Bildbereichs.)
 		\item Die Marker (schwarz-weiße Kreise) im Lasercutter sind vorhanden, nicht verschmutzt, und fest befestigt. (Ersatz-Datei: \verb|Dateifreigabe/1_fablab/1_Geraete/Laser/VisiCam|)
 		\item Der Kamera-Server (Raspi im Lasercutter) liefert ein Bild: \url{http://lasercam.lab.fablab.uni-erlangen.de:8080/}
-		\item VisiCam zeigt dieses rohe Bild an: Linke Spalte (raw image) von \url{https://fablab.fau.de/visicam}
+		\item Die Linsen-Entzerrung (Undistort-Webcam) empfängt dieses Bild: Raw image unter \url{https://fablab.fau.de/visicam-undistort} anklicken, es erscheint das Bild.
+		\item Die Linsen-Entzerrung verarbeitet es: Processed image unter gleicher Adresse, es erscheint ein ähnlich aussehendes Bild mit leicht krummem Rand.
+		\item Hinweis: Kalibrierung der Linsen-Entzerrung ist \textbf{nicht} notwendig außer wenn die Kamera-Linse getauscht wurde. Wenn doch, dann ist es direkt auf obiger Webseite erklärt --- alte Kalibrierdaten löschen, Schachbrettmuster ausdrucken, Kalibrierfotos mit dem Schachbrettmuster an verschiedensten Stellen des Kamerabilds machen, Kalibrierung ausrechnen lassen, fertig. Die Kalibrierung ist dann erfolgreich wenn gerade Linien (z.B. Lineal) auf dem verarbeiteten Bild auch wieder gerade Linien sind (mit höchstens ca. 1 mm Toleranz).
+		\item VisiCam zeigt das entzerrte Bild: Linke Spalte (raw image) von \url{https://fablab.fau.de/visicam}
 		\item Alle vier Marker sind im eingestellten Bildbereich. Der Bereich wird im \enquote{raw image} von VisiCam als rotes Rechteck angezeigt. Er sollte nicht zu groß sein, weil Spiegelungen und Lichtpunkte gerne falsch als Marker erkannt werden. Er sollte aber auch nicht zu klein sein, dass bei leicht anders stehendem Laserdeckel der Marker außerhalb des Bereichs landet. Bei Bedarf kann man den bereich in den Einstellungen auf der VisiCam-Webseite ändern. Hilfe dazu: \url{https://github.com/t-oster/VisiCam/wiki/Configuration}.
 		\item Alle vier Marker werden korrekt erkannt (grünes Kreuz in VisiCam ist in der Mitte des Markers).
 		\item Auch bei mehrmaligem Neuladen werden die Marker richtig erkannt. (Sonst \enquote{hüpft} das Bild in VisiCut hin und her).
