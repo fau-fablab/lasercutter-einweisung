@@ -1,0 +1,95 @@
+% =====================================================================
+%  Betriebsanweisung Lasercutter LTT iLaser 4000 und Epilog Zing
+%  Eigenes PDF: Betriebsanweisung_Lasercutter.tex, Seite in der Einweisung
+%  über \BAseite. Layout: fablab-document/fablab-ba.sty
+%  Inhalt: Kapitel "Was du dir merken musst" und "Materialien" der Einweisung.
+% =====================================================================
+\BAsetup{
+  typ=maschine,
+  titel={Lasercutter LTT iLaser 4000 (\glqq LTT\grqq) und Epilog Zing (\glqq Zing\grqq)},
+  taetigkeit={Schneiden und Gravieren, Materialwechsel, Reinigen des Schneidetischs},
+  nummer=BA-LC-01,
+  stand=TT.MM.JJJJ,                   % Datum der Freigabe
+  verantwortlich={Name der verantwortlichen Person},
+  bildcode={\includegraphics[width=0.75\BAsymw]{fablab-document/ba-symbole/W004}},
+  schrift=\footnotesize,
+  entwurf,                            % entfernen, sobald freigegeben
+}
+
+\BAkopf
+
+% ---------- 1 Anwendungsbereich --------------------------------------
+\BAblock{ANWENDUNGSBEREICH}{M002}{%
+  \begin{itemize}
+    \item Schneiden und Gravieren \textbf{nur der erlaubten Materialien}
+          (Liste in der Einweisung). Was dort nicht steht, ist verboten.
+    \item Benutzung nur nach Einweisung; Hinweise des Herstellers beachten.
+  \end{itemize}}
+
+% ---------- 2 Gefahren -----------------------------------------------
+\BAblock{GEFAHREN FÜR MENSCH UND UMWELT}{W004,W021,W016}{%
+  \begin{itemize}
+    \item \textbf{Laserstrahlung}: unsichtbarer Infrarot-Laser mit hoher Leistung. Er ist
+          nur bei geschlossenem Deckel und geschlossener Frontklappe in Betrieb. Der rote
+          Hilfslaser ist harmlos, aber nicht direkt (z.\,B. über einen Spiegel) ins Auge lenken.
+    \item \textbf{Brandgefahr}: Acryl, Holz, Papier u.\,ä. können brennen. Brennendes Material
+          kann Linse und Lasercutter zerstören.
+    \item \textbf{Giftige und ätzende Dämpfe} bei ungeeignetem Material: Salzsäure und Flusssäure
+          (z.\,B.\ PVC, Teflon), Blausäure (z.\,B.\ Polyamid, Elastan), Gestank (ABS, Epoxidharz).
+    \item \textbf{Verbrennungsgefahr} an heißem Werkstück, Resten und Tischgitter.
+    \item \textbf{Quetschgefahr} durch den schnell bewegten Laserkopf und den Arm bei
+          geöffnetem Deckel (Testlauf, Zing).
+    \item \textbf{Sachschaden} durch Kollision des Laserkopfs oder Magnete am Gerät.
+  \end{itemize}}
+
+% ---------- 3 Schutzmaßnahmen ----------------------------------------
+\BAblock{SCHUTZMASSNAHMEN UND VERHALTENSREGELN}{P001,P010}{%
+  \begin{itemize}
+    \item \textbf{Nur erlaubte Materialien}, keine unbekannten Kunststoffe. Keine leicht
+          entzündlichen oder gefährlichen Gegenstände (z.\,B. befüllte Feuerzeuge, Handys
+          mit Akku).
+    \item \textbf{Solange der Laser arbeitet, direkt beim Lasercutter bleiben und zusehen.}
+    \item Absaugung und Air Assist müssen laufen (beim LTT automatisch). Nach dem Job kurz
+          warten, bis die Dämpfe abgesaugt sind.
+    \item Werkstück und Tischgitter nach dem Lasern abkühlen lassen, glimmende Reste nicht wegwerfen.
+    \item Nichts verstellen oder aufschrauben, Schutzschalter nicht manipulieren.
+          Einzige Ausnahme: die grünen Schrauben des Schneidetischs.
+    \item Keine Magnete am oder im Lasercutter. Wabengitter nicht belasten.
+    \item Laserkopf muss sich frei bewegen können. Autofokus (LTT) auf den \emph{höchsten}
+          Punkt des Werkstücks. Nicht in den Verfahrbereich greifen.
+  \end{itemize}}
+
+% ---------- 4 Störungen ----------------------------------------------
+\BAblock{VERHALTEN BEI STÖRUNGEN}{W001,F001,P011}{%
+  \begin{itemize}
+    \item \textbf{Kleine Flamme}: Pause-Taste (LTT) bzw.\ Stop-Taste (Zing) drücken,
+          Absaugung und Air Assist prüfen. Der Laser fährt noch einige Linien zu Ende.
+    \item \textbf{Große Flamme oder starker Rauch}: \textbf{Deckel leicht öffnen} (Laser schaltet
+          ab, der Antrieb fährt weiter: nicht hineingreifen; LTT: \textbf{Not-Aus}, Zing: Kippschalter
+          rechts unten). \textbf{Betreuer rufen.}
+    \item Löschen nur mit dem \textbf{CO\textsubscript{2}-Löscher} in kurzen Sprühstößen, \textbf{nie mit
+          Wasser, Pulver oder Schaum}. Standort: gegenüber vom Laser beim Kassenterminal und am
+          Durchgang zur Elektrowerkstatt.
+    \item Bei weiterer Eskalation \textbf{Feuerwehr 112}, Personen warnen, Raum verlassen
+          (Erstickungsgefahr durch CO\textsubscript{2} und Rauch).
+    \item \textbf{Laserkopf stößt an}: sofort Not-Aus, Betreuer informieren. Netzstecker
+          ziehen, Hinweiszettel anbringen. \textbf{Nicht zum Test wieder einschalten}, bis die
+          Achsen geprüft sind.
+  \end{itemize}}
+
+% ---------- 5 Erste Hilfe --------------------------------------------
+\BAblock{VERHALTEN BEI UNFÄLLEN – ERSTE HILFE}{E003}{%
+  \begin{itemize}
+    \item Ruhe bewahren, Gerät abschalten, Betreuer/Ersthelfer verständigen.
+    \item Jeden Unfall den Betreuern melden und im Verbandbuch eintragen.
+  \end{itemize}\vspace{1.5mm}
+  \textbf{Notruf: 112}\qquad FabLab: 09131\,/\,85\,28013}
+
+% ---------- 6 Instandhaltung -----------------------------------------
+\BAletzterblock{INSTANDHALTUNG, ENTSORGUNG}{M021}{%
+  \begin{itemize}
+    \item Wartung, Reinigung der Optik und Filterwechsel nur durch eingewiesene Betreuer,
+          bei ausgeschaltetem Gerät (Netzstecker ziehen); Wartungsliste führen.
+    \item Vor dem Einschalten nach der Wartung prüfen, dass keine Gegenstände im Laser liegen.
+    \item Elektrische Prüfung nach DGUV Vorschrift 3 gemäß festgelegter Prüffrist.
+  \end{itemize}}
