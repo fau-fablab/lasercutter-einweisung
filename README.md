@@ -10,6 +10,7 @@ Inhalt
 - Erlaubte und verbotene Materialien
 - Datei erstellen und senden: Inkscape mit VisiCut, Corel/Illustrator, Windows-Treiber
 - Job ausführen: Fokus, Absaugung, Air Assist, Nullpunkt, Bezahlung
+- Betriebsanweisung (BA-LC-01) als eigene Seite
 - Tipps zur Konstruktion (Toleranzen, Steckverbindungen, Boxen)
 - Wartung und Fehlerbehebung für Betreuer, Rotationseinheit
 
@@ -19,6 +20,7 @@ Download
 Die neueste Version aus [GitHub](https://github.com/fau-fablab/lasercutter-einweisung) ist als PDF abrufbar:
 
 - [Einweisung](https://brain.fablab.fau.de/build/lasercutter-einweisung/Einweisung_Lasercutter.pdf)
+- [Betriebsanweisung](https://brain.fablab.fau.de/build/lasercutter-einweisung/Betriebsanweisung_Lasercutter.pdf) (Aushang am Gerät)
 - [Einweisungsliste](https://brain.fablab.fau.de/build/lasercutter-einweisung/Einweisungsliste_Lasercutter.pdf)
 - [Wartungsliste LTT](https://brain.fablab.fau.de/build/lasercutter-einweisung/Wartungsliste_Lasercutter_LTT.pdf)
 - [Wartungsliste Epilog Zing](https://brain.fablab.fau.de/build/lasercutter-einweisung/Wartungsliste_Lasercutter_Epilog_Zing.pdf)
