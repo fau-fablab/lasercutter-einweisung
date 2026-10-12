@@ -1,4 +1,4 @@
-Lasercutter Einweisung
+Lasercutter-Einweisung
 ======================
 
 Einweisung des [FAU FabLab](https://fablab.fau.de) für die [Lasercutter](https://fablab.fau.de/tool/lasercutter/) LTT iLaser 4000 und Epilog Zing.
