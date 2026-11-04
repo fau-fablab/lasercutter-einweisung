@@ -354,7 +354,7 @@ minimum height=2em]
 
 	Da VisiCut in Java programmiert ist, läuft es auf jedem Betriebssystem und man kann es auch bei sich auf dem Laptop installieren. Es ist verfügbar unter \url{https://download.visicut.org/}.
 
-	Die aktuell verwendete Konfiguration für VisiCut kannst du beim ersten Start oder unter \verb|Optionen| / \verb|empfohlene Einstellungen herunterladen...| herunterladen.
+	Die aktuell verwendete Konfiguration für VisiCut kannst du beim ersten Start oder unter \verb|Optionen| / \verb|empfohlene Einstellungen herunterladen...| herunterladen. (Details zum Ändern und Verteilen dieser Einstellungen siehe \cref{sec:wartung-epilog:visicut} auf Seite \pageref{sec:wartung-epilog:visicut}.)
 
 	VisiCut ist Open Source und wird gemeinschaftlich weiterentwickelt. Wenn du Fehler findest und diese nachvollziehbar beschreiben kannst, freuen wir uns über einen Bericht an \href{mailto:kontakt@fablab.fau.de}{kontakt@fablab.fau.de} oder noch besser direkt auf GitHub unter \url{https://github.com/t-oster/visicut/issues}.
 
@@ -840,6 +840,25 @@ Fertige Beispiele zum Umbauen:
 
 	Details dazu stehen im Handbuch.
 
+	\subsection{VisiCut-Einstellungen verteilen (für Epilog und LTT)}
+	\label{sec:wartung-epilog:visicut}
+	Im FabLab werden die Einstellungen auf dem Rechner beim linken Fenster des Hauptraums beim Durchgang zur Elektrowerkstatt mit dem dortigen fu-Nutzer (\texttt{fufablab05}) gesammelt. Von dort werden sie manuell geprüft und in mehreren Schritten auf GitHub veröffentlicht (siehe später, bitte genau lesen). Alle anderen Rechner laden sie sich regelmäßig von GitHub herunter und überschreiben dabei lokale Änderungen. Man kann das Herunterladen auch im Menü von Visicut anstoßen.
+	
+	\paragraph{Technischer Hintergrund:}
+	VisiCut lädt die Einstellungen von dem Git-Repo \url{https://github.com/fau-fablab/visicut-settings}.
+	Änderungen müssen dorthin gepusht werden. 
+	Im Nutzer \texttt{fufablab05} ist ein passender SSH-Key für den GitHub-Nutzer FAUFabLabWS hinterlegt. Dieser hat einen Fork des Repos (\url{https://github.com/FAUFabLabWS/visicut-settings}), aus dem per Pull Request in das Haupt-Repo (fau-fablab/visicut-settings) dann die Änderungen übernommen werden. Um Unfug zu vermeiden, darf der Nutzer nicht direkt in das Haupt-Repo pushen.
+	
+	Wegen technischer Randbedingungen der Windows-IT wird das Nutzerprofil von fufablab05 regelmäßig automatisch gelöscht. Daher wird das git-repo über ein Skript manuell vom Nutzerprofil auf ein Netzlaufwerk gesichert bzw. wiederhergestellt.
+
+	\paragraph{Vorbereitung: Git-Repo wiederherstellen:} Am oben beschriebenen Rechner und Benutzer Visicut schließen, C:/Users/fufablab05/.visicut/ öffnen. Wenn dort \textbf{kein} Ordner .git existiert, dann Fenster schließen, W:/visicut-backup-AUTOMATIC/.visicut/ öffnen und dort Rechtsklick auf fablab-fufablab05-backup-restore.ps1, Mit PowerShell ausführen, ggf. Sicherheitsabfrage mit J und Enter bestätigen.
+
+	\paragraph{Verteilen der Einstellungen:}
+	Am oben beschriebenen Rechner und Benutzer werden die Einstellungen in einem Git-Repo abgelegt.
+	Von dort aus können diese auf GitHub gepusht (Explorer -- C:/Users/fufablab05/.visicut/ -- Rechtsklick in diesem Ordner) werden. Bitte die einzelnen Änderungen genau überprüfen, nicht blind durchklicken --- oft speichern die Leute Unfug ab, z.B. Dicken von Acryl, die es nicht gibt. Nach dem Pushen muss ein Pull Request von \href{https://github.com/FAUFabLabWS/visicut-settings}{FAUFabLabWS} nach \href{https://github.com/fau-fablab/visicut-settings}{fau-fablab} gestellt werden: Auf irgendeinem Rechner mit deinem persönlichen Benutzer (nicht FAUFabLabWS!) bei GitHub einloggen und \href{https://github.com/fau-fablab/visicut-settings/compare/master...FAUFabLabWS:master}{hier klicken}. (Nicht auf dem fufablab-Benutzer irgendwelche persönlichen Zugangsdaten eingeben!)
+
+	\paragraph{Nachbereitung: Git-Repo sichern:} Visicut schließen. Alle Explorer-Fenster schließen. C:/Users/fufablab05/.visicut/ öffnen und dort Rechtsklick auf fablab-fufablab05-backup-restore.ps1, Mit PowerShell ausführen, ggf. Sicherheitsabfrage mit J und Enter bestätigen. (Das Skript erkennt automatisch, ob es Backup oder Restore machen soll: Wenn der .git-Ordner existiert, dann macht es eine Sicherung, sonst macht es eine Wiederherstellung. Um Fehler mit gesperrten Dateien zu vermeiden, ist es wichtig, das Skript zwecks Backup von C:/... zu starten und zwecks Restore von W:/..., obwohl es das gleiche Skript ist.)
+
 	\section{Häufige Fehler}
 	\label{sec:fehler-allgemein}
 	In diesem Abschnitt geht es um die Beseitigung häufiger Fehler. Wenn das Werkstück fehlgeschlagen ist, werden die Laserzeitkosten des Fehlschlags in der Regel erlassen. Material muss weiterhin bezahlt werden.
@@ -899,7 +918,7 @@ Fertige Beispiele zum Umbauen:
 
 	\paragraph{VisiCut neu kalibrieren}
 	\begin{enumerate}
-		\item Muss auf einem Rechner gemacht und danach an alle anderen verteilt werden (Einstellungen im Repository \url{https://github.com/fau-fablab/visicut-settings}).
+		\item Muss auf dem richtigen Rechner gemacht und dann an alle anderen verteilt werden (\cref{sec:wartung-epilog:visicut})!
 		\item Grundsätzliches Vorgehen siehe \url{https://github.com/t-oster/VisiCut/wiki/VisiCut-manual#camera-calibration}
 		\item Benötigt wird ein vollflächiges Stück Material. Dazu sollte ein großes Stück Architekten-Pappe mit Aufschrift \enquote{VisiCam Testseite} in der Elektrowerkstatt rechts neben dem Plotterregal lagern. Mit Post-Its kann man die alten Gravurmarkierungen überkleben und dann drüber gravieren. Die Kamera-Auflösung ist nicht gut genug, um die gravierte Markierung zu erkennen, also nimmt man ein zweites andersfarbiges Post-It und klebt dessen Ecke genau auf die Position der Gravurmarkierung. Das ist dann im Kamerabild gut zu erkennen.
 		\item Verteilen der Einstellungen nicht vergessen.
